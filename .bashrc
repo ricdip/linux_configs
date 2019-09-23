@@ -5,7 +5,7 @@
 alias ls='ls -h --color=auto'
 alias ll='ls -lah'
 alias restart='systemctl reboot'
-alias poweroff='systemctl poweroff'
+alias off='systemctl poweroff'
 alias ..='cd ..'
 
 #vars
@@ -17,10 +17,10 @@ export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr
 
 ########################################
 
-echo
-echo $(date)
-echo user $(whoami) on host $(hostname)
-echo
+#echo
+#echo $(date)
+#echo user $(whoami) on host $(hostname)
+#echo
 
 function getip(){
 	local INTERFACE="$1"
