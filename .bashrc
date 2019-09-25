@@ -1,14 +1,22 @@
 ## bashrc file
 
-# aliases
+## alias
 
 alias ls='ls -h --color=auto'
-alias ll='ls -lah'
+alias ll='ls -la'
 alias restart='systemctl reboot'
 alias off='systemctl poweroff'
 alias ..='cd ..'
 
-#vars
+# git alias
+
+alias gitstatus='git status'
+alias gitadd='git add .'
+alias gitcommit='git commit'
+alias gitpushmaster='git push origin master'
+
+
+## vars
 
 export EDITOR=vim
 

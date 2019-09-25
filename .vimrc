@@ -1,3 +1,5 @@
+" .vimrc file: i will extend this sample configuration
+"
 " URL: http://vim.wikia.com/wiki/Example_vimrc
 " Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
 " Description: A minimal, but feature rich, example .vimrc. If you are a
@@ -156,4 +158,9 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
  
+"------------------------------------------------------------
+" My addings
+"
+set background=dark
+
 "------------------------------------------------------------
