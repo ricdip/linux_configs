@@ -10,10 +10,10 @@ alias ..='cd ..'
 
 # git alias
 
-alias gitstatus='git status'
-alias gitadd='git add .'
-alias gitcommit='git commit'
-alias gitpushmaster='git push origin master'
+alias gstatus='git status'
+alias gadd='git add .'
+alias gcommit='git commit'
+alias gpushmaster='git push origin master'
 
 
 ## vars
@@ -26,7 +26,6 @@ export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr
 ########################################
 
 echo
-#echo $(date)
 echo - User $(whoami) on host $(hostname) -
 echo
 
@@ -54,4 +53,13 @@ function getmac(){
     echo $MAC
 }
 
+
+function meminfo(){
+    cat /proc/meminfo | less
+}
+
+
+function cpuinfo(){
+    cat /proc/cpuinfo | less
+}
 
