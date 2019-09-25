@@ -17,19 +17,33 @@ export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr
 
 ########################################
 
-#echo
+echo
 #echo $(date)
-#echo user $(whoami) on host $(hostname)
-#echo
+echo - User $(whoami) on host $(hostname) -
+echo
+
 
 function getip(){
-	local INTERFACE="$1"
+    local INTERFACE="$1"
 
-	if [ -z "$INTERFACE" ]; then
-	       INTERFACE="ens33";
-	fi
+    if [ -z "$INTERFACE" ]; then
+        INTERFACE="ens33";
+    fi
 
-	local IP="$(ip addr show $INTERFACE | awk '{if($1 == "inet"){ print $2 } }')"
-	echo $IP
+    local IP="$(ip addr show $INTERFACE | awk '{if($1 == "inet"){ print $2 } }')"
+    echo $IP
 }
+
+
+function getmac(){
+    local INTERFACE="$1"
+
+    if [ -z "$INTERFACE" ]; then
+        INTERFACE="ens33"
+    fi
+
+    local MAC="$(ip link show $INTERFACE | awk '{if($1 == "link/ether"){ print $2 } }')"
+    echo $MAC
+}
+
 
