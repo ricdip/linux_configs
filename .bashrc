@@ -14,6 +14,7 @@ alias gstatus='git status'
 alias gadd='git add .'
 alias gcommit='git commit'
 alias gpushmaster='git push origin master'
+alias gpull='git pull'
 
 
 ## vars
