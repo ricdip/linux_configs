@@ -13,8 +13,9 @@ alias ..='cd ..'
 alias gstatus='git status'
 alias gadd='git add .'
 alias gcommit='git commit'
-alias gpushmaster='git push origin master'
+alias gpushtomaster='git push origin master'
 alias gpull='git pull'
+alias glog='git log --all --decorate --oneline --graph'
 
 
 ## vars
