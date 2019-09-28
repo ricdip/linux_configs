@@ -30,7 +30,7 @@ export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr
 # history vars setting
 
 export HISTCONTROL=ignoreboth
-export HISTFILE=500
+export HISTSIZE=500
 export HISTFILESIZE=500
 
 # custom paths
