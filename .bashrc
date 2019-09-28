@@ -2,7 +2,7 @@
 
 ## alias
 
-alias ls='ls -h --color=auto'
+alias ls='ls -h --color=auto --group-directories-first'
 alias ll='ls -la'
 alias restart='systemctl reboot'
 alias off='systemctl poweroff'
@@ -54,6 +54,9 @@ function getip(){
     local IP="$(ip addr show $INTERFACE | awk '{if($1 == "inet"){ print $2 } }')"
     echo $IP
 }
+
+
+alias getextip="curl http://ipecho.net/plain; echo"
 
 
 function getmac(){
