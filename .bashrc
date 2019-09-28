@@ -8,6 +8,8 @@ alias restart='systemctl reboot'
 alias off='systemctl poweroff'
 alias ..='cd ..'
 alias grep='grep --color=auto'
+alias grub-update='grub-mkconfig -o /boot/grub/grub.cfg'
+
 
 # git alias
 
