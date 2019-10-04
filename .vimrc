@@ -163,4 +163,10 @@ nnoremap <C-L> :nohl<CR><C-L>
 "
 set background=dark
 
+command Bash !bash
+command Python !python
+command Gcc !gcc -fsyntax-only % && echo "No errors"
+
+map < :Bash
+
 "------------------------------------------------------------
