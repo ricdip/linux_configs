@@ -167,6 +167,7 @@ command Bash !bash
 command Python !python
 command Pythonthis !python %
 command Gcc !gcc -fsyntax-only % && echo "No errors"
+command Gpp !g++ -fsyntax-only % && echo "No errors"
 
 map < :Bash
 
