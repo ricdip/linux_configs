@@ -27,6 +27,8 @@ export EDITOR=vim
 
 export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w]\[$(tput sgr0)\]\[\033[38;5;15m\]\\$\[$(tput sgr0)\]\[\033[38;5;6m\]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
+# export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w]\[$(tput sgr0)\]\[\033[38;5;15m\]\\$\[$(tput sgr0)\]\[\033[38;5;6m\]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+
 # history vars setting
 
 export HISTCONTROL=ignoreboth
@@ -35,6 +37,10 @@ export HISTFILESIZE=500
 
 # custom paths
 #export PATH="/usr/local/example:$PATH"
+
+
+# font
+setfont ter-v22b
 
 
 ########################################
