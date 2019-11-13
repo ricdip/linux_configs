@@ -2,3 +2,5 @@
 
 A set of personal Debian configuration files.
 
+* vimrc
+
