@@ -71,11 +71,6 @@ export ZSH="/home/riccardo/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git command-not-found git-prompt)
 
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
-
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -108,18 +103,20 @@ source $ZSH/oh-my-zsh.sh
 
 setopt notify
 
-# enable vim mode
-bindkey -v
 
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
+# vim mode
+bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
+zstyle :compinstall filename '/home/riccardo/.zshrc'
 
-zstyle :compinstall filename '/home/resu/.zshrc'
-
-autoload -Uz compinit #promptinit
+autoload -Uz compinit
 compinit
-#promptinit
-
 # End of lines added by compinstall
 
 
