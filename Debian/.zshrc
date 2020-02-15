@@ -127,7 +127,7 @@ xhost + > /dev/null
 
 alias ls='ls -h --color=auto --group-directories-first'
 alias ll='ls -la'
-alias restart='sudo systemctl reboot'
+alias rbt='sudo systemctl reboot'
 alias off='sudo systemctl poweroff'
 alias ..='cd ..'
 alias diff='diff --color=auto'
@@ -137,10 +137,16 @@ alias getextip="curl http://ipecho.net/plain; echo"
 # git alias
 
 alias ggraphlog='git log --all --decorate --oneline --graph'
+alias gadd='git add .'
+alias gcommit='git commit -m'
+alias gpushtomaster='git push -u origin master'
 
 # prompt
 
 autoload -U colors && colors
 
 #PROMPT='%{$fg[red]%}%(?..%? )%{$reset_color%}$(git_super_status)[%n@%m: %~] %# '
-PROMPT='%{$fg[red]%}%(?..%? )%{$reset_color%}[%n@%m: %~] %# '
+## No colors
+#PROMPT='%{$fg[red]%}%(?..%? )%{$reset_color%}[%n@%m: %~] %# '
+## With color
+PROMPT='%{$fg[red]%}%(?..%? )%{$reset_color%}%{$fg[green]%}[%n@%m: %~] %#%{$reset_color%} '
