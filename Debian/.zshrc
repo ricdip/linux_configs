@@ -136,6 +136,7 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias getextip="curl http://ipecho.net/plain; echo"
 alias fd='fdfind'
+alias rg='ranger'
 
 # git alias
 
