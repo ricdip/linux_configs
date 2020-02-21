@@ -69,7 +69,10 @@ export ZSH="/home/riccardo/.oh-my-zsh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git command-not-found git-prompt)
+
+# other plugins available through apt
+# (zsh-syntax-highlighting, zsh-autosuggestions)
+plugins=(git command-not-found git-prompt zsh-completions history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,8 +118,7 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/riccardo/.zshrc'
 
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 # End of lines added by compinstall
 
 
@@ -133,6 +135,7 @@ alias ..='cd ..'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias getextip="curl http://ipecho.net/plain; echo"
+alias fd='fdfind'
 
 # git alias
 
@@ -140,6 +143,7 @@ alias ggraphlog='git log --all --decorate --oneline --graph'
 alias gadd='git add .'
 alias gcommit='git commit -m'
 alias gpushtomaster='git push -u origin master'
+alias gstatus='git status'
 
 # prompt
 
@@ -150,3 +154,6 @@ autoload -U colors && colors
 #PROMPT='%{$fg[red]%}%(?..%? )%{$reset_color%}[%n@%m: %~] %# '
 ## With color
 PROMPT='%{$fg[red]%}%(?..%? )%{$reset_color%}%{$fg[green]%}[%n@%m: %~] %#%{$reset_color%} '
+
+# enable zsh-syntax-highlighting plugin
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
