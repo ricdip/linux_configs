@@ -162,6 +162,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 " My addings
 "
 set background=dark
+set clipboard=unnamedplus,unnamed
 
 command Bash !bash
 command Python !python3
