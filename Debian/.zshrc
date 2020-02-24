@@ -127,6 +127,7 @@ xhost + > /dev/null
 
 # alias
 
+alias lll='/bin/ls --color=none -U'
 alias ls='ls -h --color=auto --group-directories-first'
 alias ll='ls -la'
 alias rbt='sudo systemctl reboot'
@@ -158,3 +159,13 @@ PROMPT='%{$fg[red]%}%(?..%? )%{$reset_color%}%{$fg[green]%}[%n@%m: %~] %#%{$rese
 
 # enable zsh-syntax-highlighting plugin
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# custom functions
+function chpwd(){
+    count=$(lll | wc -l);
+    if [ "$count" -lt "30" ]; then
+        ls;
+    fi
+    unset count
+}
+
