@@ -185,6 +185,9 @@ bindsym $mod+F10 exec --no-startup-id amixer sset Master toggle
 bindsym $mod+F11 exec --no-startup-id amixer -D pulse sset Master 5%-
 bindsym $mod+F12 exec --no-startup-id amixer -D pulse sset Master 5%+
 
+## wifi toggler on F2
+bindsym $mod+F2 exec --no-startup-id $HOME/bin/wifi_toggler
+
 ## disable touchpad (xinput id: 19) if F7 is pressed (call to custom script)
 bindsym $mod+F9 exec --no-startup-id $HOME/bin/disable_touchpad
 
@@ -200,5 +203,4 @@ exec_always --no-startup-id numlockx on
 exec_always --no-startup-id feh --bg-scale $HOME/Immagini/Sfondi/674005.jpg
 # else
 #exec_always --no-startup-id hsetroot -solid "#000000"
-
 
