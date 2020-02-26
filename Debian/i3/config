@@ -31,7 +31,9 @@ font pango:Terminus 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+#bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+# (start st terminal)
+bindsym $mod+Return exec --no-startup-id st -f "Monospace:size=11" 
 
 # kill focused window
 #bindsym $mod+Shift+q kill
