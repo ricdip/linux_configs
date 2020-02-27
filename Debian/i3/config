@@ -14,7 +14,7 @@ set $mod Mod1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 9
-font pango:Terminus 8
+font pango:Terminus 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -199,7 +199,8 @@ bindsym $mod+F2 exec --no-startup-id $HOME/bin/wifi_toggler
 bindsym $mod+F9 exec --no-startup-id $HOME/bin/disable_touchpad
 
 ## disable touchpad (xinput id: 19) by default
-exec_always --no-startup-id xinput disable 19 
+#exec_always --no-startup-id xinput disable 19 
+exec_always --no-startup-id $HOME/bin/disable_touchpad_startup 
 
 ## enable numlock at startup
 exec_always --no-startup-id numlockx on
@@ -210,4 +211,8 @@ exec_always --no-startup-id numlockx on
 exec_always --no-startup-id feh --bg-scale $HOME/Immagini/Sfondi/674005.jpg
 # else
 #exec_always --no-startup-id hsetroot -solid "#000000"
+
+## i3-gaps
+gaps inner 10
+gaps outer 5
 

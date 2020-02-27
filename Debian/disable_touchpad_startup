@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ $(xinput list "ETPS/2 Elantech Touchpad" | head -n 1 | awk '{print $4}' | sed 's/id=//') == '19' ];then
+    xinput disable 19
+fi
