@@ -20,8 +20,8 @@ order += "cpu_temperature 0"
 #order += "load"
 order += "sysdata"
 order += "battery all"
-order += "volume master"
 order += "backlight"
+order += "volume master"
 order += "tztime local"
 
 
@@ -56,12 +56,17 @@ load {
 }
 
 sysdata {
-    format = "CPU: {cpu_used_percent}% Mem: {mem_used}/{mem_total} GB"
+    format = "[\?color=cpu CPU: {cpu_usage}%] , [\?color=mem Mem: {mem_used}/{mem_total} GB]"
     cache_timeout = 5
 }
 
 battery all {
         format = "%status %percentage %remaining"
+}
+
+backlight {
+    format = "☼: {level}%"
+    cache_timeout = 2
 }
 
 volume master {
@@ -70,11 +75,6 @@ volume master {
     device = "default"
     mixer = "Master"
     mixer_idx = 0
-}
-
-backlight {
-    format = "☼: {level}%"
-    cache_timeout = 2
 }
 
 tztime local {
