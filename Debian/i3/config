@@ -205,6 +205,9 @@ exec_always --no-startup-id $HOME/bin/disable_touchpad_startup
 ## enable numlock at startup
 exec_always --no-startup-id numlockx on
 
+## screen lock
+bindsym $mod+Shift+f exec --no-startup-id i3lock -c A9A9A9 -e -f
+
 ## background
 
 # if we are using feh
