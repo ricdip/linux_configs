@@ -12,7 +12,7 @@ general {
 }
 
 order += "wireless _first_"
-order += "netdata"
+#order += "netdata"
 order += "ipv6"
 order += "ethernet _first_"
 order += "disk /"
