@@ -3,3 +3,10 @@ path=("$HOME/.config/composer/vendor/bin" "/usr/local/android-studio/bin" "/usr/
 export PATH
 
 export EDITOR=vim
+
+# Android
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
