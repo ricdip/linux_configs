@@ -169,3 +169,6 @@ function chpwd(){
     unset count
 }
 
+function fdvim(){
+    fd $@ | vim -
+}
