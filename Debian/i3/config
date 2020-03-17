@@ -219,3 +219,10 @@ exec_always --no-startup-id feh --bg-scale $HOME/Immagini/Sfondi/674005.jpg
 gaps inner 10
 gaps outer 5
 
+## always floats
+
+# always float Nexus 5 Emulator
+for_window [title="Android Emulator - Nexus_5:5554"] floating enable
+# always float Microsoft Teams
+for_window [class="Microsoft Teams - Preview"] floating enable
+
