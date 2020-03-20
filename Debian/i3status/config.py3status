@@ -9,6 +9,7 @@
 general {
         colors = true
         interval = 5
+        #output_format = "lemonbar"
 }
 
 order += "wireless _first_"
@@ -43,11 +44,11 @@ ethernet _first_ {
 }
 
 disk "/" {
-        format = "/ : %avail"
+        format = "🖴 : /  %avail"
 }
 
 cpu_temperature 0 {
-    format = "CPU Temp: %degrees°C"
+    format = "CPU 🌡 : %degrees°C"
     path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
 }
 
@@ -61,22 +62,26 @@ sysdata {
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+    status_chr = "⚡CHR"
+    status_bat = "🔋BAT"
+    status_unk = "? UNK"
+    status_full = "☻ FULL"
+    format = "%status : %percentage %remaining"
 }
 
 backlight {
-    format = "☼: {level}%"
+    format = "[\?color=#3D9AF9 ☼ : {level}%]"
     cache_timeout = 2
 }
 
 volume master {
-    format = "♪: %volume"
-    format_muted = "♪: muted (%volume)"
+    format = "♪ : %volume"
+    format_muted = "♪ : muted (%volume)"
     device = "default"
     mixer = "Master"
     mixer_idx = 0
 }
 
 tztime local {
-    format = "%d-%m-%Y - %H:%M:%S"
+    format = "⏲ : %d-%m-%Y - %H:%M:%S"
 }
