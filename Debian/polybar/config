@@ -116,7 +116,7 @@ label =  %gb_used% / %gb_total%
 type = internal/cpu
 interval = 1
 format = <label>
-label =  %percentage%%
+label =  %percentage:2%%
 
 [module/temperature]
 type = internal/temperature
