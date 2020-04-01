@@ -77,7 +77,6 @@ label-mode-background = #950000
 label-focused = %index%
 label-focused-foreground = #ffffff
 label-focused-background = #3f3f3f
-;label-focused-underline = #fba922
 label-focused-underline = #046893
 label-focused-padding = 1.8
 label-unfocused = %index%
@@ -103,9 +102,14 @@ format-full = <label-full>
 label-charging = %percentage%% %time%h
 label-discharging = %percentage%% %time%h
 label-full =  %percentage%%
-ramp-capacity-0 =  
+ramp-capacity-4 = 
+ramp-capacity-3 = 
+ramp-capacity-2 =  
+ramp-capacity-1 = 
+ramp-capacity-0 =  
+ramp-capacity-0-foreground = #de0037
 animation-charging-0 = ⚡
-
+
 [module/memory]
 type = internal/memory
 interval = 1
@@ -130,6 +134,7 @@ format =  <label>
 format-warn = <label-warn>
 label = %temperature-c%
 label-warn = %temperature-c%
+label-warn-foreground = #f00
 
 [module/filesystem]
 type = internal/fs
