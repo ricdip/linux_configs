@@ -21,6 +21,12 @@ module-margin-right = 2
 line-size = 2
 enable-ipc = true
 
+; system tray settings
+tray-position = right
+tray-detached = false
+tray-maxsize = 18
+tray-padding = 1
+
 ;override-redirect = true
 ;wm-restack = i3
 
