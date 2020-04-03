@@ -11,7 +11,6 @@
 ;
 ;==========================================================
 
-
 [bar/mybar]
 
 width = 100%
@@ -19,6 +18,7 @@ height = 22
 module-margin-left = 2
 module-margin-right = 2
 line-size = 2
+locale = it_IT.UTF-8
 enable-ipc = true
 
 ; system tray settings
@@ -47,10 +47,10 @@ modules-right = wireless-network wired-network filesystem temperature cpu memory
 ; modules
 [module/date]
 type = internal/date
-date = %d/%m/%Y%
-time = %H:%M:%S
-format =  <label>
-label = %date% - %time%
+date =  %H:%M:%S
+date-alt =  %a %d/%m/%Y - %H:%M:%S
+label = %date%
+format = <label>
 
 [module/alsa]
 type = internal/alsa
@@ -155,7 +155,7 @@ label-unmounted = %mountpoint%  not mounted
 [module/wired-network]
 type = internal/network
 interface = enp4s0f2
-interval = 1
+interval = 2
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 label-connected =  %local_ip%
@@ -164,7 +164,7 @@ label-disconnected =  down
 [module/wireless-network]
 type = internal/network
 interface = wlp3s0
-interval = 1
+interval = 2
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 label-connected =  ( %signal%% %essid% ) %local_ip%
