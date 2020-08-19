@@ -170,8 +170,9 @@ command Pythonthis !python3 %
 command Gcc !gcc -fsyntax-only % && echo "No errors"
 command Gpp !g++ -fsyntax-only % && echo "No errors"
 
-map < :Bash
-
+map <S-Tab> :Bash
+imap jk <Esc>
+vmap jk <Esc>
 
 
 "------------------------------------------------------------
