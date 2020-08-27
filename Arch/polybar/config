@@ -1,0 +1,196 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;==========================================================
+
+[bar/mybar]
+
+width = 100%
+height = 22
+module-margin-left = 2
+module-margin-right = 2
+line-size = 2
+locale = it_IT.UTF-8
+enable-ipc = true
+
+; system tray settings
+tray-position = right
+tray-detached = false
+tray-maxsize = 18
+tray-padding = 1
+
+;override-redirect = true
+;wm-restack = i3
+
+; font
+font-0 = Terminus:size=12;0
+font-1 = Siji:pixelsize=11;1
+font-2 = Material Design Icons:style=Regular:size=12;2
+font-3 = NotoSans-Regular:size=12;0
+font-4 = Unifont:size=12;0
+font-5 = Noto Color Emoji:scale=10;2
+;font-6 = FontAwesome:style=Regular:size=11;0
+
+; modules order
+modules-left = i3 
+modules-right = wireless-network wired-network filesystem temperature cpu memory battery backlight alsa date powermenu 
+
+
+; modules
+[module/date]
+type = internal/date
+date =  %H:%M:%S
+date-alt =  %a %d/%m/%Y - %H:%M:%S
+label = %date%
+format = <label>
+
+[module/alsa]
+type = internal/alsa
+interval = 5
+format-volume = <ramp-volume> <label-volume>
+label-muted = muted
+label-muted-foreground = #66
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/backlight]
+type = internal/backlight
+card =  intel_backlight
+enable-scroll = false
+format = <ramp> <label>
+label = %percentage%%
+ramp-4 = 🌕
+ramp-3 = 🌔
+ramp-2 = 🌓
+ramp-1 = 🌒
+ramp-0 = 🌑
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+label-mode = %mode%
+label-mode-padding = 1.8
+label-mode-background = #950000
+label-focused = %index%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #046893
+label-focused-padding = 1.8
+label-unfocused = %index%
+label-unfocused-padding = 1.8
+label-visible = %index%
+label-visible-underline = #555555
+label-visible-padding = 1.8
+label-urgent = %index%
+label-urgent-foreground = #ffffff
+label-urgent-background = #950000
+label-urgent-padding = 1.8
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 98
+poll-interval = 2
+time-format = %H:%M
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <label-full>
+label-charging = %percentage%% %time%h
+label-discharging = %percentage%% %time%h
+label-full =  %percentage%%
+ramp-capacity-4 = 
+ramp-capacity-3 = 
+ramp-capacity-2 =  
+ramp-capacity-1 = 
+ramp-capacity-0 =  
+ramp-capacity-0-foreground = #de0037
+animation-charging-0 = ⚡
+
+[module/memory]
+type = internal/memory
+interval = 1
+format = <label>
+label =  %gb_used% / %gb_total%
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+format = <label>
+label =  %percentage:2%%
+
+[module/temperature]
+type = internal/temperature
+interval = 1
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+base-temperature = 20
+warn-temperature = 60
+units = true
+format =  <label>
+format-warn =  <label-warn>
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = #f00
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+interval = 2
+fixed-values = true
+format-mounted =  <label-mounted>
+format-unmounted =  <label-unmounted>
+label-mounted = %mountpoint%  %free%
+label-unmounted = %mountpoint%  not mounted 
+
+[module/wired-network]
+type = internal/network
+interface = enp4s0f2
+interval = 2
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected =  %local_ip%
+label-disconnected =  down
+
+[module/wireless-network]
+type = internal/network
+interface = wlp3s0
+interval = 2
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected =  ( %signal%% %essid% ) %local_ip%
+label-disconnected =  down
+
+[module/powermenu]
+type = custom/menu
+format-padding = 1
+format-spacing = 1
+expand-right = true
+label-open = ⏻
+label-close = ❌
+label-separator = |
+menu-0-0 =   
+menu-0-0-exec = menu-open-1
+menu-0-1 = ⏻
+menu-0-1-exec = menu-open-2
+menu-1-0 = Yes
+menu-1-0-exec = systemctl reboot
+menu-1-1 = No
+menu-2-0 = Yes
+menu-2-0-exec = systemctl poweroff
+menu-2-1 = No
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
