@@ -188,3 +188,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+if [ "$TMUX" = "" ];then
+    exec tmux
+fi
+
