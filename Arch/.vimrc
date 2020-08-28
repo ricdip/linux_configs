@@ -162,15 +162,10 @@ nnoremap <C-L> :nohl<CR><C-L>
 " My addings
 "
 set background=dark
+set clipboard=unnamedplus,unnamed
 
-command Bash !bash
-command Python !python
-command Pythonthis !python %
-command Gcc !gcc -fsyntax-only % && echo "No errors"
-command Gpp !g++ -fsyntax-only % && echo "No errors"
-
-map < :Bash
-
+imap jk <Esc>
+vmap jk <Esc>
 
 
 "------------------------------------------------------------

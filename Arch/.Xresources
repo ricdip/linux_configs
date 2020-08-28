@@ -1,0 +1,16 @@
+! xterm font
+xterm*faceName: Monospace
+xterm*faceSize: 12
+
+! xterm colors
+xterm*foreground: white 
+xterm*background: black
+
+! xterm deactivate scrollbar
+xterm*scrollBar: false
+
+! xterm custom copy and paste
+xterm*VT100*translations: #override \n\
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+
