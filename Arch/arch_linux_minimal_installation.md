@@ -136,7 +136,7 @@
 ###### (inside visudo, uncomment wheel and save)
 
 #### OTHER USEFUL PROGRAMS
-	pacman -S archey3 wget parted dosfstools zsh tmux ranger htop
+	pacman -S archey3 wget parted dosfstools zsh tmux ranger htop stow
 
 
 #### DISABLE BEEP IN CONSOLE TAB [OPTIONAL]
