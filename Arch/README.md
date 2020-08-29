@@ -1,3 +1,4 @@
-# linux_configs
+# Arch Linux dotfiles
 
-A set of personal Arch Linux configuration files.
+A set of personal Arch Linux dotfiles configured for stow.
+

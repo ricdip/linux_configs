@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if ! command -v stow &> /dev/null
+then
+    echo "command 'stow' not found"
+    echo "install it with 'pacman -S stow'"
+    exit
+fi
+
+stow --target=$HOME vim
+stow --target=$HOME Xresources
+stow --target=$HOME zsh
+stow --target=$HOME tmux
+stow --target=$HOME ranger
+stow --target=$HOME i3 
+stow --target=$HOME i3status
+stow --target=$HOME polybar
+
