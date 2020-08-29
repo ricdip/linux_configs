@@ -136,7 +136,7 @@
 ###### (inside visudo, uncomment wheel and save)
 
 #### OTHER USEFUL PROGRAMS
-	pacman -S archey3 wget parted dosfstools terminus-font zsh links lynx
+	pacman -S archey3 wget parted dosfstools zsh tmux ranger htop
 
 
 #### DISABLE BEEP IN CONSOLE TAB [OPTIONAL]
@@ -155,3 +155,32 @@
 	zsh
 ###### (inside zsh first boot wizard, choose option 0)
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#### WINDOW MANAGER INSTALLATION [i3]
+	pacman -S i3 i3-gaps
+
+#### DISPLAY MANAGER INSTALLATION [lightdm]
+	pacman -S lightdm lightdm-gtk-greeter
+	systemctl enable lightdm
+
+#### DISPLAY MANAGER INSTALLATION [gdm]
+	pacman -S gdm
+	systemctl enable gdm
+
+#### FONTS
+	pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-liberation ttf-droid ttf-inconsolata ttf-roboto terminus-font ttf-font-awesome
+
+#### WM ADDON PROGRAMS
+	pacman -S dmenu numlockx alsa-utils gvim
+
+#### SET X11-KEYMAP
+	localectl set-x11-keymap it
+
+#### INSTALL NETWORKMANAGER
+	pacman -S networkmanager
+	systemctl disable dhcpdc.service
+	systemctl enable NetworkManager.service
+	systemctl start NetworkManager.service
+
+#### INSTALL NETWORKMANAGER APPLET [OPTIONAL]
+	pacman -S network-manager-applet
