@@ -1,4 +1,4 @@
 # WSL dotfiles
 
-A set of personal Windows Linux Subsystem dotfiles configured for stow.
+A set of personal Windows Subsystem Linux dotfiles configured for stow.
 
