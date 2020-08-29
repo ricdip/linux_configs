@@ -1,3 +1,4 @@
-# linux_configs
+# Debian dotfiles
 
-A set of personal Debian configuration files.
+A set of personal Debian dotfiles configured for stow.
+
