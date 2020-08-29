@@ -168,7 +168,8 @@
 	systemctl enable gdm
 
 #### FONTS
-	pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-liberation ttf-droid ttf-inconsolata ttf-roboto terminus-font ttf-font-awesome
+	pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-liberation ttf-droid ttf-inconsolata ttf-roboto terminus-font ttf-font-awesome noto-fonts-emoji xorg-font-util bdf-unifont
+	yay -S siji
 
 #### WM ADDON PROGRAMS
 	pacman -S dmenu numlockx alsa-utils gvim
