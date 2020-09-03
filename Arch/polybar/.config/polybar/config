@@ -47,8 +47,8 @@ modules-right = wireless-network wired-network filesystem temperature cpu memory
 ; modules
 [module/date]
 type = internal/date
-date =  %H:%M:%S
-date-alt =  %a %d/%m/%Y - %H:%M:%S
+date = %H:%M:%S
+date-alt = %a %d/%m/%Y - %H:%M:%S
 label = %date%
 format = <label>
 
@@ -56,11 +56,11 @@ format = <label>
 type = internal/alsa
 interval = 5
 format-volume = <ramp-volume> <label-volume>
-label-muted = muted
+label-muted = muted
 label-muted-foreground = #66
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 =
+ramp-volume-1 =
+ramp-volume-2 =
 
 [module/backlight]
 type = internal/backlight
@@ -68,11 +68,11 @@ card =  intel_backlight
 enable-scroll = false
 format = <ramp> <label>
 label = %percentage%%
-ramp-4 = 🌕
-ramp-3 = 🌔
-ramp-2 = 🌓
-ramp-1 = 🌒
-ramp-0 = 🌑
+ramp-4 =
+ramp-3 =
+ramp-2 =
+ramp-1 =
+ramp-0 =
 
 [module/i3]
 type = internal/i3
@@ -107,26 +107,26 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
 label-charging = %percentage%% %time%h
 label-discharging = %percentage%% %time%h
-label-full =  %percentage%%
-ramp-capacity-4 = 
-ramp-capacity-3 = 
-ramp-capacity-2 =  
-ramp-capacity-1 = 
-ramp-capacity-0 =  
+label-full = %percentage%%
+ramp-capacity-4 =
+ramp-capacity-3 =
+ramp-capacity-2 =
+ramp-capacity-1 =
+ramp-capacity-0 =
 ramp-capacity-0-foreground = #de0037
-animation-charging-0 = ⚡
+animation-charging-0 =
 
 [module/memory]
 type = internal/memory
 interval = 1
 format = <label>
-label =  %gb_used% / %gb_total%
+label = %gb_used% / %gb_total%
 
 [module/cpu]
 type = internal/cpu
 interval = 1
 format = <label>
-label =  %percentage:2%%
+label = %percentage:2%%
 
 [module/temperature]
 type = internal/temperature
@@ -136,8 +136,8 @@ hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 base-temperature = 20
 warn-temperature = 60
 units = true
-format =  <label>
-format-warn =  <label-warn>
+format = <label>
+format-warn = <label-warn>
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = #f00
@@ -147,8 +147,8 @@ type = internal/fs
 mount-0 = /
 interval = 2
 fixed-values = true
-format-mounted =  <label-mounted>
-format-unmounted =  <label-unmounted>
+format-mounted = <label-mounted>
+format-unmounted = <label-unmounted>
 label-mounted = %mountpoint%  %free%
 label-unmounted = %mountpoint%  not mounted 
 
@@ -158,8 +158,8 @@ interface = enp4s0f2
 interval = 2
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected =  %local_ip%
-label-disconnected =  down
+label-connected = %local_ip%
+label-disconnected = down
 
 [module/wireless-network]
 type = internal/network
@@ -167,20 +167,20 @@ interface = wlp3s0
 interval = 2
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected =  ( %signal%% %essid% ) %local_ip%
-label-disconnected =  down
+label-connected = ( %signal%% %essid% ) %local_ip%
+label-disconnected = down
 
 [module/powermenu]
 type = custom/menu
 format-padding = 1
 format-spacing = 1
 expand-right = true
-label-open = ⏻
-label-close = ❌
+label-open = 
+label-close = 
 label-separator = |
-menu-0-0 =   
+menu-0-0 =
 menu-0-0-exec = menu-open-1
-menu-0-1 = ⏻
+menu-0-1 =
 menu-0-1-exec = menu-open-2
 menu-1-0 = Yes
 menu-1-0-exec = systemctl reboot

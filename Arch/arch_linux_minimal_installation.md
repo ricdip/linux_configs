@@ -175,7 +175,7 @@
         makepkg -si
 
 #### WM ADDON PROGRAMS
-	pacman -S dmenu numlockx alsa-utils gvim
+	pacman -S dmenu numlockx alsa-utils gvim xclip
 
 #### SET X11-KEYMAP
 	localectl set-x11-keymap it
