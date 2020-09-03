@@ -170,6 +170,9 @@
 #### FONTS
 	pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-liberation ttf-droid ttf-inconsolata ttf-roboto terminus-font ttf-font-awesome noto-fonts-emoji xorg-font-util bdf-unifont
 	yay -S siji
+        git clone https://aur.archlinux.org/ttf-material-design-icons-git.git
+        cd ttf-material-icons-git
+        makepkg -si
 
 #### WM ADDON PROGRAMS
 	pacman -S dmenu numlockx alsa-utils gvim
