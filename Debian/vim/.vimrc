@@ -164,15 +164,16 @@ nnoremap <C-L> :nohl<CR><C-L>
 set background=dark
 set clipboard=unnamedplus,unnamed
 
-command Bash !bash
-command Python !python3
-command Pythonthis !python3 %
-command Gcc !gcc -fsyntax-only % && echo "No errors"
-command Gpp !g++ -fsyntax-only % && echo "No errors"
-
-map <S-Tab> :Bash
 imap jk <Esc>
 vmap jk <Esc>
 
+" plugins (vim-plug plugin manager: https://www.github.com/junegunn/vim-plug)
+call plug#begin('~/.vim/plugged')
+
+Plug 'terryma/vim-multiple-cursors'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
+
+call plug#end()
 
 "------------------------------------------------------------
