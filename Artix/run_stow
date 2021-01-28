@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if ! command -v stow &> /dev/null
+then
+    echo "command 'stow' not found"
+    echo "install it with 'pacman -Sy stow'"
+    exit
+fi
+
+stow --target=$HOME vim
+stow --target=$HOME zsh
