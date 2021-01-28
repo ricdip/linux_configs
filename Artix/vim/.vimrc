@@ -165,15 +165,15 @@ nnoremap <C-L> :nohl<CR><C-L>
 set background=dark
 set clipboard=unnamedplus,unnamed
 
-imap jk <Esc>
-vmap jk <Esc>
+inoremap jk <Esc>
+cnoremap jk <Esc>
 
 " plugins (vim-plug plugin manager: https://www.github.com/junegunn/vim-plug)
 call plug#begin('~/.vim/plugged')
 
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
