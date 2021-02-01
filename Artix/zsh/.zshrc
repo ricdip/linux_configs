@@ -115,6 +115,7 @@ alias gadd='git add .'
 alias gcommit='git commit -m'
 alias gpushtomaster='git push -u origin master'
 alias gstatus='git status'
+alias gdiff='git diff'
 
 # custom functions
 function chpwd(){
