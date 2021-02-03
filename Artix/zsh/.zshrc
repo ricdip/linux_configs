@@ -103,11 +103,15 @@ source $ZSH/oh-my-zsh.sh
 
 ##### MY CONFIGS #####
 
+# vim mode
+bindkey -v
+
 alias ls='ls -h --color=auto --group-directories-first'
 alias ll='ls -la'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias getextip="curl http://ipecho.net/plain; echo"
+alias rg='ranger'
 
 # git
 alias ggraphlog='git log --all --decorate --oneline --graph'
@@ -117,6 +121,10 @@ alias gpushtomaster='git push -u origin master'
 alias gstatus='git status'
 alias gdiff='git diff'
 
+# openrc
+alias rbt='openrc-shutdown -r now'
+alias off='openrc-shutdown -p now'
+
 # custom functions
 function chpwd(){
     count=$(ll | wc -l);
@@ -124,6 +132,10 @@ function chpwd(){
         ls;
     fi
     unset count
+}
+
+function fdvim(){
+    fd $@ | vim -
 }
 
 # >>> conda initialize >>>
