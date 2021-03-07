@@ -111,7 +111,7 @@ alias ll='ls -la'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias getextip="curl http://ipecho.net/plain; echo"
-alias rg='ranger'
+alias rgr='ranger'
 
 # git
 alias ggraphlog='git log --all --decorate --oneline --graph'
