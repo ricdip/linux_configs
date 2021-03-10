@@ -122,8 +122,8 @@ alias gstatus='git status'
 alias gdiff='git diff'
 
 # openrc
-alias rbt='openrc-shutdown -r now'
-alias off='openrc-shutdown -p now'
+alias rbt='sudo openrc-shutdown -r now'
+alias off='sudo openrc-shutdown -p now'
 
 # custom functions
 function chpwd(){
