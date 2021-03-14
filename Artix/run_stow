@@ -8,5 +8,6 @@ then
 fi
 
 stow --target=$HOME vim
+stow --target=$HOME nvim
 stow --target=$HOME zsh
 stow --target=$HOME i3
