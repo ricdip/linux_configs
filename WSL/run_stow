@@ -7,9 +7,10 @@ then
     exit
 fi
 
-stow --target=$HOME bash
-stow --target=$HOME vim
-stow --target=$HOME zsh
-stow --target=$HOME tmux
-stow --target=$HOME ranger
+#stow --target=$HOME bash
+#stow --target=$HOME vim
+stow --target=$HOME nvim
+#stow --target=$HOME zsh
+#stow --target=$HOME tmux
+#stow --target=$HOME ranger
 
