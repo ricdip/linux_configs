@@ -1,6 +1,6 @@
 ! xterm font
 xterm*faceName: Terminus
-xterm*faceSize: 15
+xterm*faceSize: 13
 
 ! xterm colors
 xterm*foreground: white 

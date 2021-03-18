@@ -42,14 +42,15 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 #bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Terminus-12'
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -183,3 +184,26 @@ bar {
         position top
         status_command i3status
 }
+
+
+# light
+bindsym $mod+F5 exec xbacklight -10
+bindsym $mod+F6 exec xbacklight +10
+
+# volume
+bindsym $mod+F10 exec amixer sset Master toggle
+bindsym $mod+F11 exec amixer -D pulse sset Master 5%-
+bindsym $mod+F12 exec amixer -D pulse sset Master 5%+
+
+# numlock on on startup
+exec_always --no-startup-id numlockx on
+
+## background
+# if we are using feh:
+#exec_always feh --bg-scale $HOME/Scaricati/adwaita-night.jpg
+# else:
+exec_always --no-startup-id hsetroot -solid "#000000"
+
+# redshift
+exec --no-startup-id redshift -v
+

@@ -163,7 +163,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 " My addings
 "
 set background=dark
-set clipboard=unnamedplus,unnamed
+set clipboard+=unnamedplus
 
 inoremap jk <Esc>
 cnoremap jk <Esc>
