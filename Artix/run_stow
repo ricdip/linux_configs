@@ -11,6 +11,9 @@ stow --target=$HOME vim
 stow --target=$HOME nvim
 stow --target=$HOME zsh
 stow --target=$HOME i3
-stow --target=$HOME i3status
+#stow --target=$HOME i3status
+stow --target=$HOME py3status
 stow --target=$HOME Xresources
 stow --target=$HOME redshift
+sudo stow --target=/usr/local/bin scripts
+
