@@ -189,8 +189,8 @@ bar {
 
 
 # light
-bindsym XF86MonBrightnessDown --no-startup-id exec xbacklight -5
-bindsym XF86MonBrightnessUp --no-startup-id exec xbacklight +5
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -5
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +5
 
 # numlock on on startup
 exec_always --no-startup-id numlockx on
