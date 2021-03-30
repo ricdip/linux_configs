@@ -46,6 +46,8 @@ ZSH_THEME="fishy"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -69,7 +71,7 @@ ZSH_THEME="fishy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git docker docker-compose kubectl minikube)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,11 +101,32 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval `dircolors ~/.dircolors`
+##### MY CONFIGS #####
 
-alias rg='ranger'
-alias getexip="curl http://ipecho.net/plain; echo"
+# vim mode
+bindkey -v
 
-if [ "$TMUX" = "" ];then
-    exec tmux
-fi
+alias ls='ls -h --color=auto --group-directories-first'
+alias ll='ls -la'
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias getextip="curl http://ipecho.net/plain; echo"
+alias rgr='ranger'
+
+# git
+alias ggraphlog='git log --all --decorate --oneline --graph'
+alias gadd='git add .'
+alias gcommit='git commit -m'
+alias gpushtomaster='git push -u origin master'
+alias gstatus='git status'
+alias gdiff='git diff'
+
+
+# custom functions
+function chpwd(){
+    count=$(ll | wc -l);
+    if [ "$count" -lt "30" ]; then
+        ls;
+    fi
+    unset count
+}
