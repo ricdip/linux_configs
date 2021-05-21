@@ -103,6 +103,9 @@ source $ZSH/oh-my-zsh.sh
 
 ##### MY CONFIGS #####
 
+# disable beel
+unsetopt BEEP
+
 # vim mode
 bindkey -v
 
