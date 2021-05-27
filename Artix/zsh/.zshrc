@@ -121,6 +121,8 @@ alias gpushtomaster='git push -u origin master'
 alias gstatus='git status'
 alias gdiff='git diff'
 
+alias glazy='lazygit'
+
 # openrc
 alias rbt='sudo openrc-shutdown -r now'
 alias off='sudo openrc-shutdown -p now'
