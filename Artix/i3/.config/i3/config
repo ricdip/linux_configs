@@ -193,7 +193,11 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -5
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +5
 
 # volume
-bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle && $refresh_i3status
+# mute toggle problem: headphone and speaker
+#bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle && $refresh_i3status
+# temporary set audio to 0% as mute
+bindsym XF86AudioMute exec --no-startup-id amixer -D default sset Master 0% && $refresh_i3status
+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D default sset Master 5%- && $refresh_i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D default sset Master 5%+ && $refresh_i3status
 
