@@ -71,7 +71,7 @@ ZSH_THEME="fishy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose kubectl minikube)
+plugins=(git docker docker-compose kubectl minikube jump)
 
 source $ZSH/oh-my-zsh.sh
 
