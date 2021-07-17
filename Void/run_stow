@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if ! command -v stow &> /dev/null
+then
+    echo "command 'stow' not found"
+    echo "install it with 'xbps-install -Su stow'"
+    exit
+fi
+
+stow --target=$HOME nvim
+stow --target=$HOME zsh
+stow --target=$HOME i3
+stow --target=$HOME i3status
