@@ -124,7 +124,7 @@ alias gdiff='git diff'
 
 alias glazy='lazygit'
 
-# openrc
+# init
 alias rbt='sudo init 6'
 alias off='sudo init 0'
 
