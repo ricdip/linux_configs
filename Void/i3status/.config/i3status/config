@@ -17,7 +17,7 @@ order += "memory"
 order += "tztime local"
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
+        format_up = "E: %ip"
         format_down = "E: down"
 }
 
@@ -32,5 +32,5 @@ memory {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%d-%m-%Y - %H:%M:%S"
 }
