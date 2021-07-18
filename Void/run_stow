@@ -11,3 +11,4 @@ stow --target=$HOME nvim
 stow --target=$HOME zsh
 stow --target=$HOME i3
 stow --target=$HOME i3status
+stow --target=$HOME xinit
