@@ -10,5 +10,9 @@ fi
 stow --target=$HOME nvim
 stow --target=$HOME zsh
 stow --target=$HOME i3
-stow --target=$HOME i3status
+stow --target=$HOME py3status
 stow --target=$HOME xinit
+
+# suckless
+stow --target=$HOME st
+stow --target=$HOME scroll
