@@ -7,7 +7,7 @@ then
     exit
 fi
 
-stow --target=$HOME vim
+#stow --target=$HOME vim
 stow --target=$HOME nvim
 stow --target=$HOME zsh
 stow --target=$HOME i3
@@ -15,5 +15,5 @@ stow --target=$HOME i3
 stow --target=$HOME py3status
 stow --target=$HOME Xresources
 stow --target=$HOME redshift
-stow --target=$HOME ranger
+#stow --target=$HOME ranger
 sudo stow --target=/usr/local/bin scripts
