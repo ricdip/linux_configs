@@ -19,3 +19,11 @@ set clipboard+=unnamedplus
 
 inoremap jk <Esc>
 cnoremap jk <Esc>
+
+"call plug#begin('~/.config/nvim/plugged')
+
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"call plug#end()
+
+"let g:coc_global_extensions = ['coc-clangd']
