@@ -15,15 +15,21 @@ set title
 
 set confirm
 
+" enable copy-paste from clipboard
 set clipboard+=unnamedplus
 
+" custom mapping
 inoremap jk <Esc>
 cnoremap jk <Esc>
 
-"call plug#begin('~/.config/nvim/plugged')
+" vim-plug
+call plug#begin('~/.config/nvim/plugged')
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" coc.nvim requires nodejs
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-"call plug#end()
+call plug#end()
 
-"let g:coc_global_extensions = ['coc-clangd']
+" coc
+" coc-clangd requires clangd
+let g:coc_global_extensions = ['coc-clangd', 'coc-jedi']
