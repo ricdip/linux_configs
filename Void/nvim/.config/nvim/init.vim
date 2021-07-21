@@ -15,6 +15,9 @@ set title
 
 set confirm
 
+set termguicolors
+set background=dark
+
 " enable copy-paste from clipboard
 set clipboard+=unnamedplus
 
@@ -22,14 +25,24 @@ set clipboard+=unnamedplus
 inoremap jk <Esc>
 cnoremap jk <Esc>
 
-" vim-plug
+"" vim-plug
 call plug#begin('~/.config/nvim/plugged')
 
 " coc.nvim requires nodejs
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" themes
+Plug 'morhetz/gruvbox'
+"Plug 'metalelf0/base16-black-metal-scheme'
 
 call plug#end()
 
-" coc
+"" coc
 " coc-clangd requires clangd
 let g:coc_global_extensions = ['coc-clangd', 'coc-jedi']
+
+" theme init
+colorscheme gruvbox
+"colorscheme base16-black-metal-bathory
+
+" theme config
+let g:gruvbox_contrast_dark = "soft"
