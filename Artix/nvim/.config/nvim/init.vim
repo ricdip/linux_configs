@@ -162,9 +162,12 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 " My addings
 "
-"set background=dark
+
+set background=dark
+set termguicolors
+"set t_Co=256
+
 set clipboard+=unnamedplus
-set t_Co=256
 
 inoremap jk <Esc>
 cnoremap jk <Esc>
@@ -178,7 +181,8 @@ Plug 'lervag/vimtex'
 Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-"Plug 'metalelf0/base16-black-metal-scheme'
+" themes
+Plug 'metalelf0/base16-black-metal-scheme'
 
 call plug#end()
 
@@ -188,6 +192,7 @@ let g:coc_global_extensions = ['coc-clangd', 'coc-git', 'coc-go', 'coc-prettier'
 " vimtex auto pdf viewer
 let g:vimtex_view_method = 'zathura'
 
-"colorscheme base16-black-metal
+" theme init
+colorscheme base16-black-metal-bathory
 
 "------------------------------------------------------------
