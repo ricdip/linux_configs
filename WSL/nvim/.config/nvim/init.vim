@@ -163,7 +163,8 @@ nnoremap <C-L> :nohl<CR><C-L>
 " My addings
 "
 set background=dark
-set clipboard=unnamedplus,unnamed
+set termguicolors
+set clipboard+=unnamedplus
 
 inoremap jk <Esc>
 cnoremap jk <Esc>
@@ -177,6 +178,15 @@ Plug 'lervag/vimtex'
 Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" themes
+Plug 'metalelf0/base16-black-metal-scheme'
+
 call plug#end()
+
+" coc extensions
+let g:coc_global_extensions = ['coc-clangd', 'coc-git', 'coc-go', 'coc-jedi']
+
+" theme init
+colorscheme base16-black-metal-bathory
 
 "------------------------------------------------------------
