@@ -31,8 +31,8 @@ call plug#begin('~/.config/nvim/plugged')
 " coc.nvim requires nodejs
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " themes
-Plug 'morhetz/gruvbox'
-"Plug 'metalelf0/base16-black-metal-scheme'
+"Plug 'morhetz/gruvbox'
+Plug 'metalelf0/base16-black-metal-scheme'
 
 call plug#end()
 
@@ -41,8 +41,8 @@ call plug#end()
 let g:coc_global_extensions = ['coc-clangd', 'coc-jedi']
 
 " theme init
-colorscheme gruvbox
-"colorscheme base16-black-metal-bathory
+"colorscheme gruvbox
+colorscheme base16-black-metal-bathory
 
 " theme config
-let g:gruvbox_contrast_dark = "soft"
+"let g:gruvbox_contrast_dark = "soft"
