@@ -177,6 +177,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'lervag/vimtex'
 Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'twanh/nvim-pydoc'
 
 " themes
 Plug 'metalelf0/base16-black-metal-scheme'
