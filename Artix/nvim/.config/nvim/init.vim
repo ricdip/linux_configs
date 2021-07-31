@@ -165,7 +165,6 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 set background=dark
 set termguicolors
-"set t_Co=256
 
 set clipboard+=unnamedplus
 
@@ -180,6 +179,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'lervag/vimtex'
 Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'twanh/nvim-pydoc'
 
 " themes
 Plug 'metalelf0/base16-black-metal-scheme'
@@ -194,5 +194,10 @@ let g:vimtex_view_method = 'zathura'
 
 " theme init
 colorscheme base16-black-metal-bathory
+
+" autocmd commands
+autocmd BufWritePost *.py execute ':!black %'
+autocmd BufWritePost *.py edit
+
 
 "------------------------------------------------------------
