@@ -189,4 +189,9 @@ let g:coc_global_extensions = ['coc-clangd', 'coc-git', 'coc-go', 'coc-jedi']
 " theme init
 colorscheme base16-black-metal-bathory
 
+" autocmd commands
+autocmd BufWritePost *.py execute ':!black %'
+autocmd BufWritePost *.py edit
+
+
 "------------------------------------------------------------
