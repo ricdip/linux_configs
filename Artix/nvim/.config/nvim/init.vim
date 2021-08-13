@@ -177,7 +177,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'lervag/vimtex'
-Plug 'sbdchd/neoformat'
+"Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'twanh/nvim-pydoc'
 
@@ -187,7 +187,11 @@ Plug 'metalelf0/base16-black-metal-scheme'
 call plug#end()
 
 " coc extensions
-let g:coc_global_extensions = ['coc-clangd', 'coc-git', 'coc-go', 'coc-prettier', 'coc-jedi', 'coc-sh', 'coc-texlab', 'coc-tsserver', 'coc-vimtex']
+let g:coc_global_extensions = ['coc-clangd', 'coc-git', 'coc-go', 'coc-pyright', 'coc-sh', 'coc-texlab', 'coc-vimtex']
+
+" 'coc-jedi'
+" 'coc-prettier'
+" 'coc-tsserver'
 
 " vimtex auto pdf viewer
 let g:vimtex_view_method = 'zathura'
