@@ -38,7 +38,7 @@ call plug#end()
 
 "" coc
 " coc-clangd requires clangd
-let g:coc_global_extensions = ['coc-clangd', 'coc-jedi']
+let g:coc_global_extensions = ['coc-clangd', 'coc-pyright']
 
 " theme init
 "colorscheme gruvbox
