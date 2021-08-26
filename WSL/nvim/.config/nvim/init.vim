@@ -175,7 +175,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'lervag/vimtex'
-Plug 'sbdchd/neoformat'
+"Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'twanh/nvim-pydoc'
 
@@ -185,7 +185,9 @@ Plug 'metalelf0/base16-black-metal-scheme'
 call plug#end()
 
 " coc extensions
-let g:coc_global_extensions = ['coc-clangd', 'coc-git', 'coc-go', 'coc-jedi']
+let g:coc_global_extensions = ['coc-clangd', 'coc-git', 'coc-go', 'coc-pyright']
+
+" 'coc-jedi'
 
 " theme init
 colorscheme base16-black-metal-bathory
