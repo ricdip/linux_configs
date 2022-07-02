@@ -8,3 +8,4 @@ then
 fi
 
 stow --target=$HOME zsh
+stow --target=$HOME nvim

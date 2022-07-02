@@ -4,4 +4,4 @@ typeset -U PATH path
 path=("$path[@]")
 export PATH
 
-export EDITOR=vim
+export EDITOR=nvim
