@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/home/user/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -23,13 +23,14 @@ ZSH_THEME="fishy"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+# export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -44,9 +45,6 @@ ZSH_THEME="fishy"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -70,10 +68,7 @@ ZSH_THEME="fishy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git jump fd fzf zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
-
-# FZF plugin settings
-DISABLE_FZF_AUTO_COMPLETION="false"
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,43 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-##### MY CONFIGS #####
+if [ "$TMUX" = "" ];then
+    exec tmux
+fi
 
-# term rate speed
-xset r rate 300 40
-
-# vim mode
-bindkey -v
-
-alias ls='ls -h --color=auto --group-directories-first'
-alias ll='ls -la'
-alias diff='diff --color=auto'
-alias grep='grep --color=auto'
-alias getextip="curl http://ipecho.net/plain; echo"
-
-# git
-alias ggraphlog='git log --all --decorate --oneline --graph'
-alias gadd='git add .'
-alias gcommit='git commit -m'
-alias gpushtomaster='git push -u origin master'
-alias gstatus='git status'
-alias gdiff='git diff'
-
-alias glazy='lazygit'
-
-# systemd
-alias rbt='sudo systemctl reboot'
-alias off='sudo systemctl poweroff'
-
-# custom functions
-function chpwd(){
-    count=$(ll | wc -l);
-    if [ "$count" -lt "30" ]; then
-        ls;
-    fi
-    unset count
-}
-
-function fdvim(){
-    fd $@ | vim -
-}
