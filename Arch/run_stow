@@ -7,5 +7,11 @@ then
     exit
 fi
 
+echo "zsh: stow"
 stow --target=$HOME zsh
+echo "nvim: stow"
 stow --target=$HOME nvim
+echo "redshift: stow"
+stow --target=$HOME redshift
+echo "redshift: systemctl enable"
+systemctl --user enable redshift.service

@@ -253,3 +253,22 @@
 	git clone https://aur.archlinux.org/ttf-material-design-icons-git.git
 	cd ttf-material-icons-git
 	makepkg -si
+
+
+#### SUBLIME-TEXT
+Installed plugins:
+
+- Alignment
+- BracketHighlighter
+- Emmet
+- Emmet Css Snippets
+- GitGutter
+- Package Control
+- Predawn
+- SideBarEnhacements
+- Themr
+- Color Highlighter
+- ColorPicker
+
+Theme:
+- Predawn
