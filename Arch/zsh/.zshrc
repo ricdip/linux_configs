@@ -131,6 +131,10 @@ alias glazy='lazygit'
 alias rbt='sudo systemctl reboot'
 alias off='sudo systemctl poweroff'
 
+# pacman shortcuts
+alias pacman-autoremove-check='pacman -Qdt'
+alias pacman-autoremove='sudo pacman -Rs $(pacman -Qdtq)'
+
 # custom functions
 function chpwd(){
     count=$(ll | wc -l);
