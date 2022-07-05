@@ -174,7 +174,7 @@
 
 
 #### OTHER USEFUL PROGRAMS
-	pacman -S archey3 wget parted gparted dosfstools zsh htop stow fd fzf mpv npm
+	pacman -S archey3 wget parted gparted dosfstools zsh htop stow fd fzf mpv npm redshift
 
 ###### (for gparted)
 	pacman -S jfsutils f2fs-tools btrfs-progs exfatprogs reiserfsprogs udftools xfsprogs nilfs-utils gpart ntfs-3g
@@ -272,3 +272,25 @@ Installed plugins:
 
 Theme:
 - Predawn
+
+
+#### RKHUNTER
+	pacman -S rkhunter
+	sudo rkhunter --versioncheck
+	sudo rkhunter --update
+	sudo rkhunter --propupd
+	sudo rkhunter --check
+
+
+#### ARCH LINUX HIBERNATION
+- make sure to have a swap partition with size 1.5 x RAM size
+- file /etc/mkinitcpio.conf:
+	- add "resume" hook to HOOKS: HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
+
+- sudo mkinitcpio -P
+- file /etc/default/grub:
+	- run `sudo blkid /dev/sdaY -s UUID` to get swap partition UUID
+	- add swap partition UUID to resume kernel parameter: `GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=<swap_partition_uuid>"`
+
+- sudo grub-mkconfig -o /boot/grub/grub.cfg
+- reboot computer
