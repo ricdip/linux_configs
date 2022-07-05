@@ -282,7 +282,7 @@ Theme:
 	sudo rkhunter --check
 
 
-#### ARCH LINUX HIBERNATION
+#### ENABLE HIBERNATION
 - make sure to have a swap partition with size 1.5 x RAM size
 - file /etc/mkinitcpio.conf:
 	- add "resume" hook to HOOKS: HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
@@ -294,3 +294,8 @@ Theme:
 
 - sudo grub-mkconfig -o /boot/grub/grub.cfg
 - reboot computer
+
+
+#### DISABLE BLUETOOTH
+	rfkill list
+	rkkill block <bluetooth_device>
