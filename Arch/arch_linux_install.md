@@ -229,7 +229,7 @@
 
 
 #### WM (i3) ADDON PROGRAMS
-	pacman -S dmenu numlockx gvim xclip xorg-xfd
+	pacman -S dmenu numlockx gvim xclip xorg-xfd rxvt-unicode
 
 
 #### DISPLAY MANAGER INSTALLATION [lightdm]
