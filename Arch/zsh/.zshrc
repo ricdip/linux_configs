@@ -106,13 +106,14 @@ source $ZSH/oh-my-zsh.sh
 ##### MY CONFIGS #####
 
 # term rate speed
-xset r rate 300 40
+if xhost >& /dev/null ;then
+    xset r rate 300 40
+fi
 
 # vim mode
 bindkey -v
 
 alias ls='ls -h --color=auto --group-directories-first'
-alias ll='ls -la'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias getextip="curl http://ipecho.net/plain; echo"
