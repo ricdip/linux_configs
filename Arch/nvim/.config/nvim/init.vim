@@ -168,6 +168,8 @@ set termguicolors
 
 set clipboard+=unnamedplus
 
+set laststatus=1
+
 inoremap jk <Esc>
 cnoremap jk <Esc>
 
