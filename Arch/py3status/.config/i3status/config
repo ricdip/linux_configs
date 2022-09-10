@@ -1,0 +1,69 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 5
+}
+
+#order += "ipv6"
+order += "wireless _first_"
+#order += "ethernet _first_"
+order += "disk /"
+order += "sysdata"
+order += "battery all"
+order += "backlight"
+order += "volume master"
+order += "cpu_temperature 0"
+order += "tztime local"
+
+wireless _first_ {
+        format_up = "W: (%quality at %essid ) %ip"
+        format_down = "W: down"
+}
+
+ethernet _first_ {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+disk "/" {
+        format = "/ %avail"
+}
+
+sysdata {
+    format = "[\?color=cpu CPU {cpu_usage}%] / [\?color=mem Mem {mem_used}/{mem_total} GB]"
+    cache_timeout = 2
+}
+
+battery all {
+        format = "%status %percentage"
+}
+
+backlight {
+    format = "[\?color=#3D9AF9 ☀ {level}%]"
+    cache_timeout = 1
+}
+
+volume master {
+    format = "♪ %volume"
+    format_muted = "♪ muted (%volume)"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+cpu_temperature 0 {
+    format = "%degrees°C"
+    path = "/sys/class/hwmon/hwmon3/temp1_input"
+}
+
+tztime local {
+        #format = "%Y-%m-%d %H:%M:%S"
+        format = "%a %d/%m/%Y - %H:%M:%S"
+}
