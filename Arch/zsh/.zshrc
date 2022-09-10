@@ -117,9 +117,12 @@ alias ls='ls -h --color=auto --group-directories-first'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias getextip="curl http://ipecho.net/plain; echo"
+alias n='nvim'
+alias v='vim'
 
 # git
 alias ggraphlog='git log --all --decorate --oneline --graph'
+alias glog='git log --name-status'
 alias gadd='git add .'
 alias gcommit='git commit -m'
 alias gpushtomaster='git push -u origin master'
@@ -131,6 +134,8 @@ alias glazy='lazygit'
 # systemd
 alias rbt='sudo systemctl reboot'
 alias off='sudo systemctl poweroff'
+alias susp='sudo systemctl suspend'
+alias hbt='sudo systemctl hibernate'
 
 # pacman shortcuts
 alias pacman-autoremove-check='pacman -Qdt'
