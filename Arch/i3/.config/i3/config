@@ -183,6 +183,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         position top
+        # applet icons on primary screen
+        tray_output primary
         status_command py3status
 }
 
