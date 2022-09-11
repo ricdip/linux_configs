@@ -134,7 +134,6 @@
 #### INSTALL USEFUL PROGRAMS
 	pacman -S networkmanager network-manager-applet openssh vim git
 	systemctl enable NetworkManager.service
-	systemctl enable sshd
 
 
 #### REBOOT
@@ -161,9 +160,30 @@
 
 
 #### XORG INSTALLATION [MINIMAL]
-	pacman -S xorg xorg-xinit xorg-fonts xterm
-	startx
+	pacman -S xorg xorg-xinit xorg-fonts xterm xorg-xhost startx xorg-xrandr arandr
 
+#### GRAPHICS DRIVERS
+	pacman -S mesa mesa-utils 
+
+#### OPTIONAL GRAPHICS DRIVERS
+	pacman -S xf86-video-intel xf86-video-nouveau vulkan-intel vulkan-mesa-layers
+
+#### GRAPHICS ADDONS
+	pacman -S glxinfo
+
+#### GRAPHICS BENCHMARKING
+	yay -S glmark2-git
+
+#### GENERATE XORG CONFIG (before startx)
+	X -configure
+
+- copy xorg.conf.new file in directory /etc/X11 as xorg.conf
+- inside xorg.conf file, for both devices Card0 and Card1 (graphics cards) choose Driver "modesetting"
+- after startx you can see xorg log in file /var/log/Xorg.0.log
+- you can test graphics card with command line program "glxgears"
+
+#### INSTALL NVIDIA DRIVERS
+	pacman -S nvidia nvidia-utils
 
 #### USER CREATION
 	useradd -m -g wheel -s /bin/bash riccardo
@@ -174,10 +194,12 @@
 
 
 #### OTHER USEFUL PROGRAMS
-	pacman -S archey3 wget parted gparted dosfstools zsh htop stow fd fzf mpv npm redshift
+	pacman -S archey3 wget parted gparted zsh htop stow fd fzf mpv vlc npm redshift nvtop dunst acpi tree
+
+	yay -S inxi google-chrome sublime-text
 
 ###### (for gparted)
-	pacman -S jfsutils f2fs-tools btrfs-progs exfatprogs reiserfsprogs udftools xfsprogs nilfs-utils gpart ntfs-3g
+	pacman -S jfsutils f2fs-tools btrfs-progs exfatprogs reiserfsprogs udftools xfsprogs nilfs-utils gpart ntfs-3g dosfstools
 
 
 #### DISABLE BEEP IN CONSOLE TAB [OPTIONAL]
@@ -228,7 +250,7 @@
 	pacman -S i3 i3-gaps
 
 
-#### WM (i3) ADDON PROGRAMS
+#### WM ADDON PROGRAMS [i3]
 	pacman -S dmenu numlockx gvim xclip xorg-xfd rxvt-unicode
 
 
@@ -299,3 +321,7 @@ Theme:
 #### DISABLE BLUETOOTH
 	rfkill list
 	rkkill block <bluetooth_device>
+
+
+#### CODING PROGRAMS
+	pacman -S vscode
