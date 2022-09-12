@@ -188,6 +188,24 @@ localectl set-x11-keymap it
 #### GRAPHICS BENCHMARKING
 	yay -S glmark2-git
 
+- run benchmarks:
+	```
+	glmark2
+	optirun glmark2
+	
+	glxgears
+	optirun glxgears
+
+	vblank_mode=0 glxgears
+	vblank_mode=0 optirun glxgears
+
+	glxspheres64
+	optirun glxspheres64
+
+	vblank_mode=0 glxspheres64
+	vblank_mode=0 optirun glxspheres64
+	```
+
 #### INSTALL NVIDIA DRIVERS [OPTIONAL]
 	pacman -Rs nvidia nvidia-utils
 	pacman -S linux-headers
@@ -230,6 +248,8 @@ localectl set-x11-keymap it
 				Driver "modesetting"
 				BusID "PCI:0:2:0"
 			EndSection
+
+- install primus: `pacman -S primus`
 
 #### GENERATE XORG CONFIG (before startx, if we will not use Bumblebee)
 	X -configure
