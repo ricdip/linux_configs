@@ -38,23 +38,26 @@
 	fdisk -l
 	parted --align=optimal /dev/sda
 
-###### (inside parted)
-	mkpart
-		swap
-		linux-swap
-		<start>GB
-		<end>GB
-	
+- inside parted:
+	```
 	mkpart
 		rootfs
 		ext4
 		<start>GB
-		100%
+		<end>GB
 
-###### (after closing parted)
+	mkpart
+		swap
+		linux-swap
+		<start>GB
+		100%
+	```
+
+- after closing parted:
+	```
 	mkfs.ext4 /dev/sdaX
 	mkswap /dev/sdaY
-
+	```
 
 ##### MOUNT FILESYSTEMS
 	mount /dev/sdaX /mnt
@@ -87,21 +90,27 @@
 
 
 #### SET LOCALIZATION
-###### (uncomment it&#95;utf-8 and it&#95;iso [for italian language] in locale.gen file)
-	vim /etc/locale.gen
-	locale-gen
-	echo "LANG=it_IT.UTF-8" >> /etc/locale.conf
-	echo "KEYMAP=it" >> /etc/vconsole.conf
-	localectl set-x11-keymap it
+```
+vim /etc/locale.gen
+```
 
+- uncomment it&#95;utf-8 and it&#95;iso [for italian language] in locale.gen file
+
+```
+locale-gen
+echo "LANG=it_IT.UTF-8" >> /etc/locale.conf
+echo "KEYMAP=it" >> /etc/vconsole.conf
+localectl set-x11-keymap it
+```
 
 #### NETWORK CONFIGURATION
 	vim /etc/hosts
 
-###### (inside vim)
+- inside vim:
+	```
 	127.0.0.1  localhost
 	::1  localhost
-
+	```
 
 #### HOSTNAME
 	echo "Arch" >> /etc/hostname
@@ -119,13 +128,14 @@
 	pacman -S grub efibootmgr os-prober
 	grub-install --target=x86_64-efi --efi-directory=/boot/efi --recheck /dev/sda
 
-###### (inside /etc/default/grub)
-- enable recovery generation
-- enable os-prober
+- inside /etc/default/grub:
+	- enable recovery generation
+	- enable os-prober
 
-###### (outside /etc/default/grub)
+- outside /etc/default/grub:
+	```
 	grub-mkconfig -o /boot/grub/grub.cfg
-
+	```
 
 #### SET ROOT PASSWORD
 	passwd
@@ -147,11 +157,15 @@
 #### GRUB CONFIGURATION
 	vim /etc/default/grub
 
-###### (inside vim, remove "loglevel=3 quite" in GRUB_CMDLINE_LINUX_DEFAULT)
+- inside vim:
+	- remove "loglevel=3 quite" in GRUB_CMDLINE_LINUX_DEFAULT
+	
+- outside vim:
+	```
 	grub-mkconfig -o /boot/grub/grub.cfg
+	```
 
-
-#### AUR Helper [YAY]
+#### INSTALL AUR Helper [YAY]
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
@@ -174,15 +188,7 @@
 #### GRAPHICS BENCHMARKING
 	yay -S glmark2-git
 
-#### GENERATE XORG CONFIG (before startx)
-	X -configure
-
-- copy xorg.conf.new file in directory /etc/X11 as xorg.conf
-- inside xorg.conf file, for both devices Card0 and Card1 (graphics cards) choose Driver "modesetting"
-- after startx you can see xorg log in file /var/log/Xorg.0.log
-- you can test graphics card with command line program "glxgears"
-
-#### INSTALL NVIDIA DRIVERS
+#### INSTALL NVIDIA DRIVERS [OPTIONAL]
 	pacman -Rs nvidia nvidia-utils
 	pacman -S linux-headers
 	echo "blacklist nouveau" >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf
@@ -190,9 +196,48 @@
 - download correct Linux driver from https://www.nvidia.com/en-us/drivers/unix/
 - chmod u+x NVIDIA-Linux-x86_64-470.xx
 - reboot in recovery mode
-- as root, run: sh ./NVIDIA-Linux-x86_64-470.xx
+- as root, run:
+	```
+	sh ./NVIDIA-Linux-x86_64-470.xx
+	```
 - reboot
-- check installation success with "nvidia-smi" command
+- check installation success with `nvidia-smi` command
+
+#### INSTALL BUMBLEBEE [OPTIONAL] (after installing DE or WM)
+	pacman -S bbswitch
+	pacman -S bumblebee (with opencl-mesa choice)
+	usermod -aG bumblebee riccardo
+	systemctl enable bumblebee.service
+
+- reboot
+- testing installation: `optirun glxgears -info`
+- if error:
+	```
+	sudo vim /etc/bumblebee/xorg.conf.nvidia
+	```
+	- inside vim: uncomment `BusID PCI:01:00:0` line (PCI:01:00:0 is the location of my dedicated graphics)
+	- reboot
+
+- for intel graphics card xorg configuration (alongside Bumblebee):
+	```
+	cd /etc/X11/xorg.config.d
+	sudo vim 20-intel.conf
+	```
+	- inside 20-intel.conf (PCI:0:2:0 is the location of my integrated graphics):
+
+			Section "Device"
+				Identifier "Intel Graphics"
+				Driver "modesetting"
+				BusID "PCI:0:2:0"
+			EndSection
+
+#### GENERATE XORG CONFIG (before startx, if we will not use Bumblebee)
+	X -configure
+
+- copy xorg.conf.new file in directory /etc/X11 as xorg.conf
+- inside xorg.conf file, for both devices Card0 and Card1 (graphics cards) choose Driver "modesetting"
+- after startx you can see xorg log in file /var/log/Xorg.0.log
+- you can test graphics card with command line program "glxgears"
 
 
 #### USER CREATION
@@ -200,7 +245,7 @@
 	passwd riccardo
 	visudo
 
-###### (inside visudo, uncomment wheel and save)
+- inside visudo, uncomment wheel and save
 
 
 #### OTHER USEFUL PROGRAMS
@@ -208,14 +253,15 @@
 
 	yay -S inxi google-chrome sublime-text
 
-###### (for gparted)
+- for gparted:
+	```
 	pacman -S jfsutils f2fs-tools btrfs-progs exfatprogs reiserfsprogs udftools xfsprogs nilfs-utils gpart ntfs-3g dosfstools
-
+	```
 
 #### DISABLE BEEP IN CONSOLE TAB [OPTIONAL]
 	vim /etc/inputrc
 
-###### (inside vim, uncomment set bell-style none)
+- inside vim: uncomment set bell-style none
 
 
 #### DISABLE BEEP GLOBALLY (PCSPEAKER MODULE) [OPTIONAL]
@@ -231,13 +277,14 @@
 	pacman -S zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-###### (install useful custom plugins)
+- install useful custom plugins:
+	```
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 	git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
-
+	```
 
 #### NVIM (PLUGGED AD PLUGIN MANAGER)
 	pacman -S neovim
@@ -247,7 +294,7 @@
 	wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
-#### DESKTOP ENVIRONMENT INSTALLATION [xfce]
+#### DESKTOP ENVIRONMENT INSTALLATION [XFCE]
 	pacman -S xfce4 xfce4-goodies
 
 
@@ -264,15 +311,15 @@
 	pacman -S dmenu numlockx gvim xclip xorg-xfd rxvt-unicode
 
 
-#### DISPLAY MANAGER INSTALLATION [lightdm]
+#### DISPLAY MANAGER INSTALLATION [lightdm] (for XFCE, not for Gnome)
 	pacman -S lightdm lightdm-gtk-greeter
 	systemctl enable lightdm
 
-###### (inside file /etc/lightdm/lightdm.conf)
-- add lightdm-gtk-greeter to greeter-session
+- inside file /etc/lightdm/lightdm.conf:
+	- add lightdm-gtk-greeter to greeter-session
 
 
-#### DISPLAY MANAGER INSTALLATION [gdm]
+#### DISPLAY MANAGER INSTALLATION [gdm] (display manager for Gnome)
 	pacman -S gdm
 	systemctl enable gdm
 
@@ -288,22 +335,22 @@
 
 
 #### SUBLIME-TEXT
-Installed plugins:
+- Installed plugins:
 
-- Alignment
-- BracketHighlighter
-- Emmet
-- Emmet Css Snippets
-- GitGutter
-- Package Control
-- Predawn
-- SideBarEnhacements
-- Themr
-- Color Highlighter
-- ColorPicker
+	- Alignment
+	- BracketHighlighter
+	- Emmet
+	- Emmet Css Snippets
+	- GitGutter
+	- Package Control
+	- Predawn
+	- SideBarEnhacements
+	- Themr
+	- Color Highlighter
+	- ColorPicker
 
-Theme:
-- Predawn
+- Theme:
+	- Predawn
 
 
 #### RKHUNTER
@@ -311,20 +358,30 @@ Theme:
 	sudo rkhunter --versioncheck
 	sudo rkhunter --update
 	sudo rkhunter --propupd
+	
 	sudo rkhunter --check
+	OR
+	sudo rkhunter --check --rwo --sk
 
 
 #### ENABLE HIBERNATION
 - make sure to have a swap partition with size 1.5 x RAM size
-- file /etc/mkinitcpio.conf:
-	- add "resume" hook to HOOKS: HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
+- inside file /etc/mkinitcpio.conf:
+	- add "resume" hook to HOOKS:
+		```
+		HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
+		```
 
-- sudo mkinitcpio -P
-- file /etc/default/grub:
+```
+sudo mkinitcpio -P
+```
+- inside file /etc/default/grub:
 	- run `sudo blkid /dev/sdaY -s UUID` to get swap partition UUID
 	- add swap partition UUID to resume kernel parameter: `GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=<swap_partition_uuid>"`
 
-- sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
 - reboot computer
 
 
@@ -333,5 +390,5 @@ Theme:
 	rkkill block <bluetooth_device>
 
 
-#### CODING PROGRAMS
+#### INSTALL CODING PROGRAMS
 	pacman -S vscode
