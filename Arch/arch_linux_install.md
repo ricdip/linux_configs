@@ -183,7 +183,17 @@
 - you can test graphics card with command line program "glxgears"
 
 #### INSTALL NVIDIA DRIVERS
-	pacman -S nvidia nvidia-utils
+	pacman -Rs nvidia nvidia-utils
+	pacman -S linux-headers
+	echo "blacklist nouveau" >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+
+- download correct Linux driver from https://www.nvidia.com/en-us/drivers/unix/
+- chmod u+x NVIDIA-Linux-x86_64-470.xx
+- reboot in recovery mode
+- as root, run: sh ./NVIDIA-Linux-x86_64-470.xx
+- reboot
+- check installation success with "nvidia-smi" command
+
 
 #### USER CREATION
 	useradd -m -g wheel -s /bin/bash riccardo
