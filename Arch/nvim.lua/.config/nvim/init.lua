@@ -1,4 +1,4 @@
--- Main config
+-- Main Neovim Lua config
 
 require("globals")
 require("options")
