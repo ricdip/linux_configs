@@ -412,3 +412,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 #### INSTALL CODING PROGRAMS
 	pacman -S vscode
+
+
+#### INSTALL BOOTISO
+	yay -S bootiso
