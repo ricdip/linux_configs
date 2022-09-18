@@ -1,14 +1,20 @@
--- Helper functions
+-- Helper functions and objects
 
+-- helper table
 G = {}
 
 -- Packer helper
 G.packer = {}
+---- bootstrap will be != nil only if we are installing Packer
 G.packer.boostrap = nil
+---- path for packer installation
 G.packer.path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+---- Packer git repository URL
 G.packer.git_repo = "https://github.com/wbthomason/packer.nvim"
+---- Packer download function
 G.packer.download = function ()
   if vim.fn.empty(vim.fn.glob(G.packer.path)) > 0 then
+    ---- bootstrap is equal to the output of system(), so if will be != nil
     G.packer.boostrap = vim.fn.system {
       "git", "clone", "--depth", "1", G.packer.git_repo, G.packer.path
     }

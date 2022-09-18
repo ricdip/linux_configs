@@ -16,8 +16,8 @@ packer.startup {
     -- base16-colorscheme
     use 'rrethy/nvim-base16'
     
-    -- if Packer is already installed: download and update plugins
-    -- (when we install Packer we have to re-open neovim for installing plugins)
+    -- if this was the first boot of Packer (bootstrap != nil): download plugins for first time
+    -- (when we first boot Packer we have to re-open neovim for configuring installed plugins)
     if helper.packer.boostrap then
       packer.sync()
     end
