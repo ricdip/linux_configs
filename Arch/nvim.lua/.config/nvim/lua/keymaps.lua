@@ -22,6 +22,9 @@ vim.api.nvim_set_keymap("n", "<leader>v", "<cmd>:vsplit<cr>", default_opts)
 -- split window horizontally
 vim.api.nvim_set_keymap("n", "<leader>o", "<cmd>:split<cr>", default_opts)
 
+-- delete current buffer
+vim.api.nvim_set_keymap("n", "<leader>bd", "<cmd>:bd<cr>", default_opts)
+
 
 -- tests
 -- test: mapping <leader>+g -> exec: echo "hello" in insert mode

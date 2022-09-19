@@ -353,6 +353,8 @@ localectl set-x11-keymap it
 	cd ttf-material-icons-git
 	makepkg -si
 
+	yay -S nerd-fonts-complete
+
 
 #### SUBLIME-TEXT
 - Installed plugins:
