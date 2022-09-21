@@ -418,3 +418,13 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 #### INSTALL BOOTISO
 	yay -S bootiso
+
+
+#### INSTALL SNAP
+	yay -S snapd
+	systemctl enable --now snapd.socket
+	systemctl enable --now snapd.service
+	systemctl enable --now snapd.apparmor
+	ln -s /var/lib/snapd/snap /snap
+
+	snap install hello-world

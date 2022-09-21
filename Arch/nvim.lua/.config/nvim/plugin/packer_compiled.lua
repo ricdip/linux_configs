@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/riccardo/.local/share/nvim/site/pack/packer/start/nvim-base16",
     url = "https://github.com/rrethy/nvim-base16"
   },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/home/riccardo/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/riccardo/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",

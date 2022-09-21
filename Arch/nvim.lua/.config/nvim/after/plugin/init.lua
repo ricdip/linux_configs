@@ -12,3 +12,6 @@ require("modules.bufferline")
 
 -- gitsigns config
 require("modules.gitsigns")
+
+-- nvim_comment config
+require("modules.comment")
