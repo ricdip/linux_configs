@@ -415,6 +415,44 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 #### INSTALL CODING PROGRAMS
 	pacman -S vscode
 
+##### INSTALL CONDA
+- follow the instructions here: https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
+	
+	```
+	conda env list
+	conda update conda
+	# python_ver example: 3.8
+	conda create --name <env_name> python=<python_ver>
+	# using conda with zsh
+	conda init zsh
+	conda config --set auto_activate_base false
+	
+	conda activate <env_name>
+	conda deactivate
+	```
+
+##### INSTALL C, C++, PYTHON
+- it's likely that **gcc**, **g++** and **python3** are already installed
+
+##### INSTALL JAVA (OpenJDK)
+	pacman -S jre-openjdk
+	pacman -S jdk-openjdk
+
+	javac --version
+	java --version
+
+##### INSTALL DOCKER
+	pacman -S docker
+	pacman -S docker-compose
+
+	systemctl enable --now docker
+
+##### INSTALL C#
+	pacman -S dotnet-runtime
+	pacman -S dotnet-sdk
+
+- install useful VSCode extensions
+
 
 #### INSTALL BOOTISO
 	yay -S bootiso
