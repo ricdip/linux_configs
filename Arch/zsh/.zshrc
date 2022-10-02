@@ -70,7 +70,7 @@ ZSH_THEME="fishy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git jump fd fzf zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
+plugins=(git jump fd fzf zsh-syntax-highlighting zsh-autosuggestions zsh-completions nix-zsh-completions)
 
 # FZF plugin settings
 DISABLE_FZF_AUTO_COMPLETION="false"
@@ -168,4 +168,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# nix-zsh-completions config
+prompt_nix_shell_setup
 

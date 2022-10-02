@@ -85,6 +85,9 @@ vim.opt.linebreak = true
 -- make gutter wider by default
 vim.opt.numberwidth = 5
 
+-- time in milliseconds to wait for a mapped sequence to complete
+vim.opt.timeoutlen = 500
+
 -- relative line numbers
 --vim.opt.relativenumber = true
 

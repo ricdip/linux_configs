@@ -297,6 +297,12 @@ localectl set-x11-keymap it
 	pacman -S zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+- enable useful plugins:
+	- add `git` to plugins list in `.zshrc`
+	- add `jump` to plugins list in `.zshrc`
+	- add `fd` to plugins list in `.zshrc`
+	- add `fzf` to plugins list in `.zshrc`
+
 - install useful custom plugins:
 	```
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -306,12 +312,16 @@ localectl set-x11-keymap it
 	git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 	```
 
-#### NVIM (PLUGGED AD PLUGIN MANAGER)
+- enable custom plugins:
+	- add `zsh-syntax-highlighting` to plugins list in `.zshrc`
+	- add `zsh-autosuggestions` to plugins list in `.zshrc`
+	- add `zsh-completions` to plugins list in `.zshrc`
+
+
+#### NVIM
 	pacman -S neovim
-	mkdir -p $HOME/.config/nvim/autoload
-	mkdir -p $HOME/.config/nvim/plugged
-	cd $HOME/.config/nvim/autoload
-	wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+- get nvim Lua configuration by running stow (`run_stow` script)
 
 
 #### DESKTOP ENVIRONMENT INSTALLATION [XFCE]
@@ -459,10 +469,39 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
 #### INSTALL SNAP
+	# installation
 	yay -S snapd
 	systemctl enable --now snapd.socket
 	systemctl enable --now snapd.service
 	systemctl enable --now snapd.apparmor
 	ln -s /var/lib/snapd/snap /snap
 
+	# test installation
 	snap install hello-world
+	hello-world
+	snap remove hello-world
+
+
+#### INSTALL NIX
+	# installation
+	pacman -S nix
+	systemctl enable --now nix-daemon.service
+	usermod -aG nix-users riccardo
+
+	# add channel
+	nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+	nix-channel --update
+
+	# test installation
+	nix-env -iA nixpkgs.hello
+	hello
+	nix-env --uninstall hello
+
+
+##### INSTALL NIX ZSH COMPLETIONS
+	cd ~/oh-my-zsh/custom/plugins
+	git clone git@github.com:spwhitt/nix-zsh-completions.git
+
+- add `nix-zsh-completions` to plugins list in .zshrc
+
+- append `prompt_nix_shell_setup` in .zshrc so we get the prefix [nix-shell] when we are in a nix-shell

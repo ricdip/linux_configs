@@ -108,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/riccardo/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/riccardo/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

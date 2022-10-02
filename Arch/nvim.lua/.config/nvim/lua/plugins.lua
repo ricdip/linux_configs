@@ -23,6 +23,8 @@ packer.startup {
     use 'lewis6991/gitsigns.nvim'
     -- nvim_comment
     use 'terrortylor/nvim-comment'
+    -- which-key
+    use 'folke/which-key.nvim'
 
     -- if this was the first boot of Packer (bootstrap != nil): download plugins for first time
     -- (when we first boot Packer we have to re-open neovim for configuring installed plugins)

@@ -15,3 +15,6 @@ require("modules.gitsigns")
 
 -- nvim_comment config
 require("modules.comment")
+
+-- which-key config
+require("modules.whichkey")
