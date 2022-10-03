@@ -3,8 +3,8 @@
 local default_opts = {noremap = true, silent = true, expr = false}
 local cjk_opts = {desc = "Esc from command mode", unpack(default_opts)}
 local nlw_opts = {desc = "Switch to splitted window: +hjkl", unpack(default_opts)}
-local nlv_opts = {desc = "Split window vertically", unpack(default_opts)}
-local nlo_opts = {desc = "Split window horizontally", unpack(default_opts)}
+local nlv_opts = {desc = "Vertical split window", unpack(default_opts)}
+local nlo_opts = {desc = "Horizontal split window", unpack(default_opts)}
 local nlbd_opts = {desc = "Delete current buffer", unpack(default_opts)}
 
 -- mapping jk -> Esc in insert mode

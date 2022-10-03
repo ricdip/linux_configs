@@ -154,6 +154,11 @@ function fdvim(){
     fd $@ | vim -
 }
 
+function xclip-copy() {
+    FILEMIME=$(file --mime-type -b "$1")
+    xclip -selection clipboard -t "$FILEMIME" -i "$1" && echo "File '$1' $FILEMIME copied to clipboard"
+}
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
