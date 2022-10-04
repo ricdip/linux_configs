@@ -18,3 +18,9 @@ require("modules.comment")
 
 -- which-key config
 require("modules.whichkey")
+
+-- nvim-cursorline config
+require("modules.cursorline")
+
+-- nvim-treesitter config
+require("modules.treesitter")

@@ -25,6 +25,10 @@ packer.startup {
     use 'terrortylor/nvim-comment'
     -- which-key
     use 'folke/which-key.nvim'
+    -- nvim-cursorline
+    use 'yamatsum/nvim-cursorline'
+    -- TODO: nvim-treesitter: config
+    use 'nvim-treesitter/nvim-treesitter'
 
     -- if this was the first boot of Packer (bootstrap != nil): download plugins for first time
     -- (when we first boot Packer we have to re-open neovim for configuring installed plugins)
