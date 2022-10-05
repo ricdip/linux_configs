@@ -1,5 +1,6 @@
 -- Scripts that runs AFTER all main Lua scripts
 -- (useful to configure installed plugins)
+-- (the require instructions are executed in order)
 
 -- base16-colorscheme config
 require("modules.base16")
@@ -16,11 +17,21 @@ require("modules.gitsigns")
 -- nvim_comment config
 require("modules.comment")
 
+-- nvim-treesitter config
+require("modules.treesitter")
+
 -- which-key config
 require("modules.whichkey")
 
 -- nvim-cursorline config
 require("modules.cursorline")
 
--- nvim-treesitter config
-require("modules.treesitter")
+-- plugins dependency: mason < mason-lspconfig < lspconfig
+-- mason config
+require("modules.mason")
+
+-- mason-lspconfig config
+require("modules.mason_lspconfig")
+
+-- lspconfig config
+require("modules.lspconfig")

@@ -23,12 +23,22 @@ packer.startup {
     use 'lewis6991/gitsigns.nvim'
     -- nvim_comment
     use 'terrortylor/nvim-comment'
+    -- nvim-treesitter
+    -- TODO: config
+    use 'nvim-treesitter/nvim-treesitter'
     -- which-key
     use 'folke/which-key.nvim'
     -- nvim-cursorline
     use 'yamatsum/nvim-cursorline'
-    -- TODO: nvim-treesitter: config
-    use 'nvim-treesitter/nvim-treesitter'
+    -- mason
+    -- TODO: config
+    use 'williamboman/mason.nvim'
+    -- mason-lspconfig
+    -- TODO: config
+    use 'williamboman/mason-lspconfig.nvim'
+    -- lspconfig
+    -- TODO: config
+    use 'neovim/nvim-lspconfig'
 
     -- if this was the first boot of Packer (bootstrap != nil): download plugins for first time
     -- (when we first boot Packer we have to re-open neovim for configuring installed plugins)
