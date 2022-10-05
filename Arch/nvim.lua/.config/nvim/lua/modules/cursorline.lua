@@ -12,7 +12,7 @@ local cursorline = helper.load(module_name)
 cursorline.setup {
   cursorline = {
     enable = true,
-    timeout = 250,
+    timeout = 500,
     number = false,
   },
   cursorword = {
