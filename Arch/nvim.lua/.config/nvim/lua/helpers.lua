@@ -54,13 +54,11 @@ end
 -- table of coding related entries
 G.coding = {}
 
----- Treesitter parsers
+---- Treesitter
 G.coding.treesitter = {}
-G.coding.treesitter.parsers = {"python", "c", "lua"}
 
----- LSP language servers: Python, C/C++, Lua
+---- LSP
 G.coding.lsp = {}
-G.coding.lsp.language_servers = {"pyright", "clangd", "sumneko_lua"}
 
 
 return G

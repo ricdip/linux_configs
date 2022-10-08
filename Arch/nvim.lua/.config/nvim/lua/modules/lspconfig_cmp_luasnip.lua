@@ -51,7 +51,7 @@ local on_attach = function(client, bufnr)
   local nlrn_opts = {desc = 'Renames all references', unpack(bufopts)}
   local nlca_opts = {desc = 'Selects an available code action', unpack(bufopts)}
   local ngr_opts = {desc = 'Lists all references', unpack(bufopts)}
-  local nlf_opts = {desc = 'Formats using the attached language server clients', unpack(bufopts)}
+  local nlf_opts = {desc = 'Formats using language server clients', unpack(bufopts)}
 
   -- ** lspconfig keymaps **
   -- jumps to the declaration of the current symbol

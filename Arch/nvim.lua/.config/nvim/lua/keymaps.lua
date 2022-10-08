@@ -6,6 +6,7 @@ local nlw_opts = {desc = "Switch to splitted window: +hjkl", unpack(default_opts
 local nlv_opts = {desc = "Vertical split window", unpack(default_opts)}
 local nlo_opts = {desc = "Horizontal split window", unpack(default_opts)}
 local nlbd_opts = {desc = "Delete current buffer", unpack(default_opts)}
+local nlm_opts = {desc = "Open Mason window", unpack(default_opts)}
 
 -- mapping jk -> Esc in insert mode
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", default_opts)
@@ -29,6 +30,9 @@ vim.api.nvim_set_keymap("n", "<leader>o", "<cmd>:split<cr>", nlo_opts)
 
 -- delete current buffer
 vim.api.nvim_set_keymap("n", "<leader>bd", "<cmd>:bd<cr>", nlbd_opts)
+
+-- open Mason
+vim.api.nvim_set_keymap("n", "<leader>m", "<cmd>:Mason<cr>", nlm_opts)
 
 
 -- tests
