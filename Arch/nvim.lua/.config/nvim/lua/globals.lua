@@ -1,4 +1,4 @@
 -- Neovim globals
 
--- setting leader = <Space>
+-- setting leader = <space>
 vim.g.mapleader = " "

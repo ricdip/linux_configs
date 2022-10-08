@@ -8,17 +8,14 @@ if not helper.load(module_name) then
   return
 end
 
--- local treesitter = helper.load(module_name)
 local treesitter_install = helper.load(module_name .. '.install')
-
 treesitter_install.update({ with_sync = true })
 
--- TODO: setup treesitter
+-- treesitter config setup
 local treesitter_config = helper.load(module_name .. '.configs')
 treesitter_config.setup {
   -- list of parser names or "all"
-  -- TODO: more parsers
-  ensure_installed = {"c", "lua"},
+  ensure_installed = helper.coding.treesitter.parsers,
   -- install parsers synchronously
   sync_install = true,
   -- auto install missing parsers

@@ -11,7 +11,7 @@ end
 local mason_lspconfig = helper.load(module_name)
 mason_lspconfig.setup {
   -- a list of servers to automatically install if they're not already installed
-  ensure_installed = {"clangd", "sumneko_lua"},
+  ensure_installed = helper.coding.lsp.language_servers,
   -- whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed
   -- this setting has no relation with the `ensure_installed` setting.
   automatic_installation = false,

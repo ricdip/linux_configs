@@ -10,3 +10,4 @@ end
 
 -- run vimL command to set color scheme
 vim.cmd [[ colorscheme base16-black-metal-bathory ]]
+--vim.cmd [[ colorscheme base16-tomorrow-night ]]

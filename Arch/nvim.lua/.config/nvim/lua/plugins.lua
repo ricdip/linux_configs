@@ -24,21 +24,29 @@ packer.startup {
     -- nvim_comment
     use 'terrortylor/nvim-comment'
     -- nvim-treesitter
-    -- TODO: config
     use 'nvim-treesitter/nvim-treesitter'
     -- which-key
     use 'folke/which-key.nvim'
     -- nvim-cursorline
     use 'yamatsum/nvim-cursorline'
     -- mason
-    -- TODO: config
     use 'williamboman/mason.nvim'
     -- mason-lspconfig
-    -- TODO: config
     use 'williamboman/mason-lspconfig.nvim'
     -- lspconfig
-    -- TODO: config
     use 'neovim/nvim-lspconfig'
+    -- cmp_nvim_lsp
+    use 'hrsh7th/cmp-nvim-lsp'
+    -- cmp
+    use 'hrsh7th/nvim-cmp'
+    -- luasnip
+    use 'L3MON4D3/LuaSnip'
+    -- cmp_luasnip
+    use 'saadparwaiz1/cmp_luasnip'
+    -- fidget
+    use 'j-hui/fidget.nvim'
+    -- lualine
+    use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
 
     -- if this was the first boot of Packer (bootstrap != nil): download plugins for first time
     -- (when we first boot Packer we have to re-open neovim for configuring installed plugins)
