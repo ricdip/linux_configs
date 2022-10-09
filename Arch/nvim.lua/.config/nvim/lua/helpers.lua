@@ -3,6 +3,12 @@
 -- helper table
 G = {}
 
+---- alias for the vim keymap set function
+G.set_keymap = vim.keymap.set
+
+---- alias for the unpack function
+G.table_unpack = unpack
+
 
 -- Packer helper
 G.packer = {}

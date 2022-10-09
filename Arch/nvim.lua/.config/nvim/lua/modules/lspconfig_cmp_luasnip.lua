@@ -37,43 +37,48 @@ local cmp_nvim_lsp = helper.load(cmp_nvim_lsp_str)
 local cmp = helper.load(cmp_str)
 local luasnip = helper.load(luasnip_str)
 
--- Use an on_attach function to only map the following keys
+-- FIX: borders on LSP window
+local windows = require(lspconfig_str .. ".ui.windows")
+windows.default_options.border = 'single'
+
+-- use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
-  local ngD_opts = {desc = 'Jumps to the declaration', unpack(bufopts)}
-  local ngd_opts = {desc = 'Jumps to the definition', unpack(bufopts)}
-  local nK_opts = {desc = 'Displays hover informations', unpack(bufopts)}
-  local ngi_opts = {desc = 'Lists all the implementations', unpack(bufopts)}
-  local nCK_opts = {desc = 'Displays signature information', unpack(bufopts)}
-  local nlD_opts = {desc = 'Jumps to the definition of the type', unpack(bufopts)}
-  local nlrn_opts = {desc = 'Renames all references', unpack(bufopts)}
-  local nlca_opts = {desc = 'Selects an available code action', unpack(bufopts)}
-  local ngr_opts = {desc = 'Lists all references', unpack(bufopts)}
-  local nlf_opts = {desc = 'Formats using language server clients', unpack(bufopts)}
+  local ngD_opts = {desc = 'Jumps to the declaration', helper.table_unpack(bufopts)}
+  --local ngd_opts = {desc = 'Jumps to the definition', helper.table_unpack(bufopts)}
+  --local nK_opts = {desc = 'Displays hover information', helper.table_unpack(bufopts)}
+  local ngi_opts = {desc = 'Lists all the implementations', helper.table_unpack(bufopts)}
+  local nCK_opts = {desc = 'Displays signature information', helper.table_unpack(bufopts)}
+  local nlD_opts = {desc = 'Jumps to the definition of the type', helper.table_unpack(bufopts)}
+  --local nlrn_opts = {desc = 'Renames all references', helper.table_unpack(bufopts)}
+  --local nlca_opts = {desc = 'Selects an available code action', helper.table_unpack(bufopts)}
+  local ngr_opts = {desc = 'Lists all references', helper.table_unpack(bufopts)}
+  local nlf_opts = {desc = 'Formats using language server clients', helper.table_unpack(bufopts)}
 
   -- ** lspconfig keymaps **
+  
   -- jumps to the declaration of the current symbol
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, ngD_opts)
-  -- jumps to the definition of the current symbol
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, ngd_opts)
-  -- displays hover informations about symbol under the cursor. Calling the function twice will jump into the floating window
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, nK_opts)
+  helper.set_keymap('n', 'gD', vim.lsp.buf.declaration, ngD_opts)
+  -- jumps to the definition of the current symbol (implemented by Lspsaga)
+  --helper.set_keymap('n', 'gd', vim.lsp.buf.definition, ngd_opts)
+  -- displays hover information about symbol under the cursor. Calling the function twice will jump into the floating window (implemented by Lspsaga)
+  --helper.set_keymap('n', 'K', vim.lsp.buf.hover, nK_opts)
   -- lists all the implementations for current symbol
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, ngi_opts)
+  helper.set_keymap('n', 'gi', vim.lsp.buf.implementation, ngi_opts)
   -- displays signature information about current symbol
-  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, nCK_opts)
+  helper.set_keymap('n', '<C-k>', vim.lsp.buf.signature_help, nCK_opts)
   -- jumps to the definition of the type of the current symbol
-  vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, nlD_opts)
-  -- renames all references to the current symbol
-  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, nlrn_opts)
-  -- selects a code action available at current cursor position
-  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, nlca_opts)
+  helper.set_keymap('n', '<leader>D', vim.lsp.buf.type_definition, nlD_opts)
+  -- renames all references to the current symbol (implemented by Lspsaga)
+  --helper.set_keymap('n', '<leader>rn', vim.lsp.buf.rename, nlrn_opts)
+  -- selects a code action available at current cursor position (implemented by Lspsaga)
+  --helper.set_keymap('n', '<leader>ca', vim.lsp.buf.code_action, nlca_opts)
   -- lists all references to the current symbol
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, ngr_opts)
+  helper.set_keymap('n', 'gr', vim.lsp.buf.references, ngr_opts)
   -- formats a buffer using the attached language server clients
-  vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, nlf_opts)
+  helper.set_keymap('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, nlf_opts)
 end
 
 -- add additional capabilities supported by nvim-cmp
@@ -94,6 +99,11 @@ cmp.setup {
     expand = function(args)
       luasnip.lsp_expand(args.body)
     end,
+  },
+
+  window = {
+    --completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
 
   mapping = cmp.mapping.preset.insert({

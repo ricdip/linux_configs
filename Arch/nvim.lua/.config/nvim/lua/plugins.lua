@@ -47,6 +47,8 @@ packer.startup {
     use 'j-hui/fidget.nvim'
     -- lualine
     use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+    -- lspsaga
+    use {'glepnir/lspsaga.nvim', branch = 'main'}
 
     -- if this was the first boot of Packer (bootstrap != nil): download plugins for first time
     -- (when we first boot Packer we have to re-open neovim for configuring installed plugins)

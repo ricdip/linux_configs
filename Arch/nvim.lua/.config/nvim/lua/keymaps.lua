@@ -1,12 +1,14 @@
 -- Neovim keymaps
 
+local helper = require("helpers")
+
 local default_opts = {noremap = true, silent = true, expr = false}
-local cjk_opts = {desc = "Esc from command mode", unpack(default_opts)}
-local nlw_opts = {desc = "Switch to splitted window: +hjkl", unpack(default_opts)}
-local nlv_opts = {desc = "Vertical split window", unpack(default_opts)}
-local nlo_opts = {desc = "Horizontal split window", unpack(default_opts)}
-local nlbd_opts = {desc = "Delete current buffer", unpack(default_opts)}
-local nlm_opts = {desc = "Open Mason window", unpack(default_opts)}
+local cjk_opts = {desc = "Esc from command mode", helper.table_unpack(default_opts)}
+local nlw_opts = {desc = "Switch to splitted window: +hjkl", helper.table_unpack(default_opts)}
+local nlv_opts = {desc = "Vertical split window", helper.table_unpack(default_opts)}
+local nlo_opts = {desc = "Horizontal split window", helper.table_unpack(default_opts)}
+local nlbd_opts = {desc = "Delete current buffer", helper.table_unpack(default_opts)}
+local nlm_opts = {desc = "Open Mason window", helper.table_unpack(default_opts)}
 
 -- mapping jk -> Esc in insert mode
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", default_opts)

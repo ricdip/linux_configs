@@ -42,3 +42,7 @@ require("modules.fidget")
 
 -- lualine config
 require("modules.lualine")
+
+-- plugins dependency: lspconfig < lspsaga
+-- lspsaga config
+require("modules.lspsaga")
