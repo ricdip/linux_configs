@@ -4,8 +4,8 @@ local module_name = "nvim-autopairs"
 
 local helper = require("helpers")
 if not helper.load(module_name) then
-  print("nvim-autopairs: reload required")
-  return
+    print("nvim-autopairs: reload required")
+    return
 end
 
 local autopairs = helper.load(module_name)

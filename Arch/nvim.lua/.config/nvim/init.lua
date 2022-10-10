@@ -1,5 +1,4 @@
 -- Main Neovim Lua config
-
 -- global variables section
 require("globals")
 -- editor options section

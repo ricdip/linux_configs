@@ -4,8 +4,8 @@ local module_name = "gitsigns"
 
 local helper = require("helpers")
 if not helper.load(module_name) then
-  print("gitsigns: reload required")
-  return
+    print("gitsigns: reload required")
+    return
 end
 
 local gitsigns = helper.load(module_name)

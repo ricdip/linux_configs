@@ -4,8 +4,8 @@ local module_name = "fidget"
 
 local helper = require("helpers")
 if not helper.load(module_name) then
-  print("fidget: reload required")
-  return
+    print("fidget: reload required")
+    return
 end
 
 local fidget = helper.load(module_name)

@@ -4,8 +4,8 @@ local module_name = "telescope"
 
 local helper = require("helpers")
 if not helper.load(module_name) then
-  print("telescope: reload required")
-  return
+    print("telescope: reload required")
+    return
 end
 
 local telescope = helper.load(module_name)

@@ -4,14 +4,14 @@ local module_name = "nvim_comment"
 
 local helper = require("helpers")
 if not helper.load(module_name) then
-  print("nvim_comment: reload required")
-  return
+    print("nvim_comment: reload required")
+    return
 end
 
 local comment = helper.load(module_name)
 comment.setup {
-  -- normal mode mapping
-  line_mapping = "<leader>cl",
-  -- visual mode mapping
-  operator_mapping = "<leader>cb",
+    -- normal mode mapping
+    line_mapping = "<leader>cl",
+    -- visual mode mapping
+    operator_mapping = "<leader>cb"
 }

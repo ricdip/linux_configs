@@ -4,13 +4,9 @@ local module_name = "bufferline"
 
 local helper = require("helpers")
 if not helper.load(module_name) then
-  print("bufferline: reload required")
-  return
+    print("bufferline: reload required")
+    return
 end
 
 local bufferline = helper.load(module_name)
-bufferline.setup {
-  options = {
-    color_icons = false
-  }
-}
+bufferline.setup {options = {color_icons = false}}

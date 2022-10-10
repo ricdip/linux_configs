@@ -4,8 +4,8 @@ local module_name = "nvim-tree"
 
 local helper = require("helpers")
 if not helper.load(module_name) then
-  print("nvim-tree: reload required")
-  return
+    print("nvim-tree: reload required")
+    return
 end
 
 local nvimtree = helper.load(module_name)

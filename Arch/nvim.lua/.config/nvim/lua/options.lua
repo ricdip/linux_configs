@@ -1,5 +1,4 @@
 -- Neovim options
-
 -- allow changing buffers even with modifications
 vim.opt.hidden = true
 
@@ -7,7 +6,7 @@ vim.opt.hidden = true
 vim.opt.wildmenu = true
 
 -- on command mode, expand the longest common match, then all
-vim.opt.wildmode = {"longest","full"}
+vim.opt.wildmode = {"longest", "full"}
 
 -- show partial commands in the last line of the screen
 vim.opt.showcmd = true
@@ -19,7 +18,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- smart backspace in insert mode
-vim.opt.backspace = {"indent","eol","start"}
+vim.opt.backspace = {"indent", "eol", "start"}
 
 -- when on a new line, keep same indent as the previous line
 vim.opt.autoindent = true
@@ -62,7 +61,7 @@ vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 vim.opt.laststatus = 2
 
 -- prefer UNIX line endings
-vim.opt.fileformat= "unix"
+vim.opt.fileformat = "unix"
 
 -- highlight search results
 vim.opt.hlsearch = true
@@ -89,8 +88,8 @@ vim.opt.numberwidth = 5
 vim.opt.timeoutlen = 500
 
 -- relative line numbers
---vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- Convert to Lua ?
---vim.opt.nocompatible = true
---vim.opt.nostartofline = true
+-- vim.opt.nocompatible = true
+-- vim.opt.nostartofline = true
