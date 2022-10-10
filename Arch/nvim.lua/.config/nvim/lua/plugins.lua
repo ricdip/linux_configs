@@ -57,6 +57,8 @@ packer.startup {
     use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = 'nvim-lua/plenary.nvim'}
     -- trouble
     use {'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+    -- nvim-tree
+    use {'nvim-tree/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
     -- if this was the first boot of Packer (bootstrap != nil): download plugins for first time
     -- (when we first boot Packer we have to re-open neovim for configuring installed plugins)

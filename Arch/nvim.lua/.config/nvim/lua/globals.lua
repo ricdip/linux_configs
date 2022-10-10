@@ -13,3 +13,7 @@ helper.coding.lsp.language_servers = {"pyright", "clangd", "gopls", "jdtls", "su
 
 -- LSP diagnostics colors
 helper.coding.lsp.diagnostics_colors = {error = '#db4b4b', warn = '#e0af68', info = '#0db9d7', hint = '#10B981'}
+
+-- nvim-tree advised settings
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1

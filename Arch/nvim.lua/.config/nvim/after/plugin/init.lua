@@ -53,3 +53,6 @@ require("modules.telescope")
 
 -- trouble config
 require("modules.trouble")
+
+-- nvim-tree config
+require("modules.nvim_tree")
