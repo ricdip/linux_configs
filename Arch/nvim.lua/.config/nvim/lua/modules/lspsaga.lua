@@ -68,3 +68,9 @@ helper.set_keymap("n", "K", "<cmd>Lspsaga hover_doc<cr>", nK_opts)
 helper.set_keymap("n", "<A-d>", "<cmd>Lspsaga open_floaterm<cr>", { silent = true })
 -- close floaterm
 helper.set_keymap("t", "<A-d>", [[<C-\><C-n><cmd>Lspsaga close_floaterm<cr>]], { silent = true })
+
+-- set diagnostics colors
+helper.set_hl('DiagnosticError', {fg = helper.coding.lsp.diagnostics_colors.error})
+helper.set_hl('DiagnosticWarn', {fg = helper.coding.lsp.diagnostics_colors.warn})
+helper.set_hl('DiagnosticInfo', {fg = helper.coding.lsp.diagnostics_colors.info})
+helper.set_hl('DiagnosticHint', {fg = helper.coding.lsp.diagnostics_colors.hint})

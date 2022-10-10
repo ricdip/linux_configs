@@ -46,3 +46,10 @@ require("modules.lualine")
 -- plugins dependency: lspconfig < lspsaga
 -- lspsaga config
 require("modules.lspsaga")
+
+-- plugins dependency: nvim-treesitter < lspconfig < telescope
+-- telescope config
+require("modules.telescope")
+
+-- trouble config
+require("modules.trouble")

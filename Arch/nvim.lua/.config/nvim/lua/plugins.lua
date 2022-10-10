@@ -13,6 +13,10 @@ packer.startup {
   function (use)
     -- Packer can manage itself (automatic updates)
     use 'wbthomason/packer.nvim'
+    -- nvim-web-devicons
+    use 'kyazdani42/nvim-web-devicons'
+    -- fzf-native (suggested dependency for telescope)
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
     -- base16-colorscheme
     use 'rrethy/nvim-base16'
     -- nvim-autopairs
@@ -49,6 +53,10 @@ packer.startup {
     use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
     -- lspsaga
     use {'glepnir/lspsaga.nvim', branch = 'main'}
+    -- telescope (dependencies: fd and ripgrep)
+    use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = 'nvim-lua/plenary.nvim'}
+    -- trouble
+    use {'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
     -- if this was the first boot of Packer (bootstrap != nil): download plugins for first time
     -- (when we first boot Packer we have to re-open neovim for configuring installed plugins)

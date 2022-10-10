@@ -9,6 +9,11 @@ G.set_keymap = vim.keymap.set
 ---- alias for the unpack function
 G.table_unpack = unpack
 
+---- custom function for set highlight
+G.set_hl = function (name, val)
+  vim.api.nvim_set_hl(0, name, val)
+end
+
 
 -- Packer helper
 G.packer = {}

@@ -57,8 +57,8 @@ local on_attach = function(client, bufnr)
   local ngr_opts = {desc = 'Lists all references', helper.table_unpack(bufopts)}
   local nlf_opts = {desc = 'Formats using language server clients', helper.table_unpack(bufopts)}
 
-  -- ** lspconfig keymaps **
-  
+  -- lspconfig keymaps
+
   -- jumps to the declaration of the current symbol
   helper.set_keymap('n', 'gD', vim.lsp.buf.declaration, ngD_opts)
   -- jumps to the definition of the current symbol (implemented by Lspsaga)
