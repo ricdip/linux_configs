@@ -105,9 +105,10 @@ source $ZSH/oh-my-zsh.sh
 
 ##### MY CONFIGS #####
 
-# term rate speed
+# term rate speed and disable screensaver
 if xhost >& /dev/null ;then
     xset r rate 300 40
+    xset s off && xset -dpms && xset s noblank
 fi
 
 # vim mode
