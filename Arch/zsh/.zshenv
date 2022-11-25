@@ -9,3 +9,5 @@ export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export EDITOR=nvim
 # variable for package 'dotnet': disable C# dotnet telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+# for git signed commits with GPG
+export GPG_TTY=$(tty)
