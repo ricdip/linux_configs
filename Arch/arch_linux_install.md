@@ -269,7 +269,7 @@ localectl set-x11-keymap it
 
 
 #### OTHER USEFUL PROGRAMS
-	pacman -S archey3 wget parted gparted zsh htop stow fd fzf mpv vlc npm redshift nvtop dunst acpi tree ripgrep ripgrep-all
+	pacman -S archey3 wget parted gparted zsh htop stow fd fzf mpv vlc npm redshift nvtop dunst acpi tree ripgrep ripgrep-all bat nnn
 
 	yay -S inxi google-chrome sublime-text
 
@@ -468,7 +468,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 	yay -S bootiso
 
 
-#### INSTALL SNAP
+#### INSTALL SNAP [OPTIONAL]
 	# installation
 	yay -S snapd
 	systemctl enable --now snapd.socket

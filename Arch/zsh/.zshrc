@@ -120,6 +120,7 @@ alias grep='grep --color=auto'
 alias getextip="curl http://ipecho.net/plain; echo"
 alias n='nvim'
 alias v='vim'
+alias rm='rm -i'
 
 # git
 alias ggraphlog='git log --all --decorate --oneline --graph'
