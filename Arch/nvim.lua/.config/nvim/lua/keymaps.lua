@@ -18,6 +18,10 @@ local nlo_opts = {
     desc = "Horizontal split window",
     helper.table_unpack(default_opts)
 }
+local nltab_opts = {
+    desc = "Select next buffer",
+    helper.table_unpack(default_opts)
+}
 local nlbd_opts = {
     desc = "Delete current buffer",
     helper.table_unpack(default_opts)
@@ -43,6 +47,9 @@ vim.api.nvim_set_keymap("n", "<leader>v", "<cmd>:vsplit<cr>", nlv_opts)
 
 -- split window horizontally
 vim.api.nvim_set_keymap("n", "<leader>o", "<cmd>:split<cr>", nlo_opts)
+
+-- switch to next buffer
+vim.api.nvim_set_keymap("n", "<tab>", "<cmd>:bnext<cr>", nltab_opts)
 
 -- delete current buffer
 vim.api.nvim_set_keymap("n", "<leader>bd", "<cmd>:bd<cr>", nlbd_opts)

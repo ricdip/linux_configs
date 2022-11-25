@@ -9,7 +9,16 @@ if not helper.load(module_name) then
 end
 
 local nvimtree = helper.load(module_name)
-nvimtree.setup {}
+nvimtree.setup {
+    sort_by = "case_sensitive",
+    view = {
+        adaptive_size = true,
+        mappings = {list = {{key = "u", action = "dir_up"}}}
+    },
+    renderer = {group_empty = true}
+}
 
-local nlt_opts = {desc = 'Open or close NvimTree'}
-helper.set_keymap('n', '<leader>t', "<cmd>:NvimTreeToggle<cr>", nlt_opts)
+local nltt_opts = {desc = 'Open/Close NvimTree'}
+local nltf_opts = {desc = 'Focus on NvimTree'}
+helper.set_keymap('n', '<leader>tt', "<cmd>:NvimTreeToggle<cr>", nltt_opts)
+helper.set_keymap('n', '<leader>tf', "<cmd>:NvimTreeFocus<cr>", nltf_opts)

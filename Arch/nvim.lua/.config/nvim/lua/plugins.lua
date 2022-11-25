@@ -42,6 +42,12 @@ packer.startup {
         use 'williamboman/mason-lspconfig.nvim'
         -- lspconfig
         use 'neovim/nvim-lspconfig'
+        -- cmp-path
+        use 'hrsh7th/cmp-path'
+        -- cmp-buffer
+        use 'hrsh7th/cmp-buffer'
+        -- cmp-cmdline
+        use 'hrsh7th/cmp-cmdline'
         -- cmp_nvim_lsp
         use 'hrsh7th/cmp-nvim-lsp'
         -- cmp

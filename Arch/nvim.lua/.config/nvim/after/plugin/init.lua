@@ -32,7 +32,7 @@ require("modules.mason")
 -- mason-lspconfig config
 require("modules.mason_lspconfig")
 
--- lspconfig, cmp_nvim_lsp, cmp, luasnip, cmp_luasnip config
+-- lspconfig, cmp_nvim_lsp, cmp_path, cmp_buffer, cmp_cmdline, cmp, luasnip, cmp_luasnip config
 require("modules.lspconfig_cmp_luasnip")
 
 -- plugins dependency: lspconfig < fidget

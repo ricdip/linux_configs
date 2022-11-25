@@ -1,7 +1,10 @@
--- helper that checks if plugins 'lspconfig', 'cmp_nvim_lsp', 'cmp', 'luasnip', 'cmp_luasnip' are already installed
+-- helper that checks if plugins 'lspconfig', 'cmp_nvim_lsp', 'cmp_path', 'cmp_buffer', 'cmp_cmdline', 'cmp', 'luasnip', 'cmp_luasnip' are already installed
 -- and only they are installed, we configure them
 local lspconfig_str = "lspconfig"
 local cmp_nvim_lsp_str = "cmp_nvim_lsp"
+local cmp_path_str = "cmp_path"
+local cmp_buffer_str = "cmp_buffer"
+local cmp_cmdline_str = "cmp_cmdline"
 local cmp_str = "cmp"
 local luasnip_str = "luasnip"
 local cmp_luasnip_str = "cmp_luasnip"
@@ -14,6 +17,21 @@ end
 
 if not helper.load(cmp_nvim_lsp_str) then
     print("cmp_nvim_lsp: reload required")
+    return
+end
+
+if not helper.load(cmp_path_str) then
+    print("cmp-path: reload required")
+    return
+end
+
+if not helper.load(cmp_buffer_str) then
+    print("cmp-buffer: reload required")
+    return
+end
+
+if not helper.load(cmp_cmdline_str) then
+    print("cmp-cmdline: reload required")
     return
 end
 
@@ -147,5 +165,20 @@ cmp.setup {
         end, {'i', 's'})
     }),
 
-    sources = {{name = 'nvim_lsp'}, {name = 'luasnip'}}
+    sources = {
+        {name = 'nvim_lsp'}, {name = 'luasnip'}, {name = 'path'},
+        {name = 'buffer'}
+    }
 }
+
+cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {{name = 'buffer'}}
+})
+
+cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({{name = 'path'}}, {
+        {name = 'cmdline', option = {ignore_cmds = {'Man', '!'}}}
+    })
+})
