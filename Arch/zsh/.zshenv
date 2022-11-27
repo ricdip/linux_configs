@@ -2,7 +2,7 @@ typeset -U PATH path
 # add paths to the left, paths are separated by spaces
 # example: path=("$HOME/miniconda3/bin" "$path[@]")
 # programs path for: Adb, Fastboot, Android Studio, Android Sdk, Flutter
-path=("/home/riccardo/Android/Sdk/platform-tools" "/opt/android-studio/bin" "$HOME/Android/Sdk" "/opt/flutter/bin" "$path[@]")
+path=("$HOME/Android/Sdk/platform-tools" "/opt/android-studio/bin" "$HOME/Android/Sdk" "/opt/flutter/bin" "$HOME/.local/bin" "$path[@]")
 export PATH
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
@@ -11,3 +11,5 @@ export EDITOR=nvim
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 # for git signed commits with GPG
 export GPG_TTY=$(tty)
+# nnn file manager colors setting
+export NNN_COLORS='6666'

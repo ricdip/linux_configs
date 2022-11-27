@@ -172,6 +172,9 @@ localectl set-x11-keymap it
 	cd ..
 	rm -rf yay
 
+        yay -Y --gendb
+        yay -Y --devel --save
+
 
 #### XORG INSTALLATION [MINIMAL]
 	pacman -S xorg xorg-xinit xorg-fonts xterm xorg-xhost startx xorg-xrandr arandr

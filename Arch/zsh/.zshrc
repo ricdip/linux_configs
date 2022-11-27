@@ -121,10 +121,12 @@ alias getextip="curl http://ipecho.net/plain; echo"
 alias n='nvim'
 alias v='vim'
 alias rm='rm -i'
+alias m='nnn -deH'
 
 # git
-alias ggraphlog='git log --all --decorate --oneline --graph'
 alias glog='git log --name-status'
+alias gloggraph='git log --all --decorate --oneline --graph'
+alias glogsign='gloggraph --show-signature'
 alias gadd='git add .'
 alias gcommit='git commit -m'
 alias gpushtomaster='git push -u origin master'
@@ -132,6 +134,9 @@ alias gstatus='git status'
 alias gdiff='git diff'
 
 alias glazy='lazygit'
+
+# docker
+alias dlazy='lazydocker'
 
 # systemd
 alias rbt='sudo systemctl reboot'
