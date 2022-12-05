@@ -148,6 +148,10 @@ alias hbt='sudo systemctl hibernate'
 alias pacman-autoremove-check='pacman -Qdt'
 alias pacman-autoremove='sudo pacman -Rs $(pacman -Qdtq)'
 
+# ssh-agent
+alias ssh-agent-start='eval "$(ssh-agent -s)"'
+alias ssh-agent-stop='pkill ssh-agent'
+
 # custom functions
 function chpwd(){
     count=$(ll | wc -l);
