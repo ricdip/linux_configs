@@ -1,0 +1,52 @@
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias ls='ls -h --color=auto --group-directories-first'
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ipv4ext="curl http://ipecho.net/plain; echo"
+alias n='nvim'
+alias v='vim'
+alias rm='rm -i'
+alias m='nnn -deH'
+alias lsnet='sudo netstat -tulpn'
+
+# git
+alias glog='git log --name-status'
+alias glogchanges='git log -p'
+alias gloggraph='git log --all --decorate --oneline --graph'
+alias glogsigned='gloggraph --show-signature'
+alias gadd='git add .'
+alias gcommit='git commit -m'
+alias gamendcommit='git commit --amend -m'
+alias gpushtomaster='git push -u origin master'
+alias gpushtomain='git push -u origin main'
+alias gstatus='git status'
+alias gdiff='git diff'
+
+alias lgit='lazygit'
+
+# docker
+alias ldocker='lazydocker'
+
+# systemd
+alias rbt='sudo systemctl reboot'
+alias off='sudo systemctl poweroff'
+alias susp='sudo systemctl suspend'
+alias hbt='sudo systemctl hibernate'
+
+# pacman / yay
+alias pacman-autoremove-check='pacman -Qdt'
+alias pacman-autoremove='sudo pacman -Rs $(pacman -Qdtq)'
+alias pacman-search="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse"
+alias yay-search="yay -Slq | fzf --preview 'yay -Si {}' --layout=reverse"
+
+# ssh-agent
+alias ssh-agent-start='eval "$(ssh-agent -s)"'
+alias ssh-agent-stop='pkill ssh-agent'
