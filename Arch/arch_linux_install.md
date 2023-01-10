@@ -272,7 +272,7 @@ localectl set-x11-keymap it
 
 
 #### OTHER USEFUL PROGRAMS
-	pacman -S archey3 wget parted gparted zsh htop stow fd fzf mpv vlc npm redshift nvtop dunst acpi tree ripgrep ripgrep-all bat nnn
+	pacman -S archey3 wget parted gparted zsh htop stow fd fzf mpv vlc npm redshift nvtop dunst acpi tree ripgrep ripgrep-all bat nnn speedtest-cli
 
 	yay -S inxi google-chrome sublime-text
 
