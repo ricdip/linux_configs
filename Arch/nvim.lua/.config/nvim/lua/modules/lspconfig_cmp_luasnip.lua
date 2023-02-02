@@ -114,7 +114,7 @@ local on_attach = function(client, bufnr)
     -- lists all references to the current symbol
     helper.set_keymap('n', 'gr', vim.lsp.buf.references, ngr_opts)
     -- formats a buffer using the attached language server clients
-    helper.set_keymap('n', '<leader>f',
+    helper.set_keymap('n', '<leader>ft',
                       function() vim.lsp.buf.format {async = true} end, nlf_opts)
 end
 
