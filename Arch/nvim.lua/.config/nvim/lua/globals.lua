@@ -10,10 +10,10 @@ helper.coding.treesitter.parsers = {
     "typescript", "json", "html", "css", "markdown", "dockerfile", "regex", "rust"
 }
 
--- LSP language servers: Python, C/C++, Go, Java, Lua, Bash, JavaScript/TypeScript, JSON, HTML, CSS, Markdown, Dockerfile, Rust
+-- LSP language servers: Python, C/C++, Go, Java, Lua, Bash, JavaScript/TypeScript, JSON, HTML, CSS, Markdown, Dockerfile, Rust, CMake
 helper.coding.lsp.language_servers = {
     "pyright", "clangd", "gopls", "jdtls", "sumneko_lua", "bashls", "tsserver",
-    "jsonls", "html", "cssls", "marksman", "dockerls", "rust_analyzer"
+    "jsonls", "html", "cssls", "marksman", "dockerls", "rust_analyzer", "cmake"
 }
 
 -- LSP diagnostics colors
