@@ -52,6 +52,8 @@ packer.startup {
         use 'hrsh7th/cmp-nvim-lsp'
         -- cmp
         use 'hrsh7th/nvim-cmp'
+        -- friendly-snippets
+        use 'rafamadriz/friendly-snippets'
         -- luasnip
         use 'L3MON4D3/LuaSnip'
         -- cmp_luasnip

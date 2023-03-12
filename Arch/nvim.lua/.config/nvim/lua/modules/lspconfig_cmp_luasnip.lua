@@ -182,3 +182,6 @@ cmp.setup.cmdline(':', {
         {name = 'cmdline', option = {ignore_cmds = {'Man', '!'}}}
     })
 })
+
+-- load snippets from installed plugins
+require("luasnip.loaders.from_vscode").lazy_load()

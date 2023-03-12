@@ -9,7 +9,7 @@ if not helper.load(module_name) then
 end
 
 local lspsaga = helper.load(module_name)
-lspsaga.init_lsp_saga()
+lspsaga.setup()
 
 local default_opts = {silent = true}
 
