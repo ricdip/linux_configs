@@ -272,9 +272,11 @@ localectl set-x11-keymap it
 
 
 #### OTHER USEFUL PROGRAMS
-	pacman -S archey3 wget parted gparted zsh htop stow fd fzf mpv vlc npm redshift nvtop dunst acpi tree ripgrep ripgrep-all bat nnn speedtest-cli
+	pacman -S archey3 wget parted gparted zsh htop stow fd fzf mpv vlc npm redshift nvtop dunst acpi tree ripgrep ripgrep-all bat nnn speedtest-cli entr python-poetry pandoc-cli python-black jq qrencode git-delta feh imagemagick
 
-	yay -S inxi google-chrome sublime-text
+	yay -S inxi google-chrome sublime-text python-grip
+    
+        pip3 install -U gita
 
 - for gparted:
 	```
