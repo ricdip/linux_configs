@@ -7,8 +7,8 @@ vim.g.mapleader = " "
 -- Treesitter parsers
 helper.coding.treesitter.parsers = {
     "python", "c", "cpp", "go", "java", "lua", "bash", "javascript",
-    "typescript", "json", "html", "css", "markdown", "dockerfile", "regex",
-    "rust"
+    "typescript", "json", "html", "css", "markdown", "markdown_inline",
+    "dockerfile", "regex", "rust"
 }
 
 -- LSP language servers: Python, C/C++, Go, Java, Lua, Bash, JavaScript/TypeScript, JSON, HTML, CSS, Markdown, Dockerfile, Rust, CMake
