@@ -8,13 +8,13 @@ vim.g.mapleader = " "
 helper.coding.treesitter.parsers = {
     "python", "c", "cpp", "go", "java", "lua", "bash", "javascript",
     "typescript", "json", "html", "css", "markdown", "markdown_inline",
-    "dockerfile", "regex", "rust"
+    "dockerfile", "regex", "rust", "kotlin"
 }
 
--- LSP language servers: Python, C/C++, Go, Java, Lua, Bash, JavaScript/TypeScript, JSON, HTML, CSS, Markdown, Dockerfile, Rust, CMake
+-- LSP language servers: Python, C/C++, Go, Java, Lua, Bash, JavaScript/TypeScript, JSON, HTML, CSS, Markdown, Dockerfile, Rust, CMake, Kotlin
 helper.coding.lsp.language_servers = {
     "pyright", "clangd", "gopls", "jdtls", "lua_ls", "bashls", "tsserver",
-    "jsonls", "html", "cssls", "marksman", "dockerls", "rust_analyzer", "cmake"
+    "jsonls", "html", "cssls", "marksman", "dockerls", "rust_analyzer", "cmake", "kotlin_language_server"
 }
 
 -- LSP diagnostics colors
