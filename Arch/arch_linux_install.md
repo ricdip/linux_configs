@@ -172,8 +172,8 @@ localectl set-x11-keymap it
 	cd ..
 	rm -rf yay
 
-        yay -Y --gendb
-        yay -Y --devel --save
+  yay -Y --gendb
+  yay -Y --devel --save
 
 
 #### XORG INSTALLATION [MINIMAL]
@@ -276,7 +276,7 @@ localectl set-x11-keymap it
 
 	yay -S inxi google-chrome sublime-text python-grip
     
-        pip3 install -U gita
+  pip3 install -U gita
 
 - for gparted:
 	```
@@ -343,7 +343,7 @@ localectl set-x11-keymap it
 
 
 #### WM ADDON PROGRAMS [i3]
-	pacman -S dmenu numlockx gvim xclip xorg-xfd rxvt-unicode
+	pacman -S dmenu rofi numlockx gvim xclip xorg-xfd rxvt-unicode
 
 
 #### DISPLAY MANAGER INSTALLATION [lightdm] (for XFCE, not for Gnome)
