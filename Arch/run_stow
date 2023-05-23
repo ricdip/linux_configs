@@ -19,4 +19,5 @@ echo "i3: stow"
 stow --target=$HOME i3
 echo "py3status: stow"
 stow --target=$HOME py3status
-
+echo "alacritty: stow"
+stow --target=$HOME alacritty
