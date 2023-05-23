@@ -1,0 +1,28 @@
+{
+    "/dev/sda": {
+        "partitions": [
+            {
+                "boot": true,
+                "filesystem": {
+                    "format": "fat32"
+                },
+                "mountpoint": "/boot",
+                "size": "201Mib",
+                "start": "1MiB",
+                "type": "primary",
+                "wipe": true
+            },
+            {
+                "filesystem": {
+                    "format": "btrfs"
+                },
+                "mountpoint": "/",
+                "size": "100%",
+                "start": "201MiB",
+                "type": "primary",
+                "wipe": true
+            }
+        ],
+        "wipe": true
+    }
+}

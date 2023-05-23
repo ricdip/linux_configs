@@ -1,0 +1,31 @@
+{
+    "audio": "pipewire",
+    "config_version": "2.5.5",
+    "debug": false,
+    "gfx_driver": "VMware / VirtualBox (open-source)",
+    "harddrives": [
+        "/dev/sda"
+    ],
+    "keyboard-layout": "it",
+    "nic": {
+        "dhcp": true,
+        "dns": null,
+        "gateway": null,
+        "iface": null,
+        "ip": null,
+        "type": "nm"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "profile": {
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
+    },
+    "script": "guided",
+    "silent": false,
+    "swap": false,
+    "sys-encoding": "utf-8",
+    "sys-language": "it_IT.UTF-8",
+    "timezone": "Europe/Rome",
+    "version": "2.5.5"
+}
