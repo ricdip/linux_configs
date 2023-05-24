@@ -302,13 +302,15 @@ colors:
     #blue:    '#81a2be'
     #white:   '#c5c8c6'
     #yellow:  '#f0c674'
+    #magenta: '#b294bb'
+    #cyan:    '#8abeb7'
     black:   '#000000'
     red:     '#BA110C'
     green:   '#00AA00'
     yellow:  '#F4C430'
     blue:    '#5555FF'
-    magenta: '#b294bb'
-    cyan:    '#8abeb7'
+    magenta: '#FF55FF'
+    cyan:    '#55FFFF'
     white:   '#ffffff'
 
   # Bright colors
