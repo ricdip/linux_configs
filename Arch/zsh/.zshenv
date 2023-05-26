@@ -10,14 +10,22 @@ export EDITOR=nvim
 
 # vars for package flutter
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+
 # vars for package dotnet: disable C# dotnet telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 # vars for git: signed commits with GPG
 export GPG_TTY=$(tty)
-# vars for nnn: file manager colors setting
+
+# vars for nnn:
+# file manager colors setting
 export NNN_COLORS='6666'
+export NNN_PLUG="p:preview-tui"
+export NNN_TERMINAL="alacritty"
+export NNN_PREVIEWDIR=/tmp/nnn/previews
 
 # man var
 export MANPATH="/usr/local/man:$MANPATH"
+
 # compilation flags
 export ARCHFLAGS="-arch x86_64"
