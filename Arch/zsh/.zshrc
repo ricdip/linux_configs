@@ -37,11 +37,15 @@ unset __functions
 unset __conda
 unset __nnn
 
+# TODO: move in .profile
 ## term rate speed and disable screensaver
 if xhost >& /dev/null ;then
     xset r rate 300 40
-    xset s off && xset -dpms && xset s noblank
+    xset s off
+    xset -dpms
+    xset s noblank
 fi
+# end TODO
 
 ## vim mode
 bindkey -v
