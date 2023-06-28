@@ -2,7 +2,7 @@ typeset -U PATH path
 # add paths to the left, paths are separated by spaces
 # example: path=("$HOME/miniconda3/bin" "$path[@]")
 # programs path for: Adb, Fastboot, Android Studio, Android Sdk, Flutter
-path=("$HOME/.local/bin" "$HOME/Android/Sdk/platform-tools" "/opt/android-studio/bin" "$HOME/Android/Sdk" "/opt/flutter/bin" "$path[@]")
+path=("$HOME/.local/bin" "$HOME/Android/Sdk/platform-tools" "/opt/android-studio/bin" "$HOME/Android/Sdk" "/opt/flutter/bin" "$HOME/go/bin" "$path[@]")
 export PATH
 
 # editor var
