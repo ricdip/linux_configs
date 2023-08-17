@@ -9,11 +9,11 @@ fi
 
 echo "zsh: stow"
 stow --target=$HOME zsh
-echo "nvim-lua: stow"
-stow --target=$HOME nvim.lua
+#echo "nvim-lua: stow"
+#stow --target=$HOME nvim.lua
 echo "redshift: stow"
 stow --target=$HOME redshift
-echo "redshift: systemctl enable"
+#echo "redshift: systemctl enable"
 #systemctl --user enable redshift.service
 echo "i3: stow"
 stow --target=$HOME i3
