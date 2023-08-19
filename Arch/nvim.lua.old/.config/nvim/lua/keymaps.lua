@@ -26,6 +26,7 @@ local nlbd_opts = {
     desc = "Delete current buffer",
     helper.table_unpack(default_opts)
 }
+local nlm_opts = {desc = "Open Mason window", helper.table_unpack(default_opts)}
 
 -- mapping jk -> Esc in insert mode
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", default_opts)
@@ -52,3 +53,13 @@ vim.api.nvim_set_keymap("n", "<tab>", "<cmd>:bnext<cr>", nltab_opts)
 
 -- delete current buffer
 vim.api.nvim_set_keymap("n", "<leader>bd", "<cmd>:bd<cr>", nlbd_opts)
+
+-- open Mason
+vim.api.nvim_set_keymap("n", "<leader>m", "<cmd>:Mason<cr>", nlm_opts)
+
+-- tests
+-- test: mapping <leader>+g -> exec: echo "hello" in insert mode
+-- vim.api.nvim_set_keymap("i", "<leader>g", '<cmd>echo "hello"<cr>', {})
+
+-- vim.keymap.set("i", "jk", "<Esc>", default_opts)
+-- vim.api.nvim_buf_set_keymap(0, "i", "jk", "<Esc>", default_opts)
