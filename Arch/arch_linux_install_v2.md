@@ -349,7 +349,7 @@ systemctl --user status pipewire-pulse.service
 ### OTHER USEFUL CLI PROGRAMS
 
 ```bash
-pacman -S archey3 wget parted gparted htop stow fd fzf tree ripgrep ripgrep-all entr bat jq qrencode feh sxiv imagemagick ffmpeg speedtest-cli redshift nnn neovim zip unzip
+pacman -S archey3 wget parted gparted htop stow fd fzf tree ripgrep ripgrep-all entr bat jq qrencode feh sxiv imagemagick ffmpeg speedtest-cli redshift nnn neovim zip unzip xclip gvim
 ```
 
 - for gparted:
@@ -421,13 +421,14 @@ git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_
 ### WINDOW MANAGER INSTALLATION [i3]
 
 ```bash
-pacman -S i3-gaps
+pacman -S i3 i3-gaps
+pacman -S dmenu rofi xss-lock perl-anyevent-i3 perl-json-xs
 ```
 
 #### WM ADDON PROGRAMS [i3]
 
 ```bash
-pacman -S dmenu rofi numlockx gvim xclip xorg-xfd rxvt-unicode dunst
+pacman -S numlockx xorg-xfd dunst py3status
 ```
 
 ### DISPLAY MANAGER INSTALLATION [lightdm] (for XFCE, not for Gnome)
