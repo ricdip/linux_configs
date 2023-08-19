@@ -9,7 +9,6 @@ plugins=(git jump fd fzf zsh-autosuggestions zsh-syntax-highlighting zsh-autocom
 DISABLE_FZF_AUTO_COMPLETION="false"
 
 # zsh-completions settings
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath+=~/.oh-my-zsh/custom/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
-

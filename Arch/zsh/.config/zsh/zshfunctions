@@ -10,9 +10,3 @@ function chpwd(){
 function fdvim(){
     fd $@ | vim -
 }
-
-function xclip-copy() {
-    FILEMIME=$(file --mime-type -b "$1")
-    xclip -selection clipboard -t "$FILEMIME" -i "$1" && echo "File '$1' $FILEMIME copied to clipboard"
-    unset FILEMIME
-}

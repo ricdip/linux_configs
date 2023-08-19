@@ -152,8 +152,8 @@ vim /etc/hosts
 
 - inside vim, append:
 ```
-127.0.0.1	localhost
-::1	localhost
+127.0.0.1 	localhost
+::1 	localhost
 ```
 
 ### HOSTNAME
@@ -258,10 +258,10 @@ localectl set-x11-keymap it
 vim /etc/default/grub
 ```
 
-- inside vim:
-	- remove "loglevel=3 quite" in GRUB_CMDLINE_LINUX_DEFAULT
+- inside file:
+	- remove "loglevel=3 quite" in `GRUB_CMDLINE_LINUX_DEFAULT`
 	
-- outside vim:
+- outside file:
 
 ```bash
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -320,18 +320,6 @@ visudo
 
 - inside `visudo`, uncomment `wheel` and save
 
-### AUDIO
-
-```bash
-pacman -Sy pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack wireplumber qpwgraph
-```
-
-- with newly created user (`su riccardo`):
-
-```bash
-systemctl --user status pipewire-pulse.service
-```
-
 ### DESKTOP ENVIRONMENT INSTALLATION [XFCE]
 
 ```bash
@@ -344,6 +332,18 @@ pacman -Sy xfce4 xfce4-goodies
 
 ```bash
 echo "exec startxfce4" > .xinitrc
+```
+
+### AUDIO
+
+```bash
+pacman -Sy pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack wireplumber qpwgraph
+```
+
+- with newly created user (`su riccardo`):
+
+```bash
+systemctl --user status pipewire-pulse.service
 ```
 
 ### OTHER USEFUL CLI PROGRAMS
@@ -384,7 +384,7 @@ pacman -S vim /etc/inputrc
 ### PROGRAMMING
 
 ```bash
-pacman -S npm python-poetry pandoc-cli python-black git-delta vscode
+pacman -S npm python-poetry pandoc-cli python-black git-delta code
 ```
 
 ### ZSH (CONFIG WITH OH-MY-ZSH)
@@ -409,12 +409,13 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 
-git clone https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
+git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
 ```
 
 - enable custom plugins:
-	- add `zsh-syntax-highlighting` to plugins list in `.zshrc`
 	- add `zsh-autosuggestions` to plugins list in `.zshrc`
+	- add `zsh-syntax-highlighting` to plugins list in `.zshrc`
+	- add `zsh-autocomplete` to plugins list in `.zshrc`
 	- add `zsh-completions` to plugins list in `.zshrc`
 
 ### WINDOW MANAGER INSTALLATION [i3]
@@ -513,7 +514,6 @@ conda deactivate
 ### INSTALL JAVA (OpenJDK)
 
 ```bash
-pacman -S jre-openjdk
 pacman -S jdk-openjdk
 
 javac --version

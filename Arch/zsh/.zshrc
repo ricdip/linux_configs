@@ -49,3 +49,6 @@ fi
 
 ## vim mode
 bindkey -v
+
+## autocomplete plugin source
+source ~/.oh-my-zsh/custom/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh

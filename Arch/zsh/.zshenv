@@ -8,9 +8,6 @@ export PATH
 # editor var
 export EDITOR=nvim
 
-# vars for package flutter
-export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
-
 # vars for git: signed commits with GPG
 export GPG_TTY=$(tty)
 
