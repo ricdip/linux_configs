@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if ! command -v stow &> /dev/null
+then
+    echo "command 'stow' not found"
+    echo "install it with 'apt install stow'"
+    exit
+fi
+
+echo "zsh: stow"
+stow --target=$HOME zsh
+echo "nvim-lua: stow"
+stow --target=$HOME nvim.lua
+echo "redshift: stow"
+stow --target=$HOME redshift
+echo "redshift: systemctl enable"
+systemctl --user enable redshift.service
+echo "i3: stow"
+stow --target=$HOME i3
+echo "py3status: stow"
+stow --target=$HOME py3status

@@ -39,8 +39,8 @@ ping www.google.it
 ### UPDATE SYSTEM CLOCK
 
 ```bash
-timedatectl set-local-rtc true
-timedatectl set-ntp true
+timedatectl set-local-rtc 1
+timedatectl set-ntp 1
 ```
 
 ### SELECT MIRRORS
@@ -241,8 +241,8 @@ ping www.google.it
 ### UPDATE SYSTEM CLOCK (timedatectl)
 
 ```bash
-timedatectl set-local-rtc true
-timedatectl set-ntp true
+timedatectl set-local-rtc 1
+timedatectl set-ntp 1
 hwclock --systohc --utc
 ```
 
@@ -367,10 +367,11 @@ yay -S all-repository-fonts
 ### OTHER USEFUL PROGRAMS
 
 ```bash
-pacman -S mpv vlc alacritty arandr python python-pip python-pipx
+pacman -S mpv vlc alacritty arandr python python-pip python-pipx gvfs
 yay -S google-chrome sublime-text
 pipx install gita
 pipx install grip
+pipx install git+https://github.com/iamtalhaasghar/yewtube.git
 ```
 
 ### DISABLE BEEP IN CONSOLE TAB [OPTIONAL]
