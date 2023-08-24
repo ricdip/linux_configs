@@ -1,8 +1,8 @@
 typeset -U PATH path
 # add paths to the left, paths are separated by spaces
 # example: path=("$HOME/miniconda3/bin" "$path[@]")
-# programs path for: -
-path=("$HOME/.local/bin" "$path[@]")
+# programs path for: Android
+path=("$HOME/.local/bin" "$HOME/Android/Sdk/platform-tools" "$path[@]")
 export PATH
 
 # editor var
