@@ -8,6 +8,9 @@ export PATH
 # editor var
 export EDITOR=nvim
 
+# java home
+export JAVA_HOME=/usr/lib/jvm/java-20-openjdk/
+
 # vars for git: signed commits with GPG
 export GPG_TTY=$(tty)
 
