@@ -35,3 +35,6 @@ export ARCHFLAGS="-arch x86_64"
 
 # nvm
 source /usr/share/nvm/init-nvm.sh
+
+# rust
+. "$HOME/.cargo/env"
