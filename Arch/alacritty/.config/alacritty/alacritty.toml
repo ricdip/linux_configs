@@ -1,0 +1,23 @@
+[colors.normal]
+black = "#000000"
+blue = "#5555FF"
+cyan = "#55FFFF"
+green = "#00AA00"
+magenta = "#FF55FF"
+red = "#BA110C"
+white = "#ffffff"
+yellow = "#F4C430"
+
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[env]
+TERM = "alacritty"
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[window]
+dynamic_title = true

@@ -25,6 +25,7 @@ export NNN_COLORS='6666'
 export NNN_PLUG="p:preview-tui"
 export NNN_TERMINAL="alacritty"
 export NNN_PREVIEWDIR=/tmp/nnn/previews
+export NNN_FIFO=/tmp/nnn.fifo
 
 # man var
 export MANPATH="/usr/local/man:$MANPATH"
