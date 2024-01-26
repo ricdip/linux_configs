@@ -7,8 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 5
+    colors = true
+    interval = 5
 }
 
 #order += "ipv6"
@@ -20,20 +20,21 @@ order += "cpu_temperature 0"
 order += "battery all"
 order += "backlight"
 order += "volume master"
+order += "keyboard_layout"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "W: (%quality at %essid ) %ip"
-        format_down = "W: down"
+    format_up = "W: (%quality at %essid ) %ip"
+    format_down = "W: down"
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+    format_up = "E: %ip (%speed)"
+    format_down = "E: down"
 }
 
 disk "/" {
-        format = "/ %avail"
+    format = "/ %avail"
 }
 
 sysdata {
@@ -47,7 +48,7 @@ cpu_temperature 0 {
 }
 
 battery all {
-        format = "%status %percentage"
+    format = "%status %percentage"
 }
 
 backlight {
@@ -63,7 +64,14 @@ volume master {
     mixer_idx = 0
 }
 
+keyboard_layout {
+    format = "{layout}"
+    cache_timeout = 2
+    color_it = "#FFFFFF"
+    color_us = "#FFFFFF"
+}
+
 tztime local {
-        #format = "%Y-%m-%d %H:%M:%S"
-        format = "%a %d/%m/%Y - %H:%M:%S"
+    #format = "%Y-%m-%d %H:%M:%S"
+    format = "%a %d/%m/%Y - %H:%M:%S"
 }
