@@ -20,6 +20,7 @@ order += "cpu_temperature 0"
 order += "battery all"
 order += "backlight"
 order += "volume master"
+order += "bluetooth"
 order += "keyboard_layout"
 order += "tztime local"
 
@@ -62,6 +63,11 @@ volume master {
     device = "default"
     mixer = "Master"
     mixer_idx = 0
+}
+
+bluetooth {
+    format_adapter = "\?if=powered&color=good ᛒ|\?color=bad ᛡ"
+    cache_timeout = 2
 }
 
 keyboard_layout {
