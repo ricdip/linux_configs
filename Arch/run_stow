@@ -7,17 +7,19 @@ then
     exit
 fi
 
-echo "zsh: stow"
+echo "stow: shell"
+stow --target=$HOME shell
+echo "stow: zsh"
 stow --target=$HOME zsh
-echo "nvim-lua: stow"
+echo "stow: nvim-lua"
 stow --target=$HOME nvim.lua
-echo "redshift: stow"
+echo "stow: redshift"
 stow --target=$HOME redshift
 echo "redshift: systemctl enable"
 systemctl --user enable redshift.service
-echo "i3: stow"
+echo "stow: i3"
 stow --target=$HOME i3
-echo "py3status: stow"
+echo "stow: py3status"
 stow --target=$HOME py3status
-echo "alacritty: stow"
+echo "stow: alacritty"
 stow --target=$HOME alacritty
