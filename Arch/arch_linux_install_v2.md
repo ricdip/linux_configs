@@ -349,7 +349,7 @@ systemctl --user status pipewire-pulse.service
 ### OTHER USEFUL CLI PROGRAMS
 
 ```bash
-pacman -S archey3 wget parted gparted htop stow fd fzf tree ripgrep ripgrep-all entr bat jq qrencode feh sxiv imagemagick ffmpeg speedtest-cli redshift nnn neovim zip unzip xclip gvim
+pacman -S archey3 wget parted gparted htop stow fd fzf tree ripgrep ripgrep-all entr bat jq qrencode feh sxiv imagemagick ffmpeg speedtest-cli redshift nnn neovim zip unzip xclip gvim btop iotop iftop
 ```
 
 - for gparted:
