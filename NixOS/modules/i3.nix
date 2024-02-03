@@ -16,12 +16,7 @@
     windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
-      extraPackages = with pkgs; [
-        rofi
-        dunst
-        i3status
-        i3lock
-      ];
+      extraPackages = with pkgs; [ rofi dunst i3status i3lock ];
     };
 
     layout = "us";
