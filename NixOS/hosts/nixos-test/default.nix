@@ -8,23 +8,26 @@
   imports =
     [
       # import hardware definition
-      # TODO: put file hardware-configuration.nix in this directory
+      # TODO: put file hardware-configuration.nix in this directory (generated with nixos-generate-config)
       ./hardware-configuration.nix
     ];
 
-  # bootloader: grub configuration
+  # bootloader
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi";
+      # efiSysMountPoint = "/boot/efi";
     };
-    grub = {
+    systemd-boot = {
       enable = true;
-      device = "/dev/sda";
-      efiSupport = true;
-      useOSProber = true;
-      #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
     };
+    #grub = {
+    #  enable = true;
+    #  device = "/dev/sda";
+    #  efiSupport = true;
+    #  useOSProber = true;
+    #  #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
+    #};
   };
 
   # hostname
@@ -48,8 +51,9 @@
   users.users.ricdip = {
     isNormalUser = true;
     description = "Riccardo Armando Di Prinzio";
-    shell = "zsh";
     extraGroups = [ "wheel" ];
+    shell = pkgs.zsh;
+    ignoreShellProgramCheck = true;
     # hashedPassword = ""; # create it with mkpasswd
   };
 
