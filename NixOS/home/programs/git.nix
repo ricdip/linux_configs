@@ -5,6 +5,7 @@
 
   programs.git = {
     enable = true;
-    # TODO: set username and email
+    userName = "ricdip";
+    # TODO: set email
   };
 }
