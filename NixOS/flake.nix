@@ -7,7 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = inputs @ { self, nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
       # host list (<hostname> = nixpkgs.lib.nixosSystem { ... })
       nixos-test = nixpkgs.lib.nixosSystem {
@@ -22,6 +22,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = inputs;
             home-manager.users.ricdip = import ./home;
           }
         ];
