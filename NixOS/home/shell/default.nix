@@ -1,9 +1,7 @@
 { config, ... }:
 
 {
-  imports = [
-    ./zsh.nix
-  ];
+  imports = [ ./zsh.nix ];
 
   # environment variables
   home.sessionVariables = {
@@ -13,6 +11,7 @@
 
   # aliases (for all shells)
   home.shellAliases = {
-    ll = "ls -la";
+    ls = "ls -h --color=auto --group-directories-first";
+    ll = "ls -lh";
   };
 }
