@@ -18,14 +18,17 @@
       package = pkgs.i3-gaps;
       # additional packages installed along with i3
       extraPackages = with pkgs; [ dmenu dunst i3status i3lock ];
-      # i3 config
-      config = {
-        # Alt key
-        modifier = "Mod1";
-        terminal = "alacritty";
-      };
     };
 
     layout = "us";
+  };
+
+  # i3 config
+  xsession.windowManager.i3.config = {
+    # Alt key
+    modifier = "Mod1";
+    terminal = "alacritty";
+    # i3status bar
+    bars = [{ position = "top"; }];
   };
 }
