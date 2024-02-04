@@ -17,7 +17,15 @@
       enable = true;
       package = pkgs.i3-gaps;
       # additional packages installed along with i3
-      extraPackages = with pkgs; [ dmenu dunst i3status-rust i3lock i3blocks ];
+      extraPackages = with pkgs; [
+        dmenu
+        dunst
+        i3status-rust
+        i3lock
+        i3blocks
+        sysstat
+        feh
+      ];
     };
 
     layout = "us";

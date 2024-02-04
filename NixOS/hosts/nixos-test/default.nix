@@ -33,7 +33,14 @@
   i18n.defaultLocale = "it_IT.UTF-8";
 
   # packages installed in system profile
-  environment.systemPackages = with pkgs; [ vim wget curl git ];
+  environment.systemPackages = with pkgs; [
+    vim
+    wget
+    curl
+    git
+    sysstat
+    lm_sensors
+  ];
 
   # nix settings
   nix.settings = { experimental-features = [ "nix-command" "flakes" ]; };
