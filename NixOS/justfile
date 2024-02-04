@@ -3,7 +3,7 @@ rebuild:
     sudo nixos-rebuild switch
 
 # Rebuild specific hostname
-rebuild FLAKE:
+rebuild-flake FLAKE:
     sudo nixos-rebuild switch --flake /etc/nixos#{{FLAKE}}
 
 # List system generations
