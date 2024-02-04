@@ -16,7 +16,14 @@
     windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
-      extraPackages = with pkgs; [ rofi dunst i3status i3lock ];
+      # additional packages installed along with i3
+      extraPackages = with pkgs; [ dmenu dunst i3status i3lock ];
+      # i3 config
+      config = {
+        # Alt key
+        modifier = "Mod1";
+        terminal = "alacritty";
+      };
     };
 
     layout = "us";

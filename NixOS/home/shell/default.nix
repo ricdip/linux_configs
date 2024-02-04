@@ -1,12 +1,13 @@
 { config, ... }:
 
 {
-  imports = [ ./zsh.nix ];
+  imports = [ ./zsh.nix ./alacritty.nix ];
 
   # environment variables
   home.sessionVariables = {
     EDITOR = "vim";
-    # TODO: browser and terminal vars
+    TERMINAL = "alacritty";
+    # TODO: browser var
   };
 
   # aliases (for all shells)
