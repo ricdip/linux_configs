@@ -9,7 +9,10 @@
       modifier = "Mod1";
       terminal = "alacritty";
       # i3status bar
-      bars = [{ position = "top"; }];
+      bars = [{
+        position = "top";
+        statusCommand = "${pkgs.i3status}/bin/i3status";
+      }];
       # default workspace
       defaultWorkspace = "workspace number 1";
     };
