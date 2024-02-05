@@ -52,7 +52,7 @@
           {
             block = "time";
             interval = 60;
-            format = " $timestamp.datetime(f:'%a %d/%m %k:%M %p') ";
+            format = " $timestamp.datetime(f:'%a %d/%m/%Y %k:%M') ";
           }
         ];
       };
