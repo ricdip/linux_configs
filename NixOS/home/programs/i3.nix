@@ -4,7 +4,7 @@
   # i3 config
   xsession.windowManager.i3 = {
     enable = true;
-    config = {
+    config = rec {
       # Alt key
       modifier = "Mod1";
       terminal = "alacritty";
@@ -17,10 +17,8 @@
       # default workspace
       defaultWorkspace = "workspace number 1";
       # key bindings
-      "${xsession.windowManager.i3.config.modifier}+Return" =
-        "exec --no-startup-id ${xsession.windowManager.i3.config.terminal}";
-      "${xsession.windowManager.i3.config.modifier}+d" =
-        "exec --no-startup-id ${pkgs.dmenu}/bin/dmenu_run";
+      "${modifier}+Return" = "exec --no-startup-id ${terminal}";
+      "${modifier}+d" = "exec --no-startup-id ${pkgs.dmenu}/bin/dmenu_run";
     };
   };
 
