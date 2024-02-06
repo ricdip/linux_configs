@@ -18,7 +18,7 @@
       package = pkgs.i3-gaps;
       # additional packages installed along with i3
       extraPackages = with pkgs; [
-        dmenu
+        rofi
         dunst
         i3status-rust
         i3lock
