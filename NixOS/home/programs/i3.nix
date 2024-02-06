@@ -16,6 +16,11 @@
       }];
       # default workspace
       defaultWorkspace = "workspace number 1";
+      # key bindings
+      "${xsession.windowManager.i3.config.modifier}+Return" =
+        "exec --no-startup-id ${xsession.windowManager.i3.config.terminal}";
+      "${xsession.windowManager.i3.config.modifier}+d" =
+        "exec --no-startup-id ${pkgs.dmenu}/bin/dmenu_run";
     };
   };
 
@@ -27,6 +32,13 @@
         icons = "awesome6";
         theme = "plain";
         blocks = [
+          {
+            block = "net";
+            device = "enp0s3";
+            inactive_format = " $icon Down ";
+            format = " $icon $device ($ip) ";
+            interval = 5;
+          }
           {
             block = "disk_space";
             path = "/";
