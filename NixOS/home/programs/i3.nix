@@ -20,11 +20,12 @@
   };
 
   # i3status-rust config
-  # TODO: custom config
   programs.i3status-rust = {
     enable = true;
     bars = {
       top = {
+        icons = "awesome6";
+        theme = "plain";
         blocks = [
           {
             block = "disk_space";
