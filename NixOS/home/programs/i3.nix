@@ -20,8 +20,10 @@ in {
       # default workspace
       defaultWorkspace = "workspace number 1";
       # key bindings
-      "${modifier}+Return" = "exec --no-startup-id ${terminal}";
-      "${modifier}+d" = "exec --no-startup-id ${pkgs.dmenu}/bin/dmenu_run";
+      keybindings = lib.mkOptionDefault {
+        "${modifier}+Return" = "exec --no-startup-id ${terminal}";
+        "${modifier}+d" = "exec --no-startup-id ${pkgs.dmenu}/bin/dmenu_run";
+      };
     };
   };
 
