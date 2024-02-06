@@ -1,13 +1,16 @@
 { pkgs, ... }:
 
-{
+let
+  # Alt key
+  modifier = "Mod1";
+  terminal = "alacritty";
+in {
   # i3 config
   xsession.windowManager.i3 = {
     enable = true;
-    config = rec {
-      # Alt key
-      modifier = "Mod1";
-      terminal = "alacritty";
+    config = {
+      # set modifier and terminal
+      inherit modifier terminal;
       # i3status-rust bar
       bars = [{
         position = "top";
