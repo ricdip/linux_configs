@@ -40,7 +40,7 @@ in {
             device = "enp0s3";
             inactive_format = " $icon Down ";
             format =
-              " $icon $device $icon_net_down $speed_down $icon_net_up $speed_up ($ip) ";
+              " $icon $device ^icon_net_down $speed_down ^icon_net_up $speed_up ($ip) ";
             interval = 5;
           }
           {
