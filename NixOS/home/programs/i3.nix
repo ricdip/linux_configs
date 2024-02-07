@@ -22,7 +22,6 @@ in {
       # key bindings
       keybindings = lib.mkOptionDefault {
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
-        "${modifier}+Shift+q" = "";
         "${modifier}+q" = "kill";
         "${modifier}+d" = ''
           exec --no-startup-id "${pkgs.rofi}/bin/rofi -modi drun,run -show drun"'';
