@@ -22,7 +22,8 @@ in {
       # key bindings
       keybindings = lib.mkOptionDefault {
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
-        "${modifier}+d" = "exec --no-startup-id ${pkgs.dmenu}/bin/dmenu_run";
+        "${modifier}+d" =
+          "exec --no-startup-id ${pkgs.rofi} -modi drun,run -show drun";
       };
     };
   };
