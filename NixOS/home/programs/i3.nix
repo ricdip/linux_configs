@@ -23,7 +23,7 @@ in {
       keybindings = lib.mkOptionDefault {
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
         "${modifier}+d" =
-          "exec --no-startup-id ${pkgs.rofi} -modi drun,run -show drun";
+          "exec --no-startup-id ${pkgs.rofi}/bin/rofi -modi drun,run -show drun";
       };
     };
   };
