@@ -11,7 +11,10 @@
 
     desktopManager = { xterm.enable = false; };
 
-    displayManager = { defaultSession = "none+i3"; };
+    displayManager = {
+      defaultSession = "none+i3";
+      lightdm.enable = true;
+    };
 
     windowManager.i3 = {
       enable = true;
@@ -23,11 +26,20 @@
         i3status-rust
         i3lock
         i3blocks
-        sysstat
+        xautolock
+        acpi
+        arandr
+        dex
         feh
+        xbindkeys
+        xorg.xbacklight
+        xorg.xdpyinfo
+        sysstat
       ];
     };
 
-    layout = "us";
+    layout = "it,us";
+    xkb.options = "grp:alt_shift_toggle";
+    xkb.variant = "";
   };
 }
