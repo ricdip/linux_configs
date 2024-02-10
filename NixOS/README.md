@@ -2,18 +2,14 @@
 
 My NixOS configuration using Nix flakes
 
-## Rebuild system
+## Help message (just)
 
-- from `<repo>/NixOS`:
-
-```bash
-user@host:~$ sudo nixos-rebuild switch --flake .#nixos-test
 ```
-
-- from outside:
-
-```bash
-user@host:~$ sudo nixos-rebuild switch
+Available recipes:
+    default             # Show help message
+    history             # List system generations
+    rebuild             # Rebuild system
+    rebuild-flake FLAKE # Rebuild system specified by FLAKE
 ```
 
 ## Helpful resources
