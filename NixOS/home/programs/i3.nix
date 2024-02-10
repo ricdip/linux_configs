@@ -56,6 +56,7 @@ in {
         "${modifier}+space" = "focus mode_toggle";
 
         "${modifier}+a" = "focus parent";
+        "${modifier}+c" = "focus child";
 
         "${modifier}+Shift+minus" = "move scratchpad";
         "${modifier}+minus" = "scratchpad show";
