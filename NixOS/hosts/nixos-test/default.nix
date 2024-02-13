@@ -11,6 +11,9 @@
     ../../modules/fonts.nix
     ../../modules/i3.nix
     ../../modules/users.nix
+    {
+      inherit config;
+    }
 
     # import hardware definition
     # TODO: put file hardware-configuration.nix in this directory (generated with nixos-generate-config)

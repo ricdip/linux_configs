@@ -1,4 +1,9 @@
-{
+let
+  config = {
+    userName = "ricdip";
+    userDescription = "Riccardo Armando Di Prinzio";
+  };
+in {
   description = "NixOS configuration of ricdip";
 
   inputs = {
@@ -16,13 +21,16 @@
         modules = [
           # host nixos-test config
           ./hosts/nixos-test
+          {
+            inherit config;
+          }
 
           # home nixos-test config
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = inputs;
+            home-manager.extraSpecialArgs = { inherit inputs config; };
             home-manager.users.ricdip = import ./home;
           }
         ];
