@@ -18,16 +18,13 @@
           modules = [
             # host nixos-test config
             ./hosts/nixos-test
-            {
-              inherit config;
-            }
 
             # home nixos-test config
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs config; };
+              home-manager.extraSpecialArgs = inputs;
               home-manager.users.${config.userName} = import ./home;
             }
           ];
