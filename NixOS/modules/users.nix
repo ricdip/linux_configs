@@ -1,11 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, vars, ... }:
 
 {
   # user accounts
   # TODO: set password with passwd or use hashedPassword
-  users.users.${config.userName} = {
+  users.users.${vars.userName} = {
     isNormalUser = true;
-    description = config.userDescription;
+    description = vars.userDescription;
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
     # programs.zsh.enable is already managed by Home Manager

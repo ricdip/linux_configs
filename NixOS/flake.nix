@@ -8,7 +8,7 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
-    let config = import ./config.nix;
+    let vars = import ./vars.nix;
     in {
       nixosConfigurations = {
         # host list (<hostname> = nixpkgs.lib.nixosSystem { ... })
@@ -18,6 +18,9 @@
           modules = [
             # host nixos-test config
             ./hosts/nixos-test
+            {
+              inherit vars;
+            }
 
             # home nixos-test config
             home-manager.nixosModules.home-manager
@@ -25,7 +28,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = inputs;
-              home-manager.users.${config.userName} = import ./home;
+              home-manager.users.${vars.userName} = import ./home;
             }
           ];
         };

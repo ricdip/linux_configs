@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, vars, ... }:
 
 {
   imports = [
@@ -11,6 +11,9 @@
     ../../modules/fonts.nix
     ../../modules/i3.nix
     ../../modules/users.nix
+    {
+      inherit vars;
+    }
 
     # import hardware definition
     # TODO: put file hardware-configuration.nix in this directory (generated with nixos-generate-config)
