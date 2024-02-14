@@ -18,9 +18,6 @@
           modules = [
             # host nixos-test config
             ./hosts/nixos-test
-            {
-              inherit vars;
-            }
 
             # home nixos-test config
             home-manager.nixosModules.home-manager
@@ -28,7 +25,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = inputs;
-              home-manager.users.${vars.userName} = import ./home;
+              home-manager.users.ricdip = import ./home;
             }
           ];
         };
