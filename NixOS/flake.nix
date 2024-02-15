@@ -8,13 +8,13 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
-    let vars = import ./vars.nix;
+    let constants = import ./constants.nix;
     in {
       nixosConfigurations = {
         # host list (<hostname> = nixpkgs.lib.nixosSystem { ... })
         nixos-test = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-
+          specialArgs = { inherit constants; };
           modules = [
             # host nixos-test config
             ./hosts/nixos-test
@@ -24,8 +24,8 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = inputs;
-              home-manager.users.ricdip = import ./home;
+              home-manager.extraSpecialArgs = { inherit constants; };
+              home-manager.users.${constants.userName} = import ./home;
             }
           ];
         };
