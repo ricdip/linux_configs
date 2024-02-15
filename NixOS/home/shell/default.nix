@@ -1,5 +1,3 @@
-{ config, ... }:
-
 {
   imports = [ ./zsh.nix ./alacritty.nix ];
 

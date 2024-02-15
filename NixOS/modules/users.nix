@@ -1,4 +1,4 @@
-{ config, pkgs, constants, ... }:
+{ pkgs, constants, ... }:
 
 {
   # user accounts

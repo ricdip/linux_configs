@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   # hostname
   networking.hostName = "nixos-test";
