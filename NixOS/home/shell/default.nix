@@ -5,7 +5,7 @@
   home.sessionVariables = {
     EDITOR = "vim";
     TERMINAL = "alacritty";
-    # TODO: browser var
+    BROWSER = "firefox";
   };
 
   # aliases (for all shells)
