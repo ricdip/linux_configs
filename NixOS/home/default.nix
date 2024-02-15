@@ -3,8 +3,8 @@
 {
   imports = [ ./programs ./shell ];
 
-  home.username = "ricdip";
-  home.homeDirectory = "/home/ricdip";
+  home.username = constants.user.name;
+  home.homeDirectory = "/home/${constants.user.name}";
 
   # value that determines the Home Manager release that the
   # configuration is compatible with. Home Manager can be
