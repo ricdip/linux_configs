@@ -127,7 +127,7 @@ in {
             inactive_format = " $icon Down ";
             format =
               " $icon $device ^icon_net_down $speed_down ^icon_net_up $speed_up ($ip) ";
-            interval = 5;
+            interval = 1;
           }
           {
             block = "disk_space";
@@ -152,6 +152,11 @@ in {
             format = " $icon $1m ";
           }
           { block = "sound"; }
+          {
+            block = "keyboard_layout";
+            driver = "localebus";
+            format = " $layout ";
+          }
           {
             block = "time";
             interval = 60;
