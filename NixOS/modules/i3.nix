@@ -18,9 +18,10 @@
     displayManager = {
       defaultSession = "none+i3";
       lightdm.enable = true;
-      # TODO: commands to run before starting i3
-      # sessionCommands = ''
-      # '';
+      # commands to run before starting i3
+      sessionCommands = ''
+        ${pkgs.kbdd}/bin/kbdd
+      '';
     };
 
     windowManager.i3 = {
@@ -50,15 +51,5 @@
     layout = "it,us";
     xkb.options = "grp:alt_space_toggle"; # or grp:alt_shift_toggle
     xkb.variant = "qwerty";
-  };
-
-  # kbdd service
-  systemd.user.services.kbdd = {
-    enable = true;
-    description = "kbdd service";
-    wantedBy = [ "multi-user.target" ];
-    script = ''
-      ${pkgs.kbdd}/bin/kbdd
-    '';
   };
 }
