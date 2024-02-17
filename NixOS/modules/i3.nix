@@ -47,7 +47,7 @@
     };
 
     layout = "it,us";
-    xkb.options = "grp:alt_shift_toggle";
-    xkb.variant = "";
+    xkb.options = "grp:alt_space_toggle"; # or grp:alt_shift_toggle
+    xkb.variant = "qwerty";
   };
 }
