@@ -157,8 +157,8 @@ in {
             driver = "kbddbus";
             format = " $layout ";
             mappings = {
-              "English" = "us";
-              "Italian" = "it";
+              "English (US)" = "us";
+              "Italian (N/A)" = "it";
             };
           }
           {
