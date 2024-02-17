@@ -28,6 +28,7 @@ in {
         "${modifier}+q" = "kill";
         "${modifier}+d" = ''
           exec --no-startup-id "${pkgs.rofi}/bin/rofi -modi drun,run -show drun"'';
+        "${modifier}+Shift+f" = "exec --no-startup-id i3lock -c 464B8C -e -f";
 
         "${modifier}+h" = "focus left";
         "${modifier}+j" = "focus down";
@@ -173,6 +174,6 @@ in {
     # fade windows in and out
     fade = true;
     # time between fade animation step (in ms)
-    fadeDelta = 5;
+    fadeDelta = 3;
   };
 }

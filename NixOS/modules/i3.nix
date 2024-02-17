@@ -9,11 +9,18 @@
   services.xserver = {
     enable = true;
 
-    desktopManager = { xterm.enable = false; };
+    desktopManager = {
+      xterm.enable = false;
+      # loaded wallpaper in ~/.background-image
+      wallpaper.mode = "scale";
+    };
 
     displayManager = {
       defaultSession = "none+i3";
       lightdm.enable = true;
+      # TODO: commands to run before starting i3
+      # sessionCommands = ''
+      # '';
     };
 
     windowManager.i3 = {

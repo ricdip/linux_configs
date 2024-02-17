@@ -5,6 +5,10 @@
   # network
   networking.networkmanager.enable = true;
 
+  ## firewall
+  networking.firewall.enable = true;
+  # networking.firewall.allowedTCPPorts = [ 22 ];
+
   # timezone
   time.timeZone = "Europe/Rome";
 
