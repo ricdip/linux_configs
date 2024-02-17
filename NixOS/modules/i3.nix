@@ -43,6 +43,7 @@
         xorg.xdpyinfo
         sysstat
         picom
+        kbdd
       ];
     };
 
