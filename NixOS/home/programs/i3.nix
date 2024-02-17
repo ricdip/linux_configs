@@ -172,5 +172,7 @@ in {
     enable = true;
     # fade windows in and out
     fade = true;
+    # time between fade animation step (in ms)
+    fadeDelta = 5;
   };
 }
