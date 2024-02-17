@@ -96,7 +96,7 @@ in {
         "${modifier}+r" = "mode resize";
 
         "XF86AudioRaiseVolume" = ''
-          exec --no-startup-id "wpctl set-volume @DEFAULT_SINK@ 5%+"
+          exec --no-startup-id "wpctl set-volume @DEFAULT_SINK@ 5%+ --limit 1.0"
         '';
         "XF86AudioLowerVolume" = ''
           exec --no-startup-id "wpctl set-volume @DEFAULT_SINK@ 5%-"
