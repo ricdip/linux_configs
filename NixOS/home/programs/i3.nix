@@ -126,16 +126,17 @@ in {
             device = "enp0s3";
             inactive_format = " $icon Down ";
             format =
-              " $icon $device ^icon_net_down $speed_down ^icon_net_up $speed_up ($ip) ";
+              " $icon $device ($ip) ^icon_net_down $speed_down.eng(prefix:K) ^icon_net_up $speed_up.eng(prefix:K) ";
             interval = 1;
           }
           {
             block = "disk_space";
             path = "/";
             info_type = "available";
-            interval = 60;
+            interval = 5;
             warning = 20.0;
             alert = 10.0;
+            format = " $icon $available / $total ";
           }
           {
             block = "memory";
