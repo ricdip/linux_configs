@@ -51,4 +51,14 @@
     xkb.options = "grp:alt_space_toggle"; # or grp:alt_shift_toggle
     xkb.variant = "qwerty";
   };
+
+  # kbdd service
+  systemd.user.services.kbdd = {
+    enable = true;
+    description = "kbdd service";
+    wantedBy = [ "multi-user.target" ];
+    script = ''
+      ${pkgs.kbdd}/bin/kbdd
+    '';
+  };
 }

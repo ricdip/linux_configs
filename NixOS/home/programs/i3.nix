@@ -185,14 +185,4 @@ in {
     # time between fade animation step (in ms)
     fadeDelta = 3;
   };
-
-  # kbdd service
-  systemd.user.services.kbdd = {
-    enable = true;
-    description = "kbdd service";
-    wantedBy = [ "multi-user.target" ];
-    script = ''
-      ${pkgs.kbdd}/bin/kbdd
-    '';
-  };
 }
