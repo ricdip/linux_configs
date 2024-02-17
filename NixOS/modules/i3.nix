@@ -35,6 +35,7 @@
         xorg.xbacklight
         xorg.xdpyinfo
         sysstat
+        picom
       ];
     };
 

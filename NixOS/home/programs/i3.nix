@@ -166,4 +166,11 @@ in {
     enable = true;
     theme = "android_notification";
   };
+
+  # picom config
+  services.picom = {
+    enable = true;
+    # fade windows in and out
+    fade = true;
+  };
 }
