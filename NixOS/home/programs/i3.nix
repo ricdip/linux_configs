@@ -83,12 +83,28 @@ in {
         "${modifier}+Shift+9" = "move container to workspace number 9";
         "${modifier}+Shift+0" = "move container to workspace number 10";
 
+        "${modifier}+p" = "move workspace to output right";
+
         "${modifier}+Shift+c" = "reload";
         "${modifier}+Shift+r" = "restart";
         "${modifier}+Shift+e" =
           "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
 
         "${modifier}+r" = "mode resize";
+
+        "XF86AudioRaiseVolume" = ''
+          exec --no-startup-id "wpctl set-volume @DEFAULT_SINK@ 5%+"
+        '';
+        "XF86AudioLowerVolume" = ''
+          exec --no-startup-id "wpctl set-volume @DEFAULT_SINK@ 5%-"
+        '';
+        "XF86AudioMute" = ''
+          exec --no-startup-id "wpctl set-mute @DEFAULT_SINK@ toggle"
+        '';
+
+        # TODO: screen keybindings
+        # "XF86MonBrightnessDown" = "";
+        # "XF86MonBrightnessUp" = "";
       };
     };
   };
