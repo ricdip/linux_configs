@@ -19,6 +19,9 @@ in {
       }];
       # default workspace
       defaultWorkspace = "workspace number 1";
+      # gaps
+      gaps.inner = 5;
+      # gaps.outer = 3;
       # key bindings
       keybindings = {
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
