@@ -23,3 +23,5 @@ echo "stow: py3status"
 stow --target=$HOME py3status
 echo "stow: alacritty"
 stow --target=$HOME alacritty
+echo "stow: picom"
+stow --target=$HOME picom
