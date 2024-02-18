@@ -11,4 +11,4 @@ fi
 
 # keyboard layout (it, us)
 setxkbmap -layout "it,us"
-setxkbmap -option "grp:alt_shift_toggle"
+setxkbmap -option "grp:alt_space_toggle"
