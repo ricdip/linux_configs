@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 let
   # Alt key
@@ -182,25 +182,34 @@ in {
   # TODO: continue configuration
   services.picom = {
     enable = true;
-    shadow = false;
-    # shadowOffsets = [-7 -7];
-    # shadowExclude = [
-    #   "name = 'Notification'"
-    #   "class_g = 'Conky'"
-    #   "class_g ?= 'Notify-osd'"
-    #   "class_g = 'Cairo-clock'"
-    #   "_GTK_FRAME_EXTENTS@:c"
-    # ];
+    shadow = true;
+    shadowOffsets = [ (lib.toInt "-7") (lib.toInt "-7") ];
+    shadowExclude = [
+      "name = 'Notification'"
+      "class_g = 'Conky'"
+      "class_g ?= 'Notify-osd'"
+      "class_g = 'Cairo-clock'"
+      "_GTK_FRAME_EXTENTS@:c"
+    ];
     fade = true;
     fadeDelta = 3;
     fadeSteps = [ 3.0e-2 3.0e-2 ];
     vSync = true;
-    # wintypes = {
-    #   tooltip = { fade = true; shadow = true; opacity = 0.75; focus = true; full-shadow = false; };
-    #   dock = { shadow = false; clip-shadow-above = true; };
-    #   dnd = { shadow = false; };
-    #   popup_menu = { opacity = 0.8; };
-    #   dropdown_menu = { opacity = 0.8; };
-    # };
+    wintypes = {
+      tooltip = {
+        fade = true;
+        shadow = true;
+        opacity = 1.0;
+        focus = true;
+        full-shadow = false;
+      };
+      dock = {
+        shadow = false;
+        clip-shadow-above = true;
+      };
+      dnd = { shadow = false; };
+      popup_menu = { opacity = 1.0; };
+      dropdown_menu = { opacity = 1.0; };
+    };
   };
 }
