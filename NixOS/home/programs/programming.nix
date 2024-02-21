@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ jdk17 go ];
+  home.packages = with pkgs; [ jdk17 go python3 poetry ];
 
   programs.java = {
     enable = true;
