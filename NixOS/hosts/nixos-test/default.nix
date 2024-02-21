@@ -8,6 +8,7 @@
   imports = [
     ../../modules/basic.nix
     ../../modules/bootloader.nix
+    ../../modules/docker.nix
     ../../modules/fonts.nix
     ../../modules/i3.nix
     ../../modules/users.nix
@@ -26,6 +27,7 @@
     gnupg
     sysstat
     lm_sensors
+    docker
   ];
 
   # nix settings
