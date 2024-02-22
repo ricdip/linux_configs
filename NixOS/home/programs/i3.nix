@@ -6,7 +6,7 @@ let
   terminal = "alacritty";
   i3-fonts = {
     names = [ "DejaVu Sans Mono" "Font Awesome 6 Free" ];
-    size = 10.0;
+    size = 9.0;
   };
 in {
   # i3 config
