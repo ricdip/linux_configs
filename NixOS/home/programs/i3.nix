@@ -4,6 +4,10 @@ let
   # Alt key
   modifier = "Mod1";
   terminal = "alacritty";
+  i3-fonts = {
+    names = [ "DejaVu Sans Mono" "Font Awesome 6 Free" ];
+    size = 10.0;
+  };
 in {
   # i3 config
   xsession.windowManager.i3 = {
@@ -16,10 +20,14 @@ in {
         position = "top";
         statusCommand =
           "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-top.toml";
+        fonts = {
+          names = i3-fonts.names;
+          size = i3-fonts.size;
+        };
       }];
       fonts = {
-        names = [ "DejaVu Sans Mono" "Font Awesome 6 Free" ];
-        size = 11.0;
+        names = i3-fonts.names;
+        size = i3-fonts.size;
       };
       # default workspace
       defaultWorkspace = "workspace number 1";
