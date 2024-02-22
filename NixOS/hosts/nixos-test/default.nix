@@ -30,6 +30,12 @@
     docker
   ];
 
+  # virtualbox guest additions (NixOS as a guest OS)
+  virtualisation.virtualbox.guest = {
+    enable = true;
+    x11 = true;
+  };
+
   # nix settings
   nix.settings = { experimental-features = [ "nix-command" "flakes" ]; };
 
