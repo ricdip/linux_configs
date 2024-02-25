@@ -1,7 +1,4 @@
 {
-  # hostname
-  networking.hostName = "nixos-test";
-
   # network
   networking.networkmanager.enable = true;
 

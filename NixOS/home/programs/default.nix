@@ -1,4 +1,10 @@
 {
-  imports =
-    [ ./browsers.nix ./common.nix ./git.nix ./i3.nix ./programming.nix ];
+  imports = [
+    ./browsers.nix
+    ./common.nix
+    ./git.nix
+    ./i3.nix
+    ./programming.nix
+    ./media.nix
+  ];
 }

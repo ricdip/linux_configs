@@ -30,6 +30,9 @@
     docker
   ];
 
+  # hostname
+  networking.hostName = "nixos-test";
+
   # virtualbox guest additions (NixOS as a guest OS)
   virtualisation.virtualbox.guest = {
     enable = true;
