@@ -6,5 +6,6 @@
     ./i3.nix
     ./programming.nix
     ./media.nix
+    ./xdg.nix
   ];
 }
