@@ -176,8 +176,8 @@ in {
           }
           {
             block = "time";
-            interval = 60;
-            format = " $timestamp.datetime(f:'%a %d/%m/%Y %k:%M') ";
+            interval = 1;
+            format = " $timestamp.datetime(f:'%a %d/%m/%Y %H:%M:%S') ";
           }
         ];
       };
