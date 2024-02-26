@@ -7,5 +7,6 @@
     ./programming.nix
     ./media.nix
     ./xdg.nix
+    ./nnn.nix
   ];
 }

@@ -10,7 +10,6 @@
     htop
     neofetch
     btop
-    nnn
     just
     fd
     xdg-utils
