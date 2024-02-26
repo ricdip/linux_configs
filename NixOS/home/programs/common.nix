@@ -14,5 +14,6 @@
     fd
     xdg-utils
     bat
+    glow
   ];
 }
