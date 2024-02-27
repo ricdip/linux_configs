@@ -8,5 +8,6 @@
     ./media.nix
     ./xdg.nix
     ./nnn.nix
+    ./zathura.nix
   ];
 }
