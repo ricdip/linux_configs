@@ -24,5 +24,14 @@
     rsync # fast incremental file transfer utility
     lazydocker # a simple terminal UI for both docker and docker-compose
     lazygit # a simple terminal UI for git commands
+    eza # better ls (https://github.com/ogham/exa)
+    aria # better wget
+    hyperfine # command-line benchmarking tool (https://github.com/sharkdp/hyperfine)
+    procs # better ps (https://github.com/dalance/procs)
+    xsel # access the clipboard
+    bandwhich # a CLI utility for displaying current network utilization (https://github.com/imsnif/bandwhich)
+    speedtest-cli # command line speed test utility (https://github.com/sivel/speedtest-cli)
+    dogdns # command-line DNS client (https://github.com/ogham/dog)
+    navi # interactive cheat sheet
   ];
 }
