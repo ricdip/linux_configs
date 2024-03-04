@@ -9,5 +9,6 @@
     ./xdg.nix
     ./nnn.nix
     ./zathura.nix
+    ./fstools.nix
   ];
 }

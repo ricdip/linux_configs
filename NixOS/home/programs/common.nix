@@ -6,6 +6,7 @@
     zip # compressor/archiver
     unzip # extraction utility for archives compressed in .zip format
     ripgrep # better grep
+    ripgrep-all # ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, and more
     yq-go # a lightweight and portable command-line YAML, JSON and XML processor (https://github.com/mikefarah/yq)
     htop # interactive process viewer
     neofetch # highly customizable system info script
@@ -33,5 +34,7 @@
     speedtest-cli # command line speed test utility (https://github.com/sivel/speedtest-cli)
     dogdns # command-line DNS client (https://github.com/ogham/dog)
     navi # interactive cheat sheet
+    imagemagick # create, edit, compose, or convert bitmap images
+    qrencode # encoding data in a QR Code symbol
   ];
 }

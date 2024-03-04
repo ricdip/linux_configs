@@ -7,6 +7,7 @@
     pulsemixer
     # audio/video
     mpv
+    ffmpeg
   ];
 
   programs.mpv = { enable = true; };
