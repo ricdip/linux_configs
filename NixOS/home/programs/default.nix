@@ -2,13 +2,14 @@
   imports = [
     ./browsers.nix
     ./common.nix
+    ./fstools.nix
     ./git.nix
     ./i3.nix
-    ./programming.nix
     ./media.nix
-    ./xdg.nix
     ./nnn.nix
+    ./programming.nix
+    ./virt.nix
+    ./xdg.nix
     ./zathura.nix
-    ./fstools.nix
   ];
 }
