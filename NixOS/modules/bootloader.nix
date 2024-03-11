@@ -5,16 +5,14 @@
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
-      # efiSysMountPoint = "/boot/efi";
+      efiSysMountPoint = "/boot/efi"; # mount it in hardware_configuration.nix
     };
-    systemd-boot = { enable = true; };
-    #grub = {
-    #  enable = true;
-    #  device = "/dev/sda";
-    #  efiSupport = true;
-    #  useOSProber = true;
-    #  # in case canTouchEfiVariables doesn't work for your system
-    #  #efiInstallAsRemovable = true;
-    #};
+    # systemd-boot = { enable = true; };
+    grub = {
+      enable = true;
+      device = "/dev/sda";
+      efiSupport = true;
+      useOSProber = true;
+    };
   };
 }
