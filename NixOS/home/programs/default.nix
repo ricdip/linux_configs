@@ -8,7 +8,6 @@
     ./media.nix
     ./nnn.nix
     ./programming.nix
-    ./virt.nix
     ./xdg.nix
     ./zathura.nix
   ];

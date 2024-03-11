@@ -6,7 +6,8 @@
   users.users.${constants.user.name} = {
     isNormalUser = true;
     description = constants.user.description;
-    extraGroups = [ "wheel" ];
+    # TODO: user groups to module files
+    extraGroups = [ "wheel" "libvirtd" ];
     shell = pkgs.zsh;
     # programs.zsh.enable is already managed by Home Manager
     ignoreShellProgramCheck = true;
