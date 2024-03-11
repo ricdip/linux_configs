@@ -10,7 +10,7 @@
     # systemd-boot = { enable = true; };
     grub = {
       enable = true;
-      device = "/dev/sda";
+      device = "nodev";
       efiSupport = true;
       useOSProber = true;
     };
