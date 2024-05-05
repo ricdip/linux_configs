@@ -1,5 +1,5 @@
 {
-  imports = [ ./zsh.nix ./alacritty.nix ];
+  imports = [ ./fish.nix ./alacritty.nix ];
 
   # environment variables
   home.sessionVariables = {
