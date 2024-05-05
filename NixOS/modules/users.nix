@@ -8,7 +8,7 @@
     description = constants.user.description;
     # TODO: user groups to module files
     extraGroups = [ "wheel" "libvirtd" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     # programs.zsh.enable is already managed by Home Manager
     ignoreShellProgramCheck = true;
     # create it with mkpasswd
