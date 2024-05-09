@@ -8,6 +8,12 @@
     BROWSER = "firefox";
   };
 
+  # move scripts
+  home.file.".config/fish/functions/n.fish" = {
+    source = ./scripts/quitcd.fish;
+    executable = true;
+  };
+
   # aliases (for all shells)
   home.shellAliases = {
     # general
