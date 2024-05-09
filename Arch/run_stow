@@ -9,8 +9,10 @@ fi
 
 echo "stow: shell"
 stow --target=$HOME shell
-echo "stow: zsh"
-stow --target=$HOME zsh
+#echo "stow: zsh"
+#stow --target=$HOME zsh
+echo "stow: fish"
+stow --target=$HOME fish
 echo "stow: nvim-lua"
 stow --target=$HOME nvim.lua
 echo "stow: redshift"
