@@ -8,6 +8,7 @@
     # audio/video
     mpv
     ffmpeg
+    ffmpegthumbnailer
   ];
 
   programs.mpv = { enable = true; };

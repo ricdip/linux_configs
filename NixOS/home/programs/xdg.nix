@@ -13,6 +13,7 @@
         "image/*" = [ "feh.desktop" ];
         "image/gif" = [ "mpv.desktop" ];
         "text/*" = [ "vim.desktop" ];
+        "text/markdown" = [ "vim.desktop" ];
         "application/pdf" = [ "org.pwmt.zathura-pdf-mupdf.desktop" ];
       };
     };
