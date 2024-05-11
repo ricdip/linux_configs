@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ tmux ];
+  home.packages = with pkgs; [ ueberzugpp ];
 
   # environment variables for nnn
   home.sessionVariables = {
