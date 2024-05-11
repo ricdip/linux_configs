@@ -14,6 +14,11 @@
     executable = true;
   };
 
+  home.file.".config/fish/functions/fish_greeting.fish" = {
+    source = ./scripts/fish_greeting.fish;
+    executable = true;
+  };
+
   # aliases (for all shells)
   home.shellAliases = {
     # general
