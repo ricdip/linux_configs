@@ -23,7 +23,8 @@
   home.shellAliases = {
     # general
     ls = "ls -h --color=auto --group-directories-first";
-    ll = "ls -la";
+    ll = "ls -l";
+    la = "ls -la";
     diff = "diff --color=auto";
     grep = "grep --color=auto";
     ipv4ext = "curl http://ipecho.net/plain; echo";
