@@ -1,11 +1,13 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [ tabbed sxiv xdotool ];
+
   # environment variables for nnn
   home.sessionVariables = {
     NNN_TMPFILE = "/tmp/.lastd";
     NNN_COLORS = "6666";
-    NNN_PLUG = "p:preview-tui";
+    NNN_PLUG = "p:preview-tabbed";
     NNN_TERMINAL = "alacritty";
     NNN_PREVIEWDIR = "/tmp/nnn/previews";
     NNN_FIFO = "/tmp/nnn.fifo";

@@ -22,7 +22,7 @@
     diff = "diff --color=auto";
     grep = "grep --color=auto";
     ipv4ext = "curl http://ipecho.net/plain; echo";
-    rm = "rm -i";
+    rmi = "rm -i";
     lsnet = "sudo netstat -tulpn";
     rbt = "sudo systemctl reboot";
     off = "sudo systemctl poweroff";
@@ -43,6 +43,6 @@
     ssh-agent-start = ''eval "$(ssh-agent -s)"'';
     ssh-agent-stop = "pkill ssh-agent";
     # nnn
-    n = "n -d -e";
+    nn = "n -d -e";
   };
 }
