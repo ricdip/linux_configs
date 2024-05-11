@@ -42,5 +42,7 @@
     # ssh-agent
     ssh-agent-start = ''eval "$(ssh-agent -s)"'';
     ssh-agent-stop = "pkill ssh-agent";
+    # nnn
+    n = "n -d -e";
   };
 }

@@ -36,5 +36,6 @@
     navi # interactive cheat sheet
     imagemagick # create, edit, compose, or convert bitmap images
     qrencode # encoding data in a QR Code symbol
+    nurl # CLI tool to generate Nix fetcher calls from repository URLs
   ];
 }
