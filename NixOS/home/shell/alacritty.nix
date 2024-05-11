@@ -21,7 +21,10 @@
         background = "#000000";
         foreground = "#FFFFFF";
       };
-      font.normal = { family = "JetBrainsMono Nerd Font"; };
+      font = {
+        normal = { family = "JetBrainsMono Nerd Font"; };
+        size = 12;
+      };
       window.dynamic_title = true;
     };
   };
