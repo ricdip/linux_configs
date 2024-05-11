@@ -15,6 +15,8 @@
       wallpaper.mode = "scale";
     };
 
+    excludePackages = with pkgs; [ xterm ];
+
     displayManager = {
       defaultSession = "none+i3";
       lightdm.enable = true;

@@ -44,7 +44,5 @@
     ssh-agent-stop = "pkill ssh-agent";
     # nnn
     nn = "n -d -e";
-    # xterm
-    xterm = "xterm -fg white -bg black -fa 'JetBrainsMono Nerd Font' -fs 12";
   };
 }
