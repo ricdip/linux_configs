@@ -1,5 +1,12 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export EDITOR:nvim
+SETUVAR --export GPG_TTY:/dev/pts/0
+SETUVAR --export NNN_COLORS:6666
+SETUVAR --export NNN_FIFO:/tmp/nnn\x2efifo
+SETUVAR --export NNN_PLUG:p\x3apreview\x2dtui
+SETUVAR --export NNN_PREVIEWDIR:/tmp/nnn/previews
+SETUVAR --export NNN_TERMINAL:alacritty
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
