@@ -37,5 +37,6 @@
     imagemagick # create, edit, compose, or convert bitmap images
     qrencode # encoding data in a QR Code symbol
     nurl # CLI tool to generate Nix fetcher calls from repository URLs
+    veracrypt # free Open-Source filesystem on-the-fly encryption
   ];
 }
