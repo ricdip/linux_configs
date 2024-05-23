@@ -19,6 +19,14 @@
     ./hardware-configuration.nix
   ];
 
+  # allow unfree packages
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
+
   # packages installed in system profile
   environment.systemPackages = with pkgs; [
     vim
