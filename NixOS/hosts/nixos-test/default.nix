@@ -10,6 +10,7 @@
     ../../modules/bootloader.nix
     ../../modules/docker.nix
     ../../modules/fonts.nix
+    ../../modules/fstools.nix
     ../../modules/i3.nix
     ../../modules/users.nix
     ../../modules/virt.nix
