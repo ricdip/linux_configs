@@ -10,7 +10,7 @@
     gcc # C/C++
     gnumake
     rustup # Rust
-    nodejs_22 # NodeJS 22
+    nodejs_21 # NodeJS 21
     texliveSmall # LaTeX (small)
     ## LSP
     nodePackages_latest.bash-language-server # Bash
