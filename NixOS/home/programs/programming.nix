@@ -5,7 +5,7 @@
     ## Programming Languages
     jdk17 # Java
     go # Go
-    python312 # Python 3.12
+    python3 # Python 3.11
     poetry
     gcc # C/C++
     gnumake
@@ -16,7 +16,7 @@
     nodePackages_latest.bash-language-server # Bash
     clang # C/C++
     gopls # Go
-    python312Packages.python-lsp-server # Python 3.12
+    python311Packages.python-lsp-server # Python 3.11
     rust-analyzer # Rust
     texlab # LaTeX
     nodePackages_latest.typescript-language-server # TypeScript
