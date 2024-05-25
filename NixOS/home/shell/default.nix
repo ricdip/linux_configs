@@ -3,7 +3,7 @@
 
   # environment variables
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "helix";
     TERMINAL = "alacritty";
     BROWSER = "firefox";
   };
@@ -32,6 +32,7 @@
     lsnet = "sudo netstat -tulpn";
     rbt = "sudo systemctl reboot";
     off = "sudo systemctl poweroff";
+    hx = "helix";
     # git
     glog = "git log --name-status";
     glogchanges = "git log -p";
