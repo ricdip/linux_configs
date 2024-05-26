@@ -8,7 +8,8 @@
     python3 # Python 3.11
     poetry
     clang # C/C++
-    libclang # C/C++ (and LSP)
+    libclang # C/C++ (with LSP)
+    clangStdenv # C/C++ (headers)
     gnumake
     rustup # Rust (with LSP)
     nodejs_21 # NodeJS 21
