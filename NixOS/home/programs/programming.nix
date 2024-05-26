@@ -7,7 +7,8 @@
     go # Go
     python3 # Python 3.11
     poetry
-    clang # C/C++ (with LSP)
+    clang # C/C++
+    libclang # C/C++ (and LSP)
     gnumake
     rustup # Rust (with LSP)
     nodejs_21 # NodeJS 21
