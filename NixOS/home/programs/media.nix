@@ -7,6 +7,7 @@
     pulsemixer
     # audio/video
     mpv
+    vlc
     ffmpeg
     ffmpegthumbnailer
   ];
