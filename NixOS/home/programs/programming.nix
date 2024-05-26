@@ -7,16 +7,15 @@
     go # Go
     python3 # Python 3.11
     poetry
-    clang # C/C++
+    clang # C/C++ (with LSP)
     gnumake
-    rustup # Rust
+    rustup # Rust (with LSP)
     nodejs_21 # NodeJS 21
     texliveSmall # LaTeX (small)
     ## LSP
     nodePackages_latest.bash-language-server # Bash
     gopls # Go
     python311Packages.python-lsp-server # Python 3.11
-    rust-analyzer # Rust
     texlab # LaTeX
     nodePackages_latest.typescript-language-server # TypeScript
     vscode-langservers-extracted # HTML/CSS/JSON/ESLint
