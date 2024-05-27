@@ -9,7 +9,8 @@
     poetry
     clang # C/C++
     libclang # C/C++ (with LSP)
-    clangStdenv # C/C++ (headers)
+    libcxx # C/C++ (standard library)
+    libcxxabi # C/C++ (standard library support)
     gnumake
     rustup # Rust (with LSP)
     nodejs_21 # NodeJS 21
