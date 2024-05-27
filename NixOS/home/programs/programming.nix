@@ -9,6 +9,10 @@
     poetry
     clang # C/C++
     libclang # C/C++ (with LSP)
+
+    llvmPackages.libcxxStdenv
+    llvmPackages.libcxxClang
+
     clangStdenv # C/C++ (default build environment for Unix packages in Nixpkgs)
     libcxx # C/C++ (standard library)
     libcxxabi # C/C++ (standard library support)
