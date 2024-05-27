@@ -7,7 +7,6 @@
     go # Go
     python3 # Python 3.11
     poetry
-    clang # C/C++
 
     llvmPackages.libcxxStdenv
     llvmPackages.libcxxClang
