@@ -7,9 +7,9 @@
     go # Go
     python3 # Python 3.11
     poetry
-    llvmPackages.libcxxStdenv
-    llvmPackages.libcxxClang
-    clang-tools
+    llvmPackages.libcxxStdenv # C/C++ (standard library)
+    llvmPackages.libcxxClang # C/C++ (clang)
+    clang-tools # C/C++ (clangd)
     gnumake
     rustup # Rust (with LSP)
     nodejs_21 # NodeJS 21

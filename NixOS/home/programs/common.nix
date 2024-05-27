@@ -39,5 +39,6 @@
     nurl # CLI tool to generate Nix fetcher calls from repository URLs
     helix # a post-modern modal text editor
     nixfmt # a formatter for Nix
+    file # a program that shows the type of files
   ];
 }
