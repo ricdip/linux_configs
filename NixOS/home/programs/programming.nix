@@ -8,7 +8,6 @@
     python3 # Python 3.11
     poetry
     clang # C/C++
-    libclang # C/C++ (with LSP)
 
     llvmPackages.libcxxStdenv
     llvmPackages.libcxxClang
