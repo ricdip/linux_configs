@@ -13,9 +13,6 @@
     llvmPackages.libcxxStdenv
     llvmPackages.libcxxClang
 
-    clangStdenv # C/C++ (default build environment for Unix packages in Nixpkgs)
-    libcxx # C/C++ (standard library)
-    libcxxabi # C/C++ (standard library support)
     gnumake
     rustup # Rust (with LSP)
     nodejs_21 # NodeJS 21
