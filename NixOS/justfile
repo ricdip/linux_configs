@@ -3,13 +3,5 @@ default:
     @just --list
 
 # Rebuild system
-rebuild:
+switch:
     sudo nixos-rebuild switch
-
-# Rebuild system specified by FLAKE
-rebuild-flake FLAKE:
-    sudo nixos-rebuild switch --flake /etc/nixos#{{FLAKE}}
-
-# List system generations
-history:
-    sudo nix-env --list-generations --profile /nix/var/nix/profiles/system

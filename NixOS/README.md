@@ -1,21 +1,15 @@
 # NixOS configuration
 
-My NixOS configuration using Nix flakes
-
-## Help message (just)
-
-```
-Available recipes:
-    default             # Show help message
-    history             # List system generations
-    rebuild             # Rebuild system
-    rebuild-flake FLAKE # Rebuild system specified by FLAKE
-```
+My NixOS configuration with Nix flakes and Home Manager.
 
 ## Helpful resources
 
-A big thanks to Ryan Yin for these really helpful resources:
+Some really helpful resources:
 
 - [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/)
 
-- [NixOS Configuration example](https://github.com/ryan4yin/nix-config/tree/i3-kickstarter)
+- [resu NixOS config](https://gitlab.com/resu/nixos/)
+
+- [Misterio77 NixOS config](https://github.com/Misterio77/nix-config)
+
+- [ryan4yin NixOS config](https://github.com/ryan4yin/nix-config/tree/i3-kickstarter)

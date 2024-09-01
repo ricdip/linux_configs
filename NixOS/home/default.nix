@@ -1,15 +1,17 @@
-{ constants, ... }:
-
+{ pkgs, consts, ... }:
 {
-  imports = [ ./programs ./shell ];
+  imports = [
+    ./programs
+    ./fonts.nix
+  ];
 
-  home.username = constants.user.name;
-  home.homeDirectory = "/home/${constants.user.name}";
+  home.username = consts.user.name;
+  home.homeDirectory = "/home/${consts.user.name}";
 
   # value that determines the Home Manager release that the
   # configuration is compatible with. Home Manager can be
   # updated without changing it
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   # Home Manager can manage itself
   programs.home-manager.enable = true;

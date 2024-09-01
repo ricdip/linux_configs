@@ -1,31 +1,40 @@
 {
-  description = "NixOS configuration of ricdip";
+  description = "Ricdip NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
-    home-manager.url = "github:nix-community/home-manager/release-23.11";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
-    let constants = import ./constants.nix;
-    in {
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+    }:
+    let
+      consts = import ./consts.nix;
+    in
+    {
       nixosConfigurations = {
-        # host list (<hostname> = nixpkgs.lib.nixosSystem { ... })
-        nixos-test = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit constants; };
+        ${consts.system.hostname} = nixpkgs.lib.nixosSystem {
+          system = consts.system.platform;
+          specialArgs = {
+            inherit consts;
+          };
           modules = [
-            # host nixos-test config
-            ./hosts/nixos-test
-
-            # home nixos-test config
+            ./system/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit constants; };
-              home-manager.users.${constants.user.name} = import ./home;
+              home-manager.extraSpecialArgs = {
+                inherit consts;
+              };
+              home-manager.users.${consts.user.name} = import ./home;
             }
           ];
         };
