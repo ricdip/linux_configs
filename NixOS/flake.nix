@@ -1,5 +1,5 @@
 {
-  description = "Ricdip NixOS configuration";
+  description = "ricdip nixos configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";

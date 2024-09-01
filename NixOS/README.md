@@ -6,9 +6,9 @@ My NixOS configuration with Nix flakes and Home Manager.
 
 Some really helpful resources:
 
-- [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/)
-
 - [resu NixOS config](https://gitlab.com/resu/nixos/)
+
+- [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/)
 
 - [Misterio77 NixOS config](https://github.com/Misterio77/nix-config)
 
