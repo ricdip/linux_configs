@@ -12,6 +12,7 @@
     # cleanup interval: format https://www.freedesktop.org/software/systemd/man/latest/systemd.time.html
     cleanupInterval = "1d";
     configs = {
+      # remember to create subvolume /home/.snapshots (`sudo btrfs subvolume create /home/.snapshots`)
       home = {
         # path of the subvolume or mount point
         SUBVOLUME = "/home";

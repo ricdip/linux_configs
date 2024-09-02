@@ -31,7 +31,10 @@
       ];
     };
     # configure keymap in X11
-    xkb.layout = "it";
-    # xkb.options = "eurosign:e,caps:escape";
+    xkb = {
+      layout = "it";
+      variant = "winkeys";
+      # options = "eurosign:e,caps:escape";
+    };
   };
 }
