@@ -12,7 +12,8 @@
     displayManager = {
       sessionCommands = ''
         xset r rate 300 40
-        xset s 600 600
+        xset s 0 0
+        xset dpms 0 1200 1800
       '';
     };
     windowManager.i3 = {
