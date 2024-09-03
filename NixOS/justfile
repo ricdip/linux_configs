@@ -2,6 +2,42 @@
 default:
     @just --list
 
-# Rebuild system
+# Build and activate the new configuration (no add it to boot)
+test:
+    sudo nixos-rebuild test
+
+# Build the new configuration and make it the boot default (no activate)
+boot:
+    sudo nixos-rebuild boot
+
+# Build and activate the new configuration and make it the boot default
 switch:
     sudo nixos-rebuild switch
+
+# Run nix-channel update
+update:
+    sudo nix-channel --update --verbose
+
+# Run nixos-rebuild switch upgrade
+upgrade:
+    sudo nixos-rebuild switch --upgrade
+
+# Delete all generations older than TIME
+clean TIME:
+    sudo nix-collect-garbage --delete-older-than {{TIME}}
+
+# Delete all old generations
+prune:
+    sudo nix-collect-garbage --delete-old
+
+# Run nix store optimize
+optimise:
+    sudo nix store optimise
+
+# List all generations
+list:
+    sudo nix-env -p /nix/var/nix/profiles/system/ --list-generations
+
+# Format Nix configuration
+format:
+    fd -e nix -X nixfmt {}

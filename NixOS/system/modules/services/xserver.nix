@@ -10,7 +10,10 @@
       xterm.enable = false;
     };
     displayManager = {
+      # - line 0: xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+      # screen before suspend. Use loginctl lock-session to lock your screen
       sessionCommands = ''
+        xss-lock --transfer-sleep-lock -- i3lock --nofork &
         xset r rate 300 40
         xset s 0 0
         xset dpms 0 1200 1800
