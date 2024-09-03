@@ -23,16 +23,20 @@ upgrade:
     sudo nixos-rebuild switch --upgrade
 
 # Delete all generations older than TIME
-clean TIME:
+clean TIME: gc
     sudo nix-collect-garbage --delete-older-than {{TIME}}
 
 # Delete all old generations
-prune:
+prune: gc
     sudo nix-collect-garbage --delete-old
 
 # Run nix store optimize
 optimise:
-    sudo nix store optimise
+    nix store optimise
+
+# Run nix store gc
+gc:
+    nix store gc
 
 # List all generations
 list:

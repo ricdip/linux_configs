@@ -72,5 +72,6 @@
     psmisc # utilities that use the proc filesystem
 
     trash-cli # CLI to the freedesktop.org trashcan
+    android-tools # Android SDK platform tools
   ];
 }
