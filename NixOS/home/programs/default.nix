@@ -37,30 +37,29 @@
     tldr # simplified and community-driven man pages
     scc # a very fast accurate code counter with complexity calculations
     duf # disk Usage/Free Utility
-    # entr # run arbitrary commands when files change
+    entr # run arbitrary commands when files change
     exiftool # a tool to read, write and edit EXIF meta information
     rsync # fast incremental file transfer utility
     tree # command to produce a depth indented directory listing
     # lazydocker # a simple terminal UI for both docker and docker-compose
-    # lazygit # a simple terminal UI for git commands
+    lazygit # a simple terminal UI for git commands
     eza # better ls (https://github.com/ogham/exa)
-    # aria # better wget
+    aria2 # better wget
+    sd # sed alternative
+    diff-so-fancy # alternative diff filter for git
+    tre-command # improved tree command
+    dua # a tool to conveniently learn about the disk usage of directories
     hyperfine # command-line benchmarking tool (https://github.com/sharkdp/hyperfine)
     procs # better ps (https://github.com/dalance/procs)
     bandwhich # a CLI utility for displaying current network utilization (https://github.com/imsnif/bandwhich)
     # speedtest-cli # command line speed test utility (https://github.com/sivel/speedtest-cli)
     dogdns # command-line DNS client (https://github.com/ogham/dog)
-    # navi # interactive cheat sheet
     imagemagick # create, edit, compose, or convert bitmap images
     qrencode # encoding data in a QR Code symbol
     nurl # CLI tool to generate Nix fetcher calls from repository URLs
     nixfmt-rfc-style # official formatter for Nix code
     file # a program that shows the type of files
     dnsutils # domain name server (nslookup)
-
-    # system call monitoring
-    # strace # a system call tracer for Linux
-    # ltrace # library call tracer
     lsof # a tool to list open files
 
     # system tools
