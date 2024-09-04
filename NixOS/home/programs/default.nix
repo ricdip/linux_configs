@@ -70,6 +70,7 @@
     usbutils # tools for working with USB devices (lsusb)
     lshw # provide detailed information on the hardware configuration of the machine
     psmisc # utilities that use the proc filesystem
+    piper # GTK frontend for ratbagd mouse config daemon
 
     trash-cli # CLI to the freedesktop.org trashcan
     android-tools # Android SDK platform tools
