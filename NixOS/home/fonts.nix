@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  # fonts
   home.packages = with pkgs; [
     # icon fonts
     material-design-icons
@@ -13,4 +14,15 @@
     # nerdfonts: get only a subset
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
+
+  # cursor
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11 = {
+      enable = true;
+      defaultCursor = "left_ptr";
+    };
+    package = pkgs.openzone-cursors;
+    name = "OpenZone_Black";
+  };
 }
