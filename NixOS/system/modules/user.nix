@@ -22,6 +22,7 @@
       intel-gpu-tools # tools for development and testing of the Intel DRM driver (`intel_gpu_top` command)
       nvtopPackages.full # a (h)top like task monitor for AMD, Adreno, Intel and NVIDIA GPUs (`nvtop` command)
       cron # daemon for running commands at specific times
+      polkit_gnome # a dbus session bus service that is used to bring up authentication dialogs
     ];
   };
 }

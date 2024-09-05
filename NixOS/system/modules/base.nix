@@ -25,8 +25,12 @@
   # packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim # Do not forget to add an editor to edit configuration.nix!
     wget
     curl
   ];
+
+  # a list of permissible login shells for user accounts.
+  # No need to mention /bin/sh here, it is placed into this list implicitly
+  environment.shells = with pkgs; [ fish ];
 }

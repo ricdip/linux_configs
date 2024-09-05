@@ -16,5 +16,6 @@
     # testdisk # data recovery utilities
     smartmontools # tools for monitoring the health of hard drives
     ventoy-full # a new bootable USB solution
+    udisks # daemon, tools and libraries to access and manipulate disks (`udisksctl` command)
   ];
 }
