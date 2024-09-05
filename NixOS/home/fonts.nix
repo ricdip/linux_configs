@@ -24,5 +24,6 @@
     };
     package = pkgs.openzone-cursors;
     name = "OpenZone_Black";
+    size = 32;
   };
 }

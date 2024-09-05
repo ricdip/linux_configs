@@ -10,6 +10,17 @@
       xterm.enable = false;
     };
     displayManager = {
+      lightdm = {
+        enable = true;
+        greeters.gtk = {
+          enable = true;
+          cursorTheme = {
+            package = pkgs.openzone-cursors;
+            name = "OpenZone_Black";
+            size = 32;
+          };
+        };
+      };
       # - line 0: xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
       # screen before suspend. Use loginctl lock-session to lock your screen
       sessionCommands = ''
