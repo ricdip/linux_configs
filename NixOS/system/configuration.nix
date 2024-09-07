@@ -20,6 +20,7 @@
     ./modules/networking.nix
     ./modules/nix-settings.nix
     ./modules/user.nix
+    ./modules/virt.nix
     ./modules/services
     ./modules/hardware/bluetooth.nix
     ./modules/hardware/graphics.nix

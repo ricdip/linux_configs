@@ -18,6 +18,9 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    nvidia.acceptLicense = true; # required by nvidia driver
+    # workaround for https://github.com/nix-community/home-manager/issues/2942
+    allowUnfreePredicate = _: true;
+    # required by nvidia driver
+    nvidia.acceptLicense = true;
   };
 }
