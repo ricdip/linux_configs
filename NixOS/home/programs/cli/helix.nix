@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.helix = {
     enable = true;
@@ -17,6 +18,30 @@
         auto-completion = true;
         auto-format = true;
       };
+    };
+    extraPackages = with pkgs; [
+      gopls # Go
+      clang-tools # C/C++
+      marksman # Markdown
+    ];
+    languages = {
+      language = with pkgs; [
+        {
+          name = "nix";
+          auto-format = true;
+          formatter = {
+            command = "${nixfmt-rfc-style}/bin/nixfmt";
+          };
+        }
+        {
+          name = "c";
+          auto-format = true;
+        }
+        {
+          name = "cpp";
+          auto-format = true;
+        }
+      ];
     };
   };
 }
