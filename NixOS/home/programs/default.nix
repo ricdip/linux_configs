@@ -41,7 +41,7 @@
     exiftool # a tool to read, write and edit EXIF meta information
     rsync # fast incremental file transfer utility
     tree # command to produce a depth indented directory listing
-    # lazydocker # a simple terminal UI for both docker and docker-compose
+    lazydocker # a simple terminal UI for both docker and docker-compose
     lazygit # a simple terminal UI for git commands
     eza # better ls (https://github.com/ogham/exa)
     aria2 # better wget
@@ -61,6 +61,9 @@
     file # a program that shows the type of files
     dnsutils # domain name server (nslookup)
     lsof # a tool to list open files
+    pastel # a command-line tool to generate, analyze, convert and manipulate colors
+    bitwise # terminal based bitwise calculator
+    # traceroute # tracks the route taken by packets over an IP network
 
     # system tools
     sysstat # a collection of performance monitoring tools for Linux

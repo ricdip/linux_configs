@@ -10,6 +10,7 @@
       "audio"
       "networkmanager"
       "libvirtd"
+      "docker"
     ];
     # programs.zsh.enable is already managed by Home Manager
     ignoreShellProgramCheck = true;

@@ -10,5 +10,8 @@
       commit.gpgsign = true;
       user.signingkey = "86FA511B24D51753";
     };
+    diff-so-fancy = {
+      enable = true;
+    };
   };
 }
