@@ -61,8 +61,9 @@
     file # a program that shows the type of files
     dnsutils # domain name server (nslookup)
     lsof # a tool to list open files
-    pastel # a command-line tool to generate, analyze, convert and manipulate colors
+    pastel # a CLI tool to generate, analyze, convert and manipulate colors
     bitwise # terminal based bitwise calculator
+    grex # a CLI tool for generating regular expressions from user-provided test cases
     # traceroute # tracks the route taken by packets over an IP network
 
     # system tools

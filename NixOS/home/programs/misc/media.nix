@@ -5,6 +5,7 @@
     mpv # general-purpose media player
     # images
     sxiv # Simple X Image Viewer
+    qimgv # a Qt5 image viewer with optional video support
     gimp # the GNU Image Manipulation Program
     # misc
     simplescreenrecorder # a screen recorder for Linux

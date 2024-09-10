@@ -12,8 +12,8 @@
     # misc
     cryptsetup # LUKS
     # veracrypt # free Open-Source filesystem on-the-fly encryption
-    # mdadm # managing RAID arrays under Linux
-    # testdisk # data recovery utilities
+    mdadm # managing RAID arrays under Linux
+    testdisk # data recovery utilities
     smartmontools # tools for monitoring the health of hard drives
     ventoy-full # a new bootable USB solution
     udisks # daemon, tools and libraries to access and manipulate disks (`udisksctl` command)
