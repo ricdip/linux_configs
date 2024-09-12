@@ -65,6 +65,8 @@
     bitwise # terminal based bitwise calculator
     grex # a CLI tool for generating regular expressions from user-provided test cases
     # traceroute # tracks the route taken by packets over an IP network
+    fdupes # identifies duplicate files residing within specified directories
+    kalker # command line calculator
 
     # system tools
     sysstat # a collection of performance monitoring tools for Linux
