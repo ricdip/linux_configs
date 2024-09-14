@@ -67,6 +67,8 @@
     # traceroute # tracks the route taken by packets over an IP network
     fdupes # identifies duplicate files residing within specified directories
     kalker # command line calculator
+    yt-dlp # CLI tool to download videos
+    license-generator # CLI tool for generating license files
 
     # system tools
     sysstat # a collection of performance monitoring tools for Linux
