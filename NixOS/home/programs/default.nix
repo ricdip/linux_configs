@@ -29,6 +29,7 @@
     gita # command-line tool to manage multiple git repos
 
     mtr # a network diagnostics tool
+    # traceroute # tracks the route taken by packets over an IP network
     # xdg-utils # a set of command line tools that assist applications with a variety of desktop integration tasks OR
     # handlr # a better xdg-utils
     bat # better cat
@@ -64,11 +65,12 @@
     pastel # a CLI tool to generate, analyze, convert and manipulate colors
     bitwise # terminal based bitwise calculator
     grex # a CLI tool for generating regular expressions from user-provided test cases
-    # traceroute # tracks the route taken by packets over an IP network
     fdupes # identifies duplicate files residing within specified directories
     kalker # command line calculator
     yt-dlp # CLI tool to download videos
     license-generator # CLI tool for generating license files
+    nix-output-monitor # processes output of Nix commands to show helpful and pretty information
+    nvd # Nix/NixOS package version diff tool
 
     # system tools
     sysstat # a collection of performance monitoring tools for Linux
