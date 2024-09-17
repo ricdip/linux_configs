@@ -1,8 +1,10 @@
+{ consts, ... }:
 {
   home.sessionVariables = {
     VISUAL = "hx";
     BROWSER = "firefox";
     PAGER = "bat";
+    FLAKE = "/home/${consts.user.name}/${consts.flake}";
   };
 
   programs.fish = {

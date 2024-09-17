@@ -4,23 +4,19 @@ default:
 
 # Build and activate the new configuration (no add it to boot)
 test:
-    sudo nixos-rebuild test
+    nh os test --ask
 
 # Build the new configuration and make it the boot default (no activate)
 boot:
-    sudo nixos-rebuild boot
+    nh os boot --ask
 
 # Build and activate the new configuration and make it the boot default
 switch:
-    sudo nixos-rebuild switch
+    nh os switch --ask
 
-# Run nix-channel update
+# Run nh os switch update
 update:
-    sudo nix-channel --update --verbose
-
-# Run nixos-rebuild switch upgrade
-upgrade:
-    sudo nixos-rebuild switch --upgrade
+    nh os switch --update --ask
 
 # Delete all generations older than TIME
 clean TIME: gc

@@ -70,6 +70,7 @@
     license-generator # CLI tool for generating license files
     nix-output-monitor # processes output of Nix commands to show helpful and pretty information
     nvd # Nix/NixOS package version diff tool
+    nh # Yet another nix CLI helper
 
     # system tools
     sysstat # a collection of performance monitoring tools for Linux
