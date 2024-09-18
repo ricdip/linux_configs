@@ -16,9 +16,6 @@
     keyMap = "it";
   };
 
-  # enable CUPS to print documents
-  # services.printing.enable = true;
-
   # GNOME configuration database
   programs.dconf.enable = true;
 
