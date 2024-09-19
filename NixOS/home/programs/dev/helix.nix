@@ -19,11 +19,6 @@
         auto-format = true;
       };
     };
-    extraPackages = with pkgs; [
-      gopls # Go
-      clang-tools # C/C++
-      marksman # Markdown
-    ];
     languages = {
       language = with pkgs; [
         {
@@ -40,6 +35,17 @@
         {
           name = "cpp";
           auto-format = true;
+        }
+        {
+          name = "python";
+          auto-format = true;
+          formatter = {
+            command = "${python3Packages.black}/bin/black";
+            args = [
+              "-"
+              "-q"
+            ];
+          };
         }
       ];
     };

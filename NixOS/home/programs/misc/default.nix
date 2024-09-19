@@ -7,6 +7,5 @@
     ./media.nix
     ./office.nix
     ./virt.nix
-    ./vscodium.nix
   ];
 }

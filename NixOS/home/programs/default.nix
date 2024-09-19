@@ -3,6 +3,7 @@
 {
   imports = [
     ./cli
+    ./dev
     ./misc
     ./wm
   ];
@@ -57,7 +58,6 @@
     imagemagick # create, edit, compose, or convert bitmap images
     qrencode # encoding data in a QR Code symbol
     nurl # CLI tool to generate Nix fetcher calls from repository URLs
-    nixfmt-rfc-style # official formatter for Nix code
     file # a program that shows the type of files
     dnsutils # domain name server (nslookup)
     lsof # a tool to list open files
