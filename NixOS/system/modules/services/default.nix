@@ -2,6 +2,7 @@
   imports = [
     ./btrfs.nix
     ./libinput.nix
+    ./lvm.nix
     ./mouse.nix
     ./openssh.nix
     ./picom.nix
