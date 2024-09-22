@@ -1,7 +1,12 @@
 { pkgs, ... }:
 {
   # VMs
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      ovmf.enable = true;
+    };
+  };
   programs.virt-manager.enable = true;
 
   # containers
