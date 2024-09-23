@@ -44,7 +44,6 @@ in
         "${modifier}+Return" = "exec --no-startup-id ${terminal}";
         "${modifier}+q" = "kill";
         "${modifier}+d" = ''exec --no-startup-id "${pkgs.rofi}/bin/rofi -show combi"'';
-        "${modifier}+Shift+f" = "exec --no-startup-id i3lock -c 464B8C -e -f";
 
         "${modifier}+h" = "focus left";
         "${modifier}+j" = "focus down";
@@ -109,7 +108,7 @@ in
         "${modifier}+Shift+r" = "restart";
         # "${modifier}+Shift+e" = "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
         "${modifier}+Shift+e" = ''
-          exec --no-startup-id "${pkgs.rofi}/bin/rofi -show power-menu -modi 'power-menu:${pkgs.rofi-power-menu}/bin/rofi-power-menu'"
+          exec --no-startup-id "${pkgs.rofi}/bin/rofi -show power-menu -modi 'power-menu:${pkgs.rofi-power-menu}/bin/rofi-power-menu --choices=lockscreen/logout/reboot/shutdown'"
         '';
 
         "${modifier}+r" = "mode resize";
@@ -130,6 +129,24 @@ in
         "XF86MonBrightnessUp" = ''
           exec --no-startup-id "brightnessctl set +5%"
         '';
+      };
+
+      modes = {
+        resize = {
+          "Left" = "resize shrink width 10 px or 10 ppt";
+          "Down" = "resize grow height 10 px or 10 ppt";
+          "Up" = "resize shrink height 10 px or 10 ppt";
+          "Right" = "resize grow width 10 px or 10 ppt";
+
+          "h" = "resize shrink width 10 px or 10 ppt";
+          "k" = "resize grow height 10 px or 10 ppt";
+          "j" = "resize shrink height 10 px or 10 ppt";
+          "l" = "resize grow width 10 px or 10 ppt";
+
+          "Return" = "mode default";
+          "Escape" = "mode default";
+          "${modifier}+r" = "mode default";
+        };
       };
     };
   };
