@@ -10,6 +10,19 @@
       enable = true;
       efiSupport = true;
       device = "nodev";
+      extraEntries = ''
+        menuentry "Shut down" {
+          halt
+        }
+
+        menuentry "Reboot" {
+          reboot
+        }
+
+        menuentry 'UEFI Firmware Settings' --id 'uefi-firmware' {
+          fwsetup
+        }
+      '';
     };
     timeout = 10;
   };
