@@ -4,6 +4,7 @@
       experimental-features = [
         "nix-command"
         "flakes"
+        "repl-flake"
       ];
       auto-optimise-store = true;
       warn-dirty = false;
@@ -22,5 +23,11 @@
     allowUnfreePredicate = _: true;
     # required by nvidia driver
     nvidia.acceptLicense = true;
+  };
+
+  programs.nix-index = {
+    enable = true;
+    enableBashIntegration = false;
+    enableZshIntegration = false;
   };
 }

@@ -10,5 +10,9 @@
       day = 5700;
       night = 2500;
     };
+    extraOptions = [
+      "-v"
+      "-m randr"
+    ];
   };
 }
