@@ -14,12 +14,10 @@
     unzip # extraction utility for archives compressed in .zip format
     xz # a general-purpose data compression software,
     p7zip # a p7zip fork with additional codecs and improvements
-
     ripgrep # better grep
     ripgrep-all # ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, and more
     fd # better find
     fzf # command-line fuzzy finder
-
     jq # a lightweight and flexible command-line JSON processor
     yq-go # a lightweight and portable command-line YAML, JSON and XML processor (https://github.com/mikefarah/yq)
     htop # interactive process viewer
@@ -28,7 +26,6 @@
     glances # cross-platform curses-based monitoring tool
     just # a handy way to save and run project-specific commands
     gita # command-line tool to manage multiple git repos
-
     mtr # a network diagnostics tool
     # xdg-utils # a set of command line tools that assist applications with a variety of desktop integration tasks OR
     # handlr # a better xdg-utils
@@ -60,7 +57,6 @@
     nurl # CLI tool to generate Nix fetcher calls from repository URLs
     file # a program that shows the type of files
     dnsutils # domain name server (nslookup)
-    lsof # a tool to list open files
     pastel # a CLI tool to generate, analyze, convert and manipulate colors
     bitwise # terminal based bitwise calculator
     grex # a CLI tool for generating regular expressions from user-provided test cases
@@ -71,16 +67,7 @@
     nix-output-monitor # processes output of Nix commands to show helpful and pretty information
     nvd # Nix/NixOS package version diff tool
     nh # Yet another nix CLI helper
-
-    # system tools
-    sysstat # a collection of performance monitoring tools for Linux
-    ethtool # utility for controlling network drivers and hardware
-    pciutils # a collection of programs for inspecting and manipulating configuration of PCI devices (lspci)
-    usbutils # tools for working with USB devices (lsusb)
-    lshw # provide detailed information on the hardware configuration of the machine
-    psmisc # utilities that use the proc filesystem
     piper # GTK frontend for ratbagd mouse config daemon
-
     trash-cli # CLI to the freedesktop.org trashcan
     android-tools # Android SDK platform tools
   ];
