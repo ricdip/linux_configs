@@ -40,4 +40,13 @@
       goPath = ".go";
     };
   };
+
+  # link installed SDKs to home
+  home.file = {
+    ".sdks/java-openjdk" = {
+      enable = true;
+      source = "${pkgs.jdk}/lib/openjdk";
+      recursive = false;
+    };
+  };
 }
