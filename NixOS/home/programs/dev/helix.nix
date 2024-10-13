@@ -47,6 +47,10 @@
             ];
           };
         }
+        {
+          name = "rust";
+          auto-format = true;
+        }
       ];
     };
   };

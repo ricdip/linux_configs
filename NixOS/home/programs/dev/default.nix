@@ -21,6 +21,10 @@
     # Nix
     nil # language server
     nixfmt-rfc-style # formatter
+    # Rust
+    cargo # builder
+    rust-analyzer # language server
+    rustfmt # formatter
   ];
 
   programs = {
