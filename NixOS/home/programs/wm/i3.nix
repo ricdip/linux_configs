@@ -89,7 +89,7 @@ in
         "${modifier}+7" = "workspace number 7";
         "${modifier}+8" = "workspace number 8";
         "${modifier}+9" = "workspace number 9";
-        "${modifier}+0" = "workspace number 10";
+        "${modifier}+10" = "workspace number 10";
 
         "${modifier}+Shift+1" = "move container to workspace number 1";
         "${modifier}+Shift+2" = "move container to workspace number 2";
@@ -100,13 +100,12 @@ in
         "${modifier}+Shift+7" = "move container to workspace number 7";
         "${modifier}+Shift+8" = "move container to workspace number 8";
         "${modifier}+Shift+9" = "move container to workspace number 9";
-        "${modifier}+Shift+0" = "move container to workspace number 10";
+        "${modifier}+Shift+10" = "move container to workspace number 10";
 
         "${modifier}+p" = "move workspace to output right";
 
         "${modifier}+Shift+c" = "reload";
         "${modifier}+Shift+r" = "restart";
-        # "${modifier}+Shift+e" = "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
         "${modifier}+Shift+e" = ''
           exec --no-startup-id "${pkgs.rofi}/bin/rofi -show power-menu -modi 'power-menu:${pkgs.rofi-power-menu}/bin/rofi-power-menu --choices=lockscreen/logout/reboot/shutdown'"
         '';
