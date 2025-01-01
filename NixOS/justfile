@@ -18,6 +18,10 @@ switch:
 update:
     nh os switch --update --ask
 
+# Run nh os switch update (with no user interaction)
+update-no-ask:
+    nh os switch --update
+
 # Delete all generations older than TIME
 clean TIME: gc
     sudo nix-collect-garbage --delete-older-than {{TIME}}
