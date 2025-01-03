@@ -25,6 +25,8 @@
     cargo # builder
     rust-analyzer # language server
     rustfmt # formatter
+    # Maven
+    maven
   ];
 
   programs = {
