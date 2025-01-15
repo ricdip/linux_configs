@@ -70,5 +70,10 @@
     piper # GTK frontend for ratbagd mouse config daemon
     trash-cli # CLI to the freedesktop.org trashcan
     android-tools # Android SDK platform tools
+    qpdf # manipulate the structure of PDF files
+    lnav # Logfile Navigator
+    pdfgrep # CLI tool to search text in PDF files
+    iperf # tool to measure IP bandwidth using UDP or TCP
+    autojump # `cd` command that learns
   ];
 }
