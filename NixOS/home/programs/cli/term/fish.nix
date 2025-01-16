@@ -15,12 +15,11 @@
       cp = "cp -iv";
       mv = "mv -iv";
       rm = "rm -Iv";
-      ls = "ls -hAN --group-directories-first --color=always";
+      ls = "lsd -hAN --group-directories-first --color=always";
       grep = "grep --color=always";
       diff = "diff --color=always";
       lsnet = "sudo netstat -tulpn";
-      lsip = "curl ifconfig.me";
-      lsweather = "curl wttr.in"; # (https://github.com/chubin/wttr.in), example: lsweather /Rome
+      lsip = "curl ifconfig.me"; # print external IP address
       wifi-password = "nmcli device wifi show-password";
       wifi-list = "nmcli device wifi";
       wifi-off = "nmcli radio wifi off";
@@ -28,7 +27,17 @@
       wifi-connect = "nmcli device wifi connect";
     };
     functions = {
+      # disable fish greeting message
       fish_greeting = "";
+      # check weather from terminal: https://github.com/chubin/wttr.in
+      lsweather = ''
+        if test (count $argv) -eq 1
+          curl wttr.in/"$argv[1]"
+        else
+          echo "Error: expected 1 argument"
+          return 1
+        end
+      '';
     };
   };
 }

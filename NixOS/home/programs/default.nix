@@ -73,7 +73,9 @@
     qpdf # manipulate the structure of PDF files
     lnav # Logfile Navigator
     pdfgrep # CLI tool to search text in PDF files
-    iperf # tool to measure IP bandwidth using UDP or TCP
     autojump # `cd` command that learns
+    lsd # next gen `ls` command
+    qalculate-gtk # desktop calculator
+    onefetch # CLI git information tool
   ];
 }
