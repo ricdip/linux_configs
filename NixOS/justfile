@@ -6,6 +6,10 @@ default:
 test:
     nh os test --ask
 
+# Build and activate the new configuration with verbose logging
+test-verbose:
+    nh os test --verbose
+
 # Build the new configuration and make it the boot default (no activate)
 boot:
     nh os boot --ask
@@ -14,11 +18,11 @@ boot:
 switch:
     nh os switch --ask
 
-# Run nh os switch update
+# Run system update
 update:
     nh os switch --update --ask
 
-# Run nh os switch update (with no user interaction)
+# Run system update with no user interaction
 update-no-ask:
     nh os switch --update
 
@@ -30,11 +34,11 @@ clean TIME: gc
 prune: gc
     sudo nix-collect-garbage --delete-old
 
-# Run nix store optimize
+# Replace identical files in the store by hard links
 optimise:
     nix store optimise
 
-# Run nix store gc
+# Perform garbage collection on a Nix store
 gc:
     nix store gc
 

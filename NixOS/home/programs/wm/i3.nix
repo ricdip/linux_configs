@@ -89,7 +89,7 @@ in
         "${modifier}+7" = "workspace number 7";
         "${modifier}+8" = "workspace number 8";
         "${modifier}+9" = "workspace number 9";
-        "${modifier}+10" = "workspace number 10";
+        "${modifier}+0" = "workspace number 10";
 
         "${modifier}+Shift+1" = "move container to workspace number 1";
         "${modifier}+Shift+2" = "move container to workspace number 2";
@@ -100,7 +100,7 @@ in
         "${modifier}+Shift+7" = "move container to workspace number 7";
         "${modifier}+Shift+8" = "move container to workspace number 8";
         "${modifier}+Shift+9" = "move container to workspace number 9";
-        "${modifier}+Shift+10" = "move container to workspace number 10";
+        "${modifier}+Shift+0" = "move container to workspace number 10";
 
         "${modifier}+p" = "move workspace to output right";
 
