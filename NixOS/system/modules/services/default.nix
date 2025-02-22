@@ -1,6 +1,7 @@
 {
   imports = [
     ./btrfs.nix
+    ./file-manager.nix
     ./libinput.nix
     ./lvm.nix
     ./mouse.nix
