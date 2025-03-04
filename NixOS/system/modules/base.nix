@@ -6,6 +6,9 @@
   # set time zone
   time.timeZone = "Europe/Rome";
 
+  # add supported filesystem types
+  boot.supportedFilesystems = [ "ntfs" ];
+
   # select internationalisation properties
   i18n.defaultLocale = "it_IT.UTF-8";
   # select console properties
