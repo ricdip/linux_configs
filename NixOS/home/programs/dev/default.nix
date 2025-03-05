@@ -23,6 +23,7 @@
     nixfmt-rfc-style # formatter
     # Rust
     cargo # builder
+    rustc # compiler
     rust-analyzer # language server
     rustfmt # formatter
     # Maven
@@ -47,7 +48,7 @@
   home.file = {
     ".sdks/java-openjdk" = {
       enable = true;
-      source = "${pkgs.jdk}/lib/openjdk";
+      source = "${pkgs.jdk}/lib/openjdk"; # openjdk implementation of Java
       recursive = false;
     };
   };
