@@ -17,6 +17,9 @@
         ];
         auto-completion = true;
         auto-format = true;
+        soft-wrap = {
+          enable = true;
+        };
       };
     };
     languages = {
