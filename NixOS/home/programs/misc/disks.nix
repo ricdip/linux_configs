@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    # btrfs
+    btrfs-assistant # GUI management tool for managing btrfs filesystems
     # partitioning
     e2fsprogs # utilities for ext2/ext3/ext4 filesystems
     btrfs-progs # utilities for the btrfs filesystem
