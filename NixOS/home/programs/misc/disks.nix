@@ -13,7 +13,7 @@
     gparted # graphical disk partitioning tool
     # misc
     cryptsetup # LUKS
-    # veracrypt # free Open-Source filesystem on-the-fly encryption
+    veracrypt # free open source filesystem on-the-fly encryption
     mdadm # managing RAID arrays under Linux
     testdisk # data recovery utilities
     smartmontools # tools for monitoring the health of hard drives
