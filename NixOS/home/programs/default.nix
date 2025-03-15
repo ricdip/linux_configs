@@ -78,5 +78,6 @@
     qalculate-gtk # desktop calculator
     onefetch # CLI git information tool
     rpi-imager # Raspberry Pi Imaging Utility
+    mermaid-cli # generation of diagrams from text
   ];
 }

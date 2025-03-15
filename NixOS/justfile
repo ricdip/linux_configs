@@ -26,9 +26,17 @@ update:
 update-no-ask:
     nh os switch --update
 
+# Run NixOS rebuild switch upgrade
+nixos-update:
+    sudo nixos-rebuild switch --upgrade
+
 # Delete all generations older than TIME
 clean TIME: gc
     sudo nix-collect-garbage --delete-older-than {{TIME}}
+
+# Keep NUMBER generations
+keep NUMBER: gc
+    nh clean all --keep {{NUMBER}}
 
 # Delete all old generations
 prune: gc

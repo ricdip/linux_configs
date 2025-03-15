@@ -19,7 +19,7 @@
       nixpkgs,
       home-manager,
       nix-index-database,
-    }:
+    }@inputs:
     let
       consts = import ./consts.nix;
     in
@@ -29,6 +29,7 @@
           system = consts.system.platform;
           specialArgs = {
             inherit consts;
+            inherit inputs;
           };
           modules = [
             ./system/configuration.nix
@@ -39,6 +40,7 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
                 inherit consts;
+                inherit inputs;
               };
               home-manager.users.${consts.user.name} = import ./home;
             }

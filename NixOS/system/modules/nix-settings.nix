@@ -1,3 +1,5 @@
+{ inputs, ... }:
+
 {
   nix = {
     settings = {
@@ -9,11 +11,16 @@
       warn-dirty = false;
     };
 
+    # automatic cleanup
     gc = {
       automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 14d";
+      dates = "daily";
+      options = "--delete-older-than 10d";
     };
+
+    nixPath = [
+      "nixpkgs=${inputs.nixpkgs}"
+    ];
   };
 
   nixpkgs.config = {
@@ -28,5 +35,13 @@
     enable = true;
     enableBashIntegration = false;
     enableZshIntegration = false;
+  };
+
+  # automatic update
+  system = {
+    autoUpgrade = {
+      enable = false;
+      # dates = "weekly";
+    };
   };
 }

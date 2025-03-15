@@ -30,6 +30,7 @@
           formatter = {
             command = "${nixfmt-rfc-style}/bin/nixfmt";
           };
+          language-servers = [ "nixd" ];
         }
         {
           name = "c";
