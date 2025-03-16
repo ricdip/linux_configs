@@ -7,5 +7,6 @@
     ./media.nix
     ./office.nix
     ./virt.nix
+    ./xdg.nix
   ];
 }

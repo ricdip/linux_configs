@@ -27,8 +27,6 @@
     just # a handy way to save and run project-specific commands
     gita # command-line tool to manage multiple git repos
     mtr # a network diagnostics tool
-    # xdg-utils # a set of command line tools that assist applications with a variety of desktop integration tasks OR
-    # handlr # a better xdg-utils
     bat # better cat
     glow # render markdown on the CLI
     figlet # program for making large letters out of ordinary text
