@@ -19,8 +19,8 @@
     gopls # language server
     delve # debugger
     # Nix
-    # nil # language server
-    nixd # language server
+    nil # language server
+    # nixd # language server
     nixfmt-rfc-style # formatter
     # Rust
     cargo # builder
