@@ -8,7 +8,6 @@
 
   xdg = {
     mimeApps = {
-      enable = true;
       defaultApplications = {
         "text/*" = [
           "Helix.desktop"
