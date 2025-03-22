@@ -11,6 +11,7 @@
     clang # compiler
     clang-tools # formatter, language server
     lldb # debugger
+    gnumake # build tool
     # Python
     python3 # interpreter
     python3Packages.python-lsp-server # language server
