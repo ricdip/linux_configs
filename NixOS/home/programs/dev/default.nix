@@ -33,6 +33,14 @@
   ];
 
   programs = {
+    # direnv
+    direnv = {
+      enable = true;
+      silent = false;
+      nix-direnv = {
+        enable = true;
+      };
+    };
     # Java
     java = {
       enable = true;
