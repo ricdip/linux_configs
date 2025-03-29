@@ -1,7 +1,7 @@
 {
-  # enable the OpenSSH daemon
+  # OpenSSH daemon
   services.openssh = {
-    enable = true;
+    enable = false;
     settings = {
       PermitRootLogin = "no";
     };
