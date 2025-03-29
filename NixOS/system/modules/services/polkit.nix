@@ -22,7 +22,7 @@ let
               <allow_active>auth_admin</allow_active>
             </defaults>
             <annotate 
-              key="org.freedesktop.policykit.exec.path">${pkgs.gparted}</annotate>
+              key="org.freedesktop.policykit.exec.path">${pkgs.gparted}/bin/gparted</annotate>
             <annotate 
               key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
           </action>
