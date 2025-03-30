@@ -2,6 +2,7 @@
   imports = [
     ./btrfs.nix
     ./file-manager.nix
+    ./gparted.nix
     ./libinput.nix
     ./lvm.nix
     ./mouse.nix

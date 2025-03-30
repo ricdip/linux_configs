@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   # auto scrub
   services.btrfs.autoScrub = {
@@ -40,4 +41,9 @@
       };
     };
   };
+
+  # btrfs assistant
+  environment.systemPackages = [
+    pkgs.btrfs-assistant # GUI management tool for managing btrfs filesystems
+  ];
 }
