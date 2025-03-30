@@ -1,4 +1,7 @@
 { pkgs, consts, ... }:
+let
+  defaultLocale = "it_IT.UTF-8";
+in
 {
   # define hostname
   networking.hostName = consts.system.hostname;
@@ -10,7 +13,21 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   # select internationalisation properties
-  i18n.defaultLocale = "it_IT.UTF-8";
+  i18n = {
+    defaultLocale = defaultLocale;
+    extraLocaleSettings = {
+      LC_ADDRESS = defaultLocale;
+      LC_IDENTIFICATION = defaultLocale;
+      LC_MEASUREMENT = defaultLocale;
+      LC_MONETARY = defaultLocale;
+      LC_NAME = defaultLocale;
+      LC_NUMERIC = defaultLocale;
+      LC_PAPER = defaultLocale;
+      LC_TELEPHONE = defaultLocale;
+      LC_TIME = defaultLocale;
+      LC_CTYPE = defaultLocale;
+    };
+  };
   # select console properties
   console = {
     earlySetup = true;

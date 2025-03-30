@@ -47,9 +47,9 @@
     };
     # configure keymap in X11
     xkb = {
-      layout = "it";
+      layout = "it,us";
       variant = "winkeys";
-      # options = "eurosign:e,caps:escape";
+      options = "eurosign:e,grp:alt_space_toggle,terminate:ctrl_alt_bksp";
     };
   };
 }
