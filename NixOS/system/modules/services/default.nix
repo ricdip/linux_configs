@@ -11,6 +11,7 @@
     ./polkit.nix
     ./printer.nix
     ./redshift.nix
+    ./smartd.nix
     ./sound.nix
     ./xserver.nix
   ];

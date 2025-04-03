@@ -7,5 +7,8 @@
   system = {
     hostname = "nixos";
     platform = "x86_64-linux";
+    smartd = {
+      enable = true;
+    };
   };
 }
