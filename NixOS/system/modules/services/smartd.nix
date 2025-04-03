@@ -11,19 +11,13 @@
         # -n standby,q: check device unless it is in sleep or standby mode, do not write log message
         # -s T/MM/DD/d/HH: run tests at scheduled times (S: short self test; L: long self test)
         options = ''
-          -o on
-          -S on
-          -n standby,q
-          -s (S/../(08|22)/./22|L/../(01|15)/./18)
+          -o on -S on -n standby,q -s (S/../(08|22)/./22|L/../(01|15)/./18)
         '';
       }
       {
         device = "/dev/sda";
         options = ''
-          -o on
-          -S on
-          -n standby,q
-          -s (S/../(08|22)/./23|L/../(01|15)/./19)
+          -o on -S on -n standby,q -s (S/../(08|22)/./23|L/../(01|15)/./19)
         '';
       }
     ];
