@@ -10,14 +10,14 @@
     nameservers = consts.networking.nameservers;
 
     # firewall configuration
+    firewall.enable = true;
     # open ports in the firewall
     networking.firewall.allowedTCPPorts = consts.networking.firewall.allowedTCPPorts;
     networking.firewall.allowedUDPPorts = consts.networking.firewall.allowedUDPPorts;
-    firewall.enable = true;
   };
 
   # user groups update
-  consts.user.groups = [ "networkmanager" ];
+  users.users.${consts.user.name}.extraGroups = [ "networkmanager" ];
 
   # configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

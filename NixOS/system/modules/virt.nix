@@ -18,7 +18,7 @@
   };
 
   # user groups update
-  consts.user.groups = [
+  users.users.${consts.user.name}.extraGroups = [
     "libvirtd"
     "docker"
   ];

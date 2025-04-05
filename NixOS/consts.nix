@@ -2,11 +2,6 @@
   user = {
     name = "ricdip";
     email = "riccardodpr@gmail.com";
-    groups = [
-      "wheel"
-      "video"
-      "audio"
-    ];
     git = {
       signingkey = "86FA511B24D51753";
     };

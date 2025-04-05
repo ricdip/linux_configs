@@ -4,7 +4,11 @@
   users.users.${consts.user.name} = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = consts.user.groups;
+    extraGroups = [
+      "wheel"
+      "video"
+      "audio"
+    ];
     # programs.zsh.enable is already managed by Home Manager
     ignoreShellProgramCheck = true;
     # packages installed for user not managed by Home Manager
