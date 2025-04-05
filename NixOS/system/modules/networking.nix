@@ -12,8 +12,8 @@
     # firewall configuration
     firewall.enable = true;
     # open ports in the firewall
-    networking.firewall.allowedTCPPorts = consts.networking.firewall.allowedTCPPorts;
-    networking.firewall.allowedUDPPorts = consts.networking.firewall.allowedUDPPorts;
+    firewall.allowedTCPPorts = consts.networking.firewall.allowedTCPPorts;
+    firewall.allowedUDPPorts = consts.networking.firewall.allowedUDPPorts;
   };
 
   # user groups update
