@@ -1,7 +1,6 @@
 {
-  # use the GRUB boot loader
-  boot.loader.systemd-boot.enable = false;
   boot.loader = {
+    systemd-boot.enable = false;
     efi = {
       canTouchEfiVariables = true;
       efiSysMountPoint = "/boot/efi";

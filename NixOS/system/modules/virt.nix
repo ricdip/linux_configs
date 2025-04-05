@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, consts, ... }:
 {
   # VMs
   virtualisation.libvirtd = {
@@ -16,4 +16,10 @@
     package = pkgs.docker;
     storageDriver = "btrfs";
   };
+
+  # user groups update
+  consts.user.groups = [
+    "libvirtd"
+    "docker"
+  ];
 }

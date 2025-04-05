@@ -1,4 +1,4 @@
-{ pkgs, consts, ... }:
+{ consts, ... }:
 {
   programs.git = {
     enable = true;
@@ -8,7 +8,7 @@
       init.defaultBranch = "master";
       # sign all commits with gpg key
       commit.gpgsign = true;
-      user.signingkey = "86FA511B24D51753";
+      user.signingkey = consts.user.git.signingkey;
     };
     diff-so-fancy = {
       enable = true;

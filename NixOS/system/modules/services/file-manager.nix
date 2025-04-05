@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   # thunar
   programs.thunar = {

@@ -1,13 +1,13 @@
 { pkgs, consts, ... }:
 let
-  defaultLocale = "it_IT.UTF-8";
+  defaultLocale = consts.system.locale;
 in
 {
   # define hostname
   networking.hostName = consts.system.hostname;
 
   # set time zone
-  time.timeZone = "Europe/Rome";
+  time.timeZone = consts.system.timezone;
 
   # add supported filesystem types
   boot.supportedFilesystems = [ "ntfs" ];
@@ -33,7 +33,7 @@ in
     earlySetup = true;
     font = "ter-v16b";
     packages = with pkgs; [ terminus_font ];
-    keyMap = "it";
+    keyMap = consts.system.consoleKeyMap;
   };
 
   # GNOME configuration database

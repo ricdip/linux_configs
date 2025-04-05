@@ -5,7 +5,7 @@
     autodetect = false;
     devices = [
       {
-        device = "/dev/sdb";
+        device = consts.system.smartd.hdd;
         # -o enable/disable SMART automatic offline testing
         # -S enable/disable attribute autosave
         # -n standby,q: check device unless it is in sleep or standby mode, do not write log message
@@ -15,7 +15,7 @@
         '';
       }
       {
-        device = "/dev/sda";
+        device = consts.system.smartd.ssd;
         options = ''
           -o on -S on -n standby,q -s (S/../(08|22)/./23|L/../(01|15)/./19)
         '';

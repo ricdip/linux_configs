@@ -1,3 +1,4 @@
+{ consts, ... }:
 {
   networking = {
     networkmanager = {
@@ -6,18 +7,17 @@
     };
     useDHCP = false;
     dhcpcd.enable = false;
-    # Cloudflare DNS
-    nameservers = [
-      "1.1.1.1"
-      "1.0.0.1"
-    ];
+    nameservers = consts.networking.nameservers;
 
     # firewall configuration
     # open ports in the firewall
-    # networking.firewall.allowedTCPPorts = [ ... ];
-    # networking.firewall.allowedUDPPorts = [ ... ];
+    networking.firewall.allowedTCPPorts = consts.networking.firewall.allowedTCPPorts;
+    networking.firewall.allowedUDPPorts = consts.networking.firewall.allowedUDPPorts;
     firewall.enable = true;
   };
+
+  # user groups update
+  consts.user.groups = [ "networkmanager" ];
 
   # configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

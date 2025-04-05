@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, consts, ... }:
 {
   # enable OpenGL
   hardware.graphics = {
@@ -54,8 +54,8 @@
       };
       # make sure to use the correct Bus ID values for the system
       # run 'sudo lshw -c display' to get correct Bus IDs
-      intelBusId = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
+      intelBusId = consts.hardware.graphics.intelBusId;
+      nvidiaBusId = consts.hardware.graphics.nvidiaBusId;
     };
   };
 }
