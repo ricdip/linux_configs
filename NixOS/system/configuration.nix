@@ -25,8 +25,9 @@
   sops.defaultSopsFile = "../secrets/secrets.yaml";
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/${consts.user.name}/.config/sops/age/keys.txt";
-  sops.secrets.user.owner = consts.user.name;
-  sops.secrets.networking.owner = consts.user.name;
+  sops.secrets."user/email".owner = consts.user.name;
+  sops.secrets."user/git/gpg_signing_key".owner = consts.user.name;
+  sops.secrets."networking/nameservers".owner = consts.user.name;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.

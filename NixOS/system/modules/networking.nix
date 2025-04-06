@@ -7,13 +7,13 @@
     };
     useDHCP = false;
     dhcpcd.enable = false;
-    nameservers = config.sops.secrets.networking.nameservers;
+    nameservers = config.sops.secrets."networking/nameservers".path;
 
     # firewall configuration
     firewall.enable = true;
     # open ports in the firewall
-    firewall.allowedTCPPorts = config.sops.secrets.networking.firewall.allowed_tcp_ports;
-    firewall.allowedUDPPorts = config.sops.secrets.networking.firewall.allowed_udp_ports;
+    firewall.allowedTCPPorts = [ ];
+    firewall.allowedUDPPorts = [ ];
   };
 
   # user groups update

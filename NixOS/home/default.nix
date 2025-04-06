@@ -1,9 +1,12 @@
-{ consts, ... }:
+{ inputs, consts, ... }:
 {
   imports = [
+    # sops module
+    inputs.sops-nix.nixosModules.sops
     ./programs
     ./scripts
     ./fonts.nix
+    ./sops.nix
   ];
 
   home.username = consts.user.name;
