@@ -1,4 +1,4 @@
-{ consts, ... }:
+{ consts, config, ... }:
 {
   networking = {
     networkmanager = {
@@ -7,13 +7,13 @@
     };
     useDHCP = false;
     dhcpcd.enable = false;
-    nameservers = consts.networking.nameservers;
+    nameservers = config.sops.secrets.networking.nameservers;
 
     # firewall configuration
     firewall.enable = true;
     # open ports in the firewall
-    firewall.allowedTCPPorts = consts.networking.firewall.allowedTCPPorts;
-    firewall.allowedUDPPorts = consts.networking.firewall.allowedUDPPorts;
+    firewall.allowedTCPPorts = config.sops.secrets.networking.firewall.allowed_tcp_ports;
+    firewall.allowedUDPPorts = config.sops.secrets.networking.firewall.allowed_udp_ports;
   };
 
   # user groups update

@@ -1,10 +1,6 @@
 {
   user = {
     name = "ricdip";
-    email = "riccardodpr@gmail.com";
-    git = {
-      signingkey = "86FA511B24D51753";
-    };
   };
   flake = "linux_configs/NixOS"; # path relative to home directory
   system = {
@@ -24,17 +20,5 @@
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
     };
-  };
-  networking = {
-    firewall = {
-      # open ports in the firewall
-      allowedTCPPorts = [ ];
-      allowedUDPPorts = [ ];
-    };
-    # Cloudflare DNS
-    nameservers = [
-      "1.1.1.1"
-      "1.0.0.1"
-    ];
   };
 }

@@ -1,11 +1,13 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
+{ inputs, consts, ... }:
 {
   imports = [
     # include the results of the hardware scan
     ./hardware-configuration.nix
+    # sops module
+    inputs.sops-nix.nixosModules.sops
     # system modules
     ./modules/base.nix
     ./modules/bootloader.nix
@@ -18,6 +20,13 @@
     ./modules/hardware/bluetooth.nix
     ./modules/hardware/graphics.nix
   ];
+
+  # sops configuration
+  sops.defaultSopsFile = "../secrets/secrets.yaml";
+  sops.defaultSopsFormat = "yaml";
+  sops.age.keyFile = "/home/${consts.user.name}/.config/sops/age/keys.txt";
+  sops.secrets.user.owner = consts.user.name;
+  sops.secrets.networking.owner = consts.user.name;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
