@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     # audio/video
     mpv # general-purpose media player
+    spotify # Spotify official client
     # images
     sxiv # Simple X Image Viewer
     qimgv # a Qt5 image viewer with optional video support
