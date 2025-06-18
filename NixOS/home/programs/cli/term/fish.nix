@@ -24,7 +24,7 @@
       wifi-list = "nmcli device wifi";
       wifi-off = "nmcli radio wifi off";
       wifi-on = "nmcli radio wifi on";
-      wifi-connect = "nmcli device wifi connect";
+      wifi-connect = "nmcli --ask device wifi connect";
       gpg-encrypt = "gpg -c --no-symkey-cache --cipher-algo AES256";
       gpg-decrypt = "gpg -d --no-symkey-cache";
     };
