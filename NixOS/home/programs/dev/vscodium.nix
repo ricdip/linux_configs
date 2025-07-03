@@ -21,6 +21,7 @@
       golang.go
       ms-python.python
       rust-lang.rust-analyzer
+      tiehuis.zig
     ];
   };
 }

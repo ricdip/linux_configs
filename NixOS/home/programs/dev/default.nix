@@ -30,6 +30,9 @@
     rustfmt # formatter
     # Maven
     maven
+    # Zig
+    zig # compiler
+    zls # language server
   ];
 
   programs = {

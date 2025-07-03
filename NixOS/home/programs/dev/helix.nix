@@ -55,6 +55,10 @@
           name = "rust";
           auto-format = true;
         }
+        {
+          name = "zig";
+          auto-format = true;
+        }
       ];
     };
   };
