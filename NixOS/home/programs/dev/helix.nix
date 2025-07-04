@@ -8,6 +8,7 @@
       editor = {
         line-number = "relative";
         cursorline = true;
+        cursorcolumn = true;
         gutters = [
           "diagnostics"
           "spacer"
@@ -16,9 +17,64 @@
           "diff"
         ];
         auto-completion = true;
+        path-completion = true;
         auto-format = true;
         soft-wrap = {
           enable = true;
+        };
+        clipboard-provider = "x-clip";
+        statusline = {
+          left = [
+            "mode"
+            "spinner"
+            "version-control"
+          ];
+          center = [
+            "file-name"
+            "read-only-indicator"
+            "file-modification-indicator"
+          ];
+          right = [
+            "diagnostics"
+            "selections"
+            "register"
+            "position"
+            "position-percentage"
+            "file-encoding"
+            "file-line-ending"
+          ];
+          separator = "|";
+          mode.normal = "NORMAL";
+          mode.insert = "INSERT";
+          mode.select = "SELECT";
+        };
+        lsp = {
+          enable = true;
+          display-inlay-hints = true;
+        };
+        cursor-shape = {
+          insert = "bar";
+          normal = "block";
+          select = "underline";
+        };
+        auto-pairs = true;
+      };
+      keys = {
+        insert = {
+          j = {
+            k = "normal_mode";
+          };
+          g = {
+            a = "code_action";
+          };
+          up = "no_op";
+          down = "no_op";
+          left = "no_op";
+          right = "no_op";
+          pageup = "no_op";
+          pagedown = "no_op";
+          home = "no_op";
+          end = "no_op";
         };
       };
     };
