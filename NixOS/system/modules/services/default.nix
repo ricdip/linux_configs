@@ -6,6 +6,7 @@
     ./libinput.nix
     ./lvm.nix
     ./mouse.nix
+    ./ollama.nix
     ./openssh.nix
     ./picom.nix
     ./polkit.nix

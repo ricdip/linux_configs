@@ -8,6 +8,10 @@
     excludePackages = with pkgs; [ xterm ];
     desktopManager = {
       xterm.enable = false;
+      wallpaper = {
+        combineScreens = false;
+        mode = "fill";
+      };
     };
     displayManager = {
       lightdm = {
