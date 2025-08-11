@@ -12,7 +12,8 @@
     # hack font
     hack-font
     # nerdfonts: get only a subset
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
   ];
 
   # cursor

@@ -4,7 +4,7 @@
     VISUAL = "hx";
     BROWSER = "firefox";
     PAGER = "bat";
-    FLAKE = "/home/${consts.user.name}/${consts.flake}";
+    NH_FLAKE = "/home/${consts.user.name}/${consts.flake}";
   };
 
   programs.fish = {

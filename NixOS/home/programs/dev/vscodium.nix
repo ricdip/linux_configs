@@ -3,7 +3,7 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
-    extensions = with pkgs.vscode-extensions; [
+    profiles.default.extensions = with pkgs.vscode-extensions; [
       # nix
       jnoortheen.nix-ide
       # utility
@@ -21,7 +21,7 @@
       golang.go
       ms-python.python
       rust-lang.rust-analyzer
-      tiehuis.zig
+      ziglang.vscode-zig
     ];
   };
 }

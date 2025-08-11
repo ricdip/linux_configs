@@ -47,6 +47,7 @@
         arandr # simple visual front end for xrandr
         xdotool # fake keyboard/mouse input, window management, and more
         maim # a command-line screenshot utility
+        feh # light-weight image viewer
       ];
     };
     # configure keymap in X11

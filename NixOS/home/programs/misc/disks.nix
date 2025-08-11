@@ -14,7 +14,7 @@
     mdadm # managing RAID arrays under Linux
     testdisk # data recovery utilities
     smartmontools # tools for monitoring the health of hard drives
-    ventoy-full # a new bootable USB solution
+    # ventoy-full # a new bootable USB solution (removed because is marked as insecure)
     nwipe # securely erase disks
   ];
 }
