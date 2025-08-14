@@ -79,5 +79,6 @@
     mermaid-cli # generation of diagrams from text (`mmdc` command)
     sublime3 # text editor
     ipcalc # simple IP network calculator
+    ncdu # disk usage analyzer
   ];
 }

@@ -27,6 +27,10 @@
       wifi-connect = "nmcli --ask device wifi connect";
       gpg-encrypt = "gpg -c --no-symkey-cache --cipher-algo AES256";
       gpg-decrypt = "gpg -d --no-symkey-cache";
+      ps-cpu = "ps aux --sort=-pcpu | head -n 10";
+      ps-mem = "ps aux --sort=-pmem | head -n 10";
+      ls-mount = "mount | column -t";
+      c = "clear";
     };
     functions = {
       # disable fish greeting message
