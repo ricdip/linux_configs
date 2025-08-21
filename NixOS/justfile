@@ -26,9 +26,9 @@ update:
 update-no-ask:
     nh os switch --update
 
-# Run NixOS rebuild switch upgrade
+# Update NixOS flakes, channels and packages
 nixos-update:
-    sudo nixos-rebuild switch --upgrade
+    sudo nix flake update && sudo nixos-rebuild switch --upgrade-all
 
 # Delete all generations older than TIME
 clean TIME: gc
