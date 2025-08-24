@@ -37,4 +37,9 @@
       "1.0.0.1"
     ];
   };
+  disks = {
+    partitions-uuid = {
+      efi = "3B0C-4580";
+    };
+  };
 }

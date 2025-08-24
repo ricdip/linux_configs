@@ -3,6 +3,7 @@
   home.sessionVariables = {
     NNN_COLORS = "6666";
     NNN_OPTS = "cdeHU";
+    NNN_TRASH = 1;
   };
 
   programs.nnn = {

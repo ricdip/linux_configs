@@ -34,7 +34,6 @@
     scc # a very fast accurate code counter with complexity calculations
     duf # disk Usage/Free Utility
     entr # run arbitrary commands when files change
-    exiftool # a tool to read, write and edit EXIF meta information
     rsync # fast incremental file transfer utility
     tree # command to produce a depth indented directory listing
     lazydocker # a simple terminal UI for both docker and docker-compose
@@ -50,7 +49,6 @@
     bandwhich # a CLI utility for displaying current network utilization (https://github.com/imsnif/bandwhich)
     # speedtest-cli # command line speed test utility (https://github.com/sivel/speedtest-cli)
     dogdns # command-line DNS client (https://github.com/ogham/dog)
-    imagemagick # create, edit, compose, or convert bitmap images
     qrencode # encoding data in a QR Code symbol
     nurl # CLI tool to generate Nix fetcher calls from repository URLs
     file # a program that shows the type of files
@@ -60,7 +58,6 @@
     grex # a CLI tool for generating regular expressions from user-provided test cases
     fdupes # identifies duplicate files residing within specified directories
     kalker # command line calculator
-    yt-dlp # CLI tool to download videos
     license-generator # CLI tool for generating license files
     nix-output-monitor # processes output of Nix commands to show helpful and pretty information
     nvd # Nix/NixOS package version diff tool
@@ -79,6 +76,5 @@
     mermaid-cli # generation of diagrams from text (`mmdc` command)
     sublime3 # text editor
     ipcalc # simple IP network calculator
-    ncdu # disk usage analyzer
   ];
 }

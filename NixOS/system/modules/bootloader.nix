@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, consts, ... }:
 {
   boot.loader = {
     systemd-boot.enable = false;
@@ -34,7 +34,7 @@
 
           menuentry "UEFI MemTest86" {
             echo "Booting UEFI MemTest86..."
-            search --no-floppy --fs-uuid --set=root 3B0C-4580
+            search --no-floppy --fs-uuid --set=root ${consts.disks.partitions-uuid.efi}
             insmod chain
             chainloader /EFI/memtest86/BOOTX64.efi
           }
