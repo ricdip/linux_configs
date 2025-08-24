@@ -23,7 +23,7 @@
     htop # interactive process viewer
     fastfetch # highly customizable system info script (like neofetch)
     btop # monitor of resources
-    glances # cross-platform curses-based monitoring tool
+    # glances # cross-platform curses-based monitoring tool
     just # a handy way to save and run project-specific commands
     gita # command-line tool to manage multiple git repos
     mtr # a network diagnostics tool
