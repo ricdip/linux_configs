@@ -5,6 +5,7 @@
     enable = true;
     qemu = {
       ovmf.enable = true;
+      vhostUserPackages = with pkgs; [ virtiofsd ];
     };
   };
   programs.virt-manager.enable = true;

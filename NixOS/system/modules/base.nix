@@ -26,6 +26,7 @@ in
       LC_TELEPHONE = defaultLocale;
       LC_TIME = defaultLocale;
       LC_CTYPE = defaultLocale;
+      LC_ALL = defaultLocale;
     };
   };
   # select console properties
@@ -58,6 +59,7 @@ in
     psmisc # utilities that use the proc filesystem
     lsof # a tool to list open files
     # udisks # daemon, tools and libraries to access and manipulate disks (`udisksctl` command)
+    memtest86-efi # a tool to detect memory errors (runs from the bootloader)
   ];
 
   # a list of permissible login shells for user accounts.
