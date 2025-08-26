@@ -60,6 +60,8 @@ in
     lsof # a tool to list open files
     # udisks # daemon, tools and libraries to access and manipulate disks (`udisksctl` command)
     memtest86-efi # a tool to detect memory errors (runs from the bootloader)
+    adw-gtk3 # theme from libadwaita ported to GTK-3
+    adwaita-qt # style to bend Qt applications to look like they belong into GNOME Shell
   ];
 
   # a list of permissible login shells for user accounts.
