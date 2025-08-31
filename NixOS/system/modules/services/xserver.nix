@@ -18,6 +18,9 @@
         enable = true;
         greeters.gtk = {
           enable = true;
+          theme = {
+            name = "Adwaita-dark";
+          };
           cursorTheme = {
             package = pkgs.openzone-cursors;
             name = "OpenZone_Black";

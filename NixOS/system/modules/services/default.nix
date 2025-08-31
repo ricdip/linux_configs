@@ -2,6 +2,7 @@
   imports = [
     ./btrfs.nix
     ./file-manager.nix
+    ./gaming.nix
     ./gparted.nix
     ./libinput.nix
     ./lvm.nix
@@ -15,5 +16,6 @@
     ./smartd.nix
     ./sound.nix
     ./xserver.nix
+    ./zfs.nix
   ];
 }

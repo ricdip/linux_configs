@@ -54,7 +54,9 @@
       };
       # make sure to use the correct Bus ID values for the system
       # run 'sudo lshw -c display' to get correct Bus IDs
+      ## integrated
       intelBusId = consts.hardware.graphics.intelBusId;
+      ## dedicated
       nvidiaBusId = consts.hardware.graphics.nvidiaBusId;
     };
   };

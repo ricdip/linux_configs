@@ -1,5 +1,9 @@
 { pkgs, consts, ... }:
 {
+  # parameters added to the kernel command line:
+  # - boot.shell_on_fail: allows for root shell if failure to boot. Requires root password
+  boot.kernelParams = [ "boot.shell_on_fail" ];
+  # GRUB EFI configuration
   boot.loader = {
     systemd-boot.enable = false;
     efi = {
@@ -13,8 +17,6 @@
       extraFiles = {
         "EFI/memtest86/BOOTX64.efi" = "${pkgs.memtest86-efi}/BOOTX64.efi";
       };
-      # TODO: be careful: the memtest86 menuentry has the hardcoded EFI partition UUID!
-      # Remember to update it if it changes
       extraEntries = ''
         menuentry "Shut down" {
           echo "Powering off machine..."

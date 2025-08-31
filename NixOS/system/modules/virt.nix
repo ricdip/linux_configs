@@ -15,7 +15,7 @@
     enable = true;
     enableOnBoot = false;
     package = pkgs.docker;
-    storageDriver = "btrfs";
+    storageDriver = consts.applications.docker.storageDriver;
   };
 
   # user groups update

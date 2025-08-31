@@ -28,6 +28,12 @@
       ps-cpu = "ps aux --sort=-pcpu | head -n 15";
       ps-mem = "ps aux --sort=-pmem | head -n 15";
       ls-mount = "mount | column -t";
+      ## graphics
+      gtop = "nvtop";
+      intel-watch = "sudo intel_gpu_top";
+      nvidia-watch = "nvidia-smi -l 1";
+      nvidia-ps = "sudo fuser -v /dev/nvidia*";
+      nvidia-run = "nvidia-offload";
       ## files
       ls = "lsd -hAN --group-directories-first --color=auto";
       ll = "lsd -lh --group-directories-first --color=auto";

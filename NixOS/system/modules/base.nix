@@ -10,7 +10,15 @@ in
   time.timeZone = consts.system.timezone;
 
   # add supported filesystem types
-  boot.supportedFilesystems = [ "ntfs" ];
+  boot.supportedFilesystems = [
+    "ntfs"
+    "ext4"
+    "vfat"
+    "exfat"
+    "btrfs"
+    "zfs"
+    "xfs"
+  ];
 
   # select internationalisation properties
   i18n = {
@@ -34,7 +42,7 @@ in
     earlySetup = true;
     font = "ter-v16b";
     packages = with pkgs; [ terminus_font ];
-    keyMap = consts.system.consoleKeyMap;
+    useXkbConfig = true;
   };
 
   # GNOME configuration database
