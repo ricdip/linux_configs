@@ -1,5 +1,6 @@
 {
   imports = [
+    ./ai.nix
     ./btrfs.nix
     ./file-manager.nix
     ./gaming.nix
@@ -7,7 +8,6 @@
     ./libinput.nix
     ./lvm.nix
     ./mouse.nix
-    ./ollama.nix
     ./openssh.nix
     ./picom.nix
     ./polkit.nix

@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   services.ollama = {
     enable = true;
@@ -10,4 +11,9 @@
       "llava:7b" # model for general-purpose visual and language understanding
     ];
   };
+
+  # general-purpose speech recognition model
+  environment.systemPackages = with pkgs; [
+    openai-whisper
+  ];
 }
