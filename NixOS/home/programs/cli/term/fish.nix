@@ -72,6 +72,7 @@
       h = "history";
       clock = "watch -n 1 date";
       ":q" = "exit";
+      locate = "nix eval --raw";
       ## git
       gs = "git status -sb";
       ga = "git add";

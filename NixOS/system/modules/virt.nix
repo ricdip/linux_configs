@@ -1,6 +1,6 @@
 { pkgs, consts, ... }:
 {
-  # VMs
+  # VMs with libvirtd and qemu
   virtualisation.libvirtd = {
     enable = true;
     qemu = {
@@ -9,6 +9,11 @@
     };
   };
   programs.virt-manager.enable = true;
+
+  # VMs with quickemu
+  environment.systemPackages = with pkgs; [
+    quickemu # quickly create and run optimised Windows, macOS and Linux virtual machines
+  ];
 
   # containers
   virtualisation.docker = {
