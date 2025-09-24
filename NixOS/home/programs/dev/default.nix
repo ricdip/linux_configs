@@ -7,10 +7,14 @@
   ];
 
   home.packages = with pkgs; [
+    # Assembly
+    nasm # 80x86 and x86-64 assembler
     # C/C++
     clang # compiler
     clang-tools # formatter, language server
-    lldb # debugger
+    lldb # next-generation high-performance debugger
+    gdb # GNU Project debugger
+    gdbgui # browser-based frontend for GDB
     gnumake # build tool
     # Python
     python3 # interpreter

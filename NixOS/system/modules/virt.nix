@@ -10,9 +10,10 @@
   };
   programs.virt-manager.enable = true;
 
-  # VMs with quickemu
+  # VMs with quickemu and distrobox
   environment.systemPackages = with pkgs; [
     quickemu # quickly create and run optimised Windows, macOS and Linux virtual machines
+    distrobox # wrapper around podman or docker to create and start containers
   ];
 
   # containers
