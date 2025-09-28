@@ -10,9 +10,10 @@
     # Assembly
     nasm # 80x86 and x86-64 assembler
     # C/C++
-    clang # compiler
+    # clang # compiler
+    # lldb # next-generation high-performance debugger
     clang-tools # formatter, language server
-    lldb # next-generation high-performance debugger
+    gcc # GNU Compiler Collection
     gdb # GNU Project debugger
     gdbgui # browser-based frontend for GDB
     gnumake # build tool
