@@ -70,7 +70,15 @@ in
     memtest86-efi # a tool to detect memory errors (runs from the bootloader)
     adw-gtk3 # theme from libadwaita ported to GTK-3
     adwaita-qt # style to bend Qt applications to look like they belong into GNOME Shell
+    man-pages # Linux development manual pages
   ];
+
+  # man documentation config
+  documentation = {
+    nixos.includeAllModules = true;
+    man.generateCaches = true;
+    dev.enable = true;
+  };
 
   # a list of permissible login shells for user accounts.
   # No need to mention /bin/sh here, it is placed into this list implicitly
