@@ -67,6 +67,15 @@
             empty_format = " $icon $percentage ";
           }
           {
+            block = "keyboard_layout";
+            driver = "kbddbus";
+            mappings = {
+              "English (US)" = "EN";
+              "Italian (N/A)" = "IT";
+            };
+            format = " $layout ";
+          }
+          {
             block = "time";
             interval = 1;
             format = " $timestamp.datetime(f:'%a %d/%m/%Y %H:%M:%S', l:it_IT) ";

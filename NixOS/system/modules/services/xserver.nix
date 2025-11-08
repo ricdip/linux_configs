@@ -35,6 +35,7 @@
         xset r rate 300 40
         xset s 0 0
         xset dpms 0 1200 1800
+        kbdd &
       '';
     };
     windowManager.i3 = {
@@ -51,6 +52,7 @@
         xdotool # fake keyboard/mouse input, window management, and more
         maim # a command-line screenshot utility
         feh # light-weight image viewer
+        kbdd # simple daemon and library to make per window layout using XKB
       ];
     };
     # configure keymap in X11
