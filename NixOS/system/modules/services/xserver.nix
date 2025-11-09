@@ -59,7 +59,11 @@
     xkb = {
       layout = "it,us";
       variant = "winkeys";
-      options = "eurosign:e,grp:alt_space_toggle,terminate:ctrl_alt_bksp";
+      # options:
+      # - eurosign:e              -> Euro on E
+      # - grp:lwin_toggle         -> Switching to another layout on Left Win
+      # - terminate:ctrl_alt_bksp -> Key sequence to kill the X server on Ctrl + Alt + Backspace
+      options = "eurosign:e,grp:lwin_toggle,terminate:ctrl_alt_bksp";
     };
   };
 }
