@@ -67,13 +67,12 @@
             empty_format = " $icon $percentage ";
           }
           {
-            block = "keyboard_layout";
-            driver = "kbddbus";
-            mappings = {
-              "English (US)" = "EN";
-              "Italian (N/A)" = "IT";
-            };
-            format = " $layout ";
+            block = "custom";
+            command = ''
+              echo $(xkblayout-state print %s) | tr a-z A-Z ; pkill -SIGRTMIN+4 i3status-rs
+            '';
+            signal = 4;
+            interval = "once";
           }
           {
             block = "time";
