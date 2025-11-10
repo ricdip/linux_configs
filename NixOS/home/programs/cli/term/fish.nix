@@ -72,15 +72,21 @@
       h = "history";
       clock = "watch -n 1 date";
       ":q" = "exit";
-      locate = "nix eval --raw";
       ## git
       gs = "git status -sb";
+      gsf = "git status";
       ga = "git add";
       gc = "git commit -m";
-      gp = "git push";
-      gl = "git pull";
+      gca = "git commit --amend";
+      gps = "git push";
+      gpl = "git pull";
       gd = "git diff";
       gw = "git switch";
+      gl = "git log";
+      glo = "git log --oneline --decorate";
+      glg = "git log --graph --oneline --decorate";
+      gls = "git log --stat";
+      gld = "git log -p";
     };
     functions = {
       # disable fish greeting message
@@ -103,6 +109,10 @@
       # grep from history
       histgrep = ''
         history | grep $argv
+      '';
+      # locate nix packages
+      locate = ''
+        nix eval --raw nixpkgs#"$argv[1]"
       '';
     };
   };
