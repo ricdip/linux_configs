@@ -1,7 +1,7 @@
 {
   imports = [
-    ./i3.nix
-    ./i3status.nix
+    ./sway.nix
+    ./i3status-rs.nix
     ./rofi.nix
   ];
 }

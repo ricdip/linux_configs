@@ -22,7 +22,7 @@
         soft-wrap = {
           enable = true;
         };
-        clipboard-provider = "x-clip";
+        clipboard-provider = "wayland";
         statusline = {
           left = [
             "mode"

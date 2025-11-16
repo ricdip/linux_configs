@@ -8,8 +8,41 @@
         blocks = [
           {
             block = "net";
-            format = " $icon {$ssid ($signal_strength): $ip|Wired: $ip} ";
+            format = " $icon {$ssid ($signal_strength)|Wired} ";
+            format_alt = " $icon {$device: $ip|$device: $ip} ";
             inactive_format = " $icon Down ";
+            interval = 2;
+          }
+          {
+            block = "custom";
+            shell = "sh";
+            json = true;
+            cycle = [
+              ''
+                bluetoothctl show | grep -q "Powered: yes" &&  \
+                {
+                  echo '{"icon":"bluetooth", "text": "ON"}';
+                } || \
+                {
+                  echo '{"icon":"bluetooth", "text": "OFF"}';
+                }
+              ''
+              ''
+                {
+                  dev=$(bluetoothctl info | awk -F': ' '/Name/ {print $2}');
+                  if [ -n "$dev" ]
+                  then
+                    {
+                      echo '{"icon":"bluetooth", "text": '\"$dev\"'}';
+                    }
+                  else
+                    {
+                      echo '{"icon":"bluetooth", "text": "No device"}';
+                    }
+                  fi;
+                }
+              ''
+            ];
             interval = 2;
           }
           {
@@ -19,7 +52,8 @@
             interval = 5;
             warning = 20.0;
             alert = 10.0;
-            format = " $icon $available / $total ";
+            format = " $icon $percentage ";
+            format_alt = " $icon $available / $total ";
           }
           {
             block = "memory";
@@ -30,6 +64,7 @@
           {
             block = "cpu";
             format = " $icon $utilization ";
+            format_alt = "$icon $frequency ";
             interval = 2;
           }
           {
@@ -66,13 +101,22 @@
             charging_format = " $icon $percentage ";
             empty_format = " $icon $percentage ";
           }
+          # {
+          #   block = "custom";
+          #   command = ''
+          #     echo $(xkblayout-state print %s) | tr a-z A-Z ; pkill -SIGRTMIN+4 i3status-rs
+          #   '';
+          #   signal = 4;
+          #   interval = "once";
+          # }
           {
-            block = "custom";
-            command = ''
-              echo $(xkblayout-state print %s) | tr a-z A-Z ; pkill -SIGRTMIN+4 i3status-rs
-            '';
-            signal = 4;
-            interval = "once";
+            block = "keyboard_layout";
+            driver = "sway";
+            format = " $layout ";
+            mappings = {
+              "English (US)" = "US";
+              "Italian (Windows)" = "IT";
+            };
           }
           {
             block = "time";

@@ -9,13 +9,21 @@ let
       "DejaVu Sans Mono"
       "Font Awesome 6 Free"
     ];
-    size = 10.5;
+    size = 10.0;
   };
 in
 {
-  # i3 config
-  xsession.windowManager.i3 = {
+  # sway config
+  wayland.windowManager.sway = {
     enable = true;
+    wrapperFeatures.gtk = true;
+    extraConfig = ''
+      exec swayidle -w \
+        timeout 300 'swaylock' \
+        timeout 600 'swaymsg "output * dpms off"' \
+        resume 'swaymsg "output * dpms on"' \
+        before-sleep 'swaylock'
+    '';
     config = {
       # set modifier and terminal
       inherit modifier terminal;
@@ -33,6 +41,17 @@ in
       fonts = {
         names = i3-fonts.names;
         size = i3-fonts.size;
+      };
+      # keyboard configuration
+      input."*" = {
+        xkb_layout = "it,us";
+        xkb_variant = "winkeys";
+        # options:
+        # - eurosign:e              -> Euro on E
+        # - grp:lwin_toggle         -> Switching to another layout on Left Win
+        xkb_options = "eurosign:e,grp:lwin_toggle";
+        repeat_delay = "300";
+        repeat_rate = "40";
       };
       # default workspace
       defaultWorkspace = "workspace number 1";
@@ -104,8 +123,7 @@ in
 
         "${modifier}+p" = "move workspace to output right";
 
-        "${modifier}+Shift+c" = "reload";
-        "${modifier}+Shift+r" = "restart";
+        "${modifier}+Shift+r" = "reload";
         "${modifier}+Shift+e" = ''
           exec --no-startup-id "${pkgs.rofi}/bin/rofi -show power-menu -modi 'power-menu:${pkgs.rofi-power-menu}/bin/rofi-power-menu --choices=lockscreen/logout/reboot/shutdown'"
         '';

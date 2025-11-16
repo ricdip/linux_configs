@@ -11,6 +11,8 @@
     noto-fonts-emoji
     # hack font
     hack-font
+    # terminus font
+    terminus_font
     # nerdfonts: get only a subset
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
@@ -19,6 +21,7 @@
   # cursor
   home.pointerCursor = {
     gtk.enable = true;
+    sway.enable = true;
     x11 = {
       enable = true;
       defaultCursor = "left_ptr";
