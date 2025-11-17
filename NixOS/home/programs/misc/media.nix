@@ -6,7 +6,7 @@
     vlc # cross-platform media player and streaming server
     spotify # Spotify official client
     # images
-    sxiv # Simple X Image Viewer
+    imv # CLI image viewer for tiling window managers
     qimgv # a Qt5 image viewer with optional video support
     gimp # the GNU Image Manipulation Program
     imagemagick # create, edit, compose, or convert bitmap images

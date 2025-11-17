@@ -6,11 +6,6 @@
     excludePackages = with pkgs; [ xterm ];
     desktopManager = {
       xterm.enable = false;
-      wallpaper = {
-        # TODO: solve wallpaper in wayland
-        combineScreens = false;
-        mode = "fill";
-      };
     };
     displayManager = {
       lightdm = {
@@ -62,5 +57,8 @@
       wdisplays # graphical application for configuring displays in Wayland compositors
       bemenu # dynamic menu library and client program inspired by dmenu
     ];
+  };
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1"; # Ozone Wayland support in Chromium and Electron based applications
   };
 }

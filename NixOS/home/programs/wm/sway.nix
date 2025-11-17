@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, consts, ... }:
 
 let
   # Alt key
@@ -11,18 +11,26 @@ let
     ];
     size = 10.0;
   };
+  swaylock-command = "swaylock -f -c 000000";
+  lock-timeout = "1800";
+  screen-poweroff-timeout = "1860";
 in
 {
   # sway config
   wayland.windowManager.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+    checkConfig = false;
     extraConfig = ''
       exec swayidle -w \
-        timeout 300 'swaylock' \
-        timeout 600 'swaymsg "output * dpms off"' \
-        resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock'
+        timeout ${lock-timeout} '${swaylock-command}' \
+        timeout ${screen-poweroff-timeout} 'swaymsg "output * power off"' \
+                resume 'swaymsg "output * power on"' \
+        before-sleep '${swaylock-command}' \
+        lock '${swaylock-command}'
+      for_window [app_id="^.*"] inhibit_idle fullscreen
+      output * bg /home/${consts.user.name}/.background-image fill
+      seat * hide_cursor 10000
     '';
     config = {
       # set modifier and terminal
