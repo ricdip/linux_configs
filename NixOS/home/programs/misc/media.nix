@@ -12,7 +12,7 @@
     imagemagick # create, edit, compose, or convert bitmap images
     exiftool # a tool to read, write and edit EXIF meta information
     # misc
-    simplescreenrecorder # a screen recorder for Linux
+    wf-recorder # utility program for screen recording of wlroots-based compositors (https://github.com/ammen99/wf-recorder)
     ffmpeg # a complete, cross-platform solution to record, convert and stream audio and video
     puddletag # audio tag editor similar to the Windows program, Mp3tag
     mediainfo # supplies technical and tag information about a video or audio file

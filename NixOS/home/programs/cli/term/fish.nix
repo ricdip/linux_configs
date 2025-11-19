@@ -72,6 +72,7 @@
       h = "history";
       clock = "watch -n 1 date";
       ":q" = "exit";
+      cliphist-wipe = "cliphist wipe";
       ## git
       gs = "git status -sb";
       gsf = "git status";

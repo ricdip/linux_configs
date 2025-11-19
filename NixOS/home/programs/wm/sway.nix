@@ -31,6 +31,7 @@ in
       for_window [app_id="^.*"] inhibit_idle fullscreen
       output * bg /home/${consts.user.name}/.background-image fill
       seat * hide_cursor 10000
+      exec wl-paste --watch cliphist store
     '';
     config = {
       # set modifier and terminal
@@ -154,6 +155,13 @@ in
         "XF86MonBrightnessUp" = ''
           exec --no-startup-id "brightnessctl set +5%"
         '';
+
+        "Print" = "exec grimshot save area";
+        "Shift+Print" = "exec grimshot save window";
+        "Control+Shift+Print" = "exec grimshot save output";
+
+        "Control+grave" = "exec 'cliphist list | rofi -dmenu | cliphist decode | wl-copy'"; # US layout
+        "Control+backslash" = "exec 'cliphist list | rofi -dmenu | cliphist decode | wl-copy'"; # IT layout
       };
 
       modes = {
