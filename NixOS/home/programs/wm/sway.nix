@@ -32,6 +32,17 @@ in
       output * bg /home/${consts.user.name}/.background-image fill
       seat * hide_cursor 10000
       exec wl-paste --watch cliphist store
+      for_window [shell="xwayland"] title_format "[XWayland] %title"
+      for_window [window_role = "pop-up"] floating enable
+      for_window [window_role = "bubble"] floating enable
+      for_window [window_role = "dialog"] floating enable
+      for_window [window_type = "dialog"] floating enable
+      for_window [window_role = "task_dialog"] floating enable
+      for_window [window_type = "menu"] floating enable
+      for_window [app_id = "floating"] floating enable
+      for_window [app_id = "floating_update"] floating enable, resize set width 1000px height 600px
+      for_window [class = "(?i)pinentry"] floating enable
+      for_window [title = "Administrator privileges required"] floating enable
     '';
     config = {
       # set modifier and terminal

@@ -9,8 +9,6 @@
     MANPAGER = "less -R --use-color";
     FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git";
     BAT_THEME = "base16";
-    GTK_THEME = "Adwaita:dark";
-    QT_STYLE_OVERRIDE = "Adwaita-dark";
     HISTSIZE = 50000;
     HISTFILESIZE = 100000;
   };

@@ -23,6 +23,15 @@
         };
       };
     };
+    # configure keymap in X11 for console
+    xkb = {
+      layout = "it,us";
+      variant = "winkeys";
+      # options:
+      # - eurosign:e              -> Euro on E
+      # - grp:lwin_toggle         -> Switching to another layout on Left Win
+      options = "eurosign:e,grp:lwin_toggle";
+    };
   };
   programs.sway = {
     enable = true;
@@ -41,9 +50,9 @@
       wev # Wayland event viewer
       slurp # select a region in a Wayland compositor
       grim # grab images from a Wayland compositor
-      adwaita-icon-theme # mouse cursor and icons
       gnome-themes-extra # dark adwaita theme
       wtype # xdotool type for wayland (fake keyboard/mouse input, window management, and more)
+      libappindicator # library to allow applications to export a menu into the Unity Menu bar
     ];
   };
   environment.sessionVariables = {
@@ -52,6 +61,11 @@
   # enable screensharing
   xdg.portal = {
     enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk # desktop integration portals for sandboxed apps
+      xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
+    ];
+    xdgOpenUsePortal = true;
     wlr.enable = true;
   };
 }
