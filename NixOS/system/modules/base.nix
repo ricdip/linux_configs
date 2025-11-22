@@ -55,7 +55,7 @@ in
   services.fwupd.enable = true;
 
   # Whether to enable GNOME Keyring daemon, a service designed to take care of the user’s security credentials, such as user names and passwords
-  services.gnome.gnome-keyring.enable = true;
+  services.gnome.gnome-keyring.enable = false;
 
   # packages installed in system profile
   environment.systemPackages = with pkgs; [

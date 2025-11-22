@@ -18,9 +18,9 @@
     user.services.polkit-gnome-authentication-agent-1 = {
       enable = true;
       description = "polkit-gnome-authentication-agent-1";
-      wantedBy = [ "graphical.target" ];
-      wants = [ "graphical.target" ];
-      after = [ "graphical.target" ];
+      wantedBy = [ "graphical-session.target" ];
+      wants = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
       serviceConfig = {
         Type = "simple";
         ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";

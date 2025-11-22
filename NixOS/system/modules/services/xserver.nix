@@ -53,6 +53,8 @@
       gnome-themes-extra # dark adwaita theme
       wtype # xdotool type for wayland (fake keyboard/mouse input, window management, and more)
       libappindicator # library to allow applications to export a menu into the Unity Menu bar
+      xorg.xhost # solves "Authorization required, but no authorization protocol specified"
+      xorg.xeyes # good way to verify X11 setup
     ];
   };
   environment.sessionVariables = {
@@ -64,6 +66,7 @@
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk # desktop integration portals for sandboxed apps
       xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
+      xdg-desktop-portal-gnome # backend implementation for xdg-desktop-portal for the GNOME desktop environment
     ];
     xdgOpenUsePortal = true;
     wlr.enable = true;

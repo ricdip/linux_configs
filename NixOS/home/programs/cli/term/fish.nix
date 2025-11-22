@@ -71,6 +71,7 @@
       clock = "watch -n 1 date";
       ":q" = "exit";
       cliphist-wipe = "cliphist wipe";
+      xrun = "env -u WAYLAND_DISPLAY"; # run application with xwayland
       ## git
       gs = "git status -sb";
       gsf = "git status";

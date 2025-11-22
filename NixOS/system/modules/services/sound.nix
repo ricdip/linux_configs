@@ -15,6 +15,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    pavucontrol # PulseAudio Volume Control
+    pwvucontrol # Pipewire Volume Control (works only with xwayland)
+    helvum # GTK patchbay for pipewire (works only with xwayland)
+    sink-rotate # command that rotates the default PipeWire audio sink
   ];
 }
