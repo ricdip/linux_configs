@@ -173,6 +173,14 @@ in
 
         "Control+grave" = "exec 'cliphist list | rofi -dmenu | cliphist decode | wl-copy'"; # US layout
         "Control+backslash" = "exec 'cliphist list | rofi -dmenu | cliphist decode | wl-copy'"; # IT layout
+
+        "${modifier}+F1" = ''
+          exec 'bluetoothctl show | grep -q "Powered: yes" && bluetoothctl power off || bluetoothctl power on'
+        '';
+
+        "${modifier}+F2" = ''
+          exec 'nmcli networking | grep -q "enabled" && nmcli networking off || nmcli networking on'
+        '';
       };
 
       modes = {
