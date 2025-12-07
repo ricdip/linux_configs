@@ -3,6 +3,7 @@
     ./ai.nix
     ./btrfs.nix
     ./file-manager.nix
+    ./fonts.nix
     ./gaming.nix
     ./gparted.nix
     ./libinput.nix

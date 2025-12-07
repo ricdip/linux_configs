@@ -1,23 +1,5 @@
 { pkgs, ... }:
 {
-  # fonts
-  home.packages = with pkgs; [
-    # icon fonts
-    material-design-icons
-    font-awesome
-    # noto fonts
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-    # hack font
-    hack-font
-    # terminus font
-    terminus_font
-    # nerdfonts: get only a subset
-    nerd-fonts.fira-code
-    nerd-fonts.droid-sans-mono
-  ];
-
   # GTK/QT
   gtk = {
     enable = true;
@@ -45,7 +27,6 @@
       package = pkgs.adwaita-qt6;
     };
   };
-
   # cursor
   home.pointerCursor = {
     gtk.enable = true;
@@ -54,7 +35,6 @@
     name = "OpenZone_Black";
     size = 32;
   };
-
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       gtk-theme = "Adwaita-dark";
