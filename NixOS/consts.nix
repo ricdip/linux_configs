@@ -40,12 +40,17 @@
       allowedTCPPorts = [ ];
       allowedUDPPorts = [ ];
     };
-    # Cloudflare DNS
-    nameservers = [
-      "1.1.1.1"
-      "1.0.0.1"
-      # "192.168.1.245"
-    ];
+    nameserver = {
+      # pihole DNS
+      defaults = [
+        "192.168.1.245"
+      ];
+      # Cloudflare DNS
+      fallback = [
+        "1.1.1.1"
+        "1.0.0.1"
+      ];
+    };
   };
   disks = {
     partitions-uuid = {

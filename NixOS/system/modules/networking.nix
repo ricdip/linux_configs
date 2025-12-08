@@ -3,11 +3,12 @@
   networking = {
     networkmanager = {
       enable = true;
-      dns = "none";
+      # dns = "none";
+      dns = "systemd-resolved";
     };
     useDHCP = false;
     dhcpcd.enable = false;
-    nameservers = consts.networking.nameservers;
+    # nameservers = consts.networking.nameserver.defaults;
 
     hostId = consts.networking.hostId;
 
@@ -22,12 +23,14 @@
   };
 
   # systemd DNS resolver configuration
-  /*
-    services.resolved = {
-      enable = true;
-      fallbackDns = consts.networking.nameservers;
-    };
-  */
+  services.resolved = {
+    enable = true;
+    domains = [ "~." ];
+    fallbackDns = consts.networking.nameserver.fallback;
+    extraConfig = ''
+      DNSStubListener=no
+    '';
+  };
 
   # user groups update
   users.users.${consts.user.name}.extraGroups = [ "networkmanager" ];

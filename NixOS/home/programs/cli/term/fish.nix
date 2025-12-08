@@ -1,4 +1,4 @@
-{ consts, ... }:
+{ consts, lib, ... }:
 {
   home.sessionVariables = {
     NH_FLAKE = "/home/${consts.user.name}/${consts.flake}";
@@ -113,6 +113,18 @@
       # locate nix packages
       locate = ''
         nix eval --raw nixpkgs#"$argv[1]"
+      '';
+      # set defaults DNS to wlp3s0 interface
+      dns-set-defaults = ''
+        set dns ${lib.strings.concatStringsSep " " consts.networking.nameserver.defaults}
+        echo Setting "$dns" as wlp3s0 DNS
+        sudo resolvectl dns wlp3s0 $dns
+      '';
+      # set fallbacks DNS to wlp3s0 interface
+      dns-set-fallbacks = ''
+        set dns ${lib.strings.concatStringsSep " " consts.networking.nameserver.fallback}
+        echo Setting "$dns" as wlp3s0 DNS
+        sudo resolvectl dns wlp3s0 $dns
       '';
     };
   };
