@@ -24,8 +24,8 @@
     StandardOutput = "tty";
     StandardError = "journal"; # without this, errors will spam on screen
     # without these, bootlogs will spam on screen
-    TTYReset = true;
-    TTYVHangup = true;
+    # TTYReset = true;
+    # TTYVHangup = true;
     TTYVTDisallocate = true;
   };
 }
