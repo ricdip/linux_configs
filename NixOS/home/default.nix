@@ -3,7 +3,7 @@
   imports = [
     ./programs
     ./scripts
-    ./fonts.nix
+    ./theme.nix
   ];
 
   home.username = consts.user.name;

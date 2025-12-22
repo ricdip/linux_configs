@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ consts, ... }:
 {
   programs.waybar = {
     enable = true;
@@ -133,112 +133,165 @@
         position = "top";
         height = 30;
         modules-left = [
-          # "wlr/taskbar"
           "network"
           "bluetooth"
-          "disk"
           "memory"
-          "cpu"
+          "disk"
         ];
         modules-center = [
-          # "sway/window"
           "sway/workspaces"
           "sway/mode"
         ];
         modules-right = [
+          "cpu"
           "load"
           "temperature"
           "backlight"
           "wireplumber"
+          "battery"
           "sway/language"
           "clock"
+          "tray"
         ];
-
+        # modules configuration
         "sway/workspaces" = {
           disable-scroll = true;
           all-outputs = false;
         };
-
+        "sway/mode" = {
+          format = "<span style=\"italic\">{}</span>";
+          tooltip = false;
+        };
+        "tray" = {
+          spacing = 10;
+        };
         "network" = {
-          format = "{ifname}";
-          format-wifi = "{essid} ({signalStrength}%)";
-          format-ethernet = "{ipaddr}/{cidr}";
-          format-disconnected = "";
-          tooltip-format = "{ifname} via {gwaddr}";
-          tooltip-format-wifi = "{essid} ({signalStrength}%)";
-          tooltip-format-ethernet = "{ifname}";
-          tooltip-format-disconnected = "Disconnected";
-          max-length = 50;
+          format-wifi = "{essid} ({signalStrength}%) ";
+          format-ethernet = "Wired ";
+          format-linked = "{ifname} (No IP)";
+          format-disconnected = "Disconnected 󰌙";
+          format-disabled = "Disabled 󰌙";
+          tooltip-format-wifi = "{ifname}: {ipaddr}/{cidr}";
+          tooltip-format-ethernet = "{ifname}: {ipaddr}/{cidr}";
+          tooltip-disconnected = "Disconnected 󰌙";
+          tooltip-disabled = "Disabled 󰌙";
+          interval = 2;
+          max-length = 30;
         };
-      };
-
-      "bluetooth" = {
-        format = "{status}";
-        format-disabled = "";
-        format-connected = "{num_connections} connected";
-        tooltip-format = "{controller_alias}\t{controller_address}";
-        tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
-        tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
-      };
-
-      "disk" = {
-        interval = 30;
-        format = "Only {percentage_free}% remaining on {path}";
-        path = "/";
-        unit = "GB";
-      };
-
-      "memory" = {
-        interval = 30;
-        format = "{used:0.1f}GB/{total:0.1f}GB";
-      };
-
-      "cpu" = {
-        interval = 10;
-        format = "{}%";
-        max-length = 10;
-      };
-
-      "load" = {
-        interval = 10;
-        format = "load: {load1}";
-        max-length = 10;
-      };
-
-      "temperature" = {
-        format = "{temperatureC}°C";
-      };
-
-      "backlight" = {
-        device = "intel_backlight";
-        format = "{percent}%";
-      };
-
-      "wireplumber" = {
-        format = "{volume}%";
-        max-volume = 150;
-        scroll-step = 0.2;
-      };
-
-      "battery" = {
-        interval = 60;
-        states = {
-          warning = 30;
-          critical = 15;
+        "bluetooth" = {
+          format-on = "On ";
+          format-connected = "{device_alias} ";
+          format-disabled = "Disabled 󰂲";
+          format-off = "Off 󰂲";
+          format-no-controller = "No controller 󰂲";
+          tooltip-format-off = "{status}";
+          tooltip-format-on = "{status}";
+          tooltip-format-connected = "MAC: {device_address}";
+          max-length = 30;
         };
-        format = "{capacity}% {icon}";
-        max-length = 25;
-      };
-
-      "sway/language" = {
-        format = "{short} {variant}";
-      };
-
-      "clock" = {
-        interval = 60;
-        format = "{%a %d/%m/%Y %H:%M:%S}";
-        max-length = 25;
-        locale = "it_IT";
+        "disk" = {
+          interval = 5;
+          format = "{percentage_free}% ";
+          path = "/";
+          unit = "GB";
+          tooltip-format = "{used} / {total} (free: {free})";
+        };
+        "memory" = {
+          interval = 2;
+          format = "{percentage}%    / {swapPercentage}% ";
+          tooltip-format = "RAM: {used:0.1f}GB / {total:0.1f}GB\nSWAP: {swapUsed:0.1f}GB / {swapTotal:0.1f}GB";
+        };
+        "cpu" = {
+          interval = 2;
+          format = "{usage}% ";
+          tooltip = false;
+        };
+        "load" = {
+          interval = 2;
+          format = "{load1} ";
+        };
+        "temperature" = {
+          interval = 2;
+          format = "{temperatureC}°C ";
+          critical-threshold = 80;
+          warning-threshold = 70;
+          tooltip = false;
+        };
+        "backlight" = {
+          interval = 2;
+          format = "{percent}% {icon}";
+          scroll-step = 5.0;
+          tooltip = false;
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
+        };
+        "wireplumber" = {
+          format = "{volume}% {icon}";
+          max-volume = 100;
+          scroll-step = 5.0;
+          format-muted = "{volume}% ";
+          format-icons = [
+            ""
+            ""
+            ""
+          ];
+          tooltip-format = "{source_desc}";
+        };
+        "battery" = {
+          interval = 5;
+          states = {
+            warning = 30;
+            critical = 15;
+          };
+          format = "{capacity}% {icon}";
+          format-full = "{capacity}% {icon}";
+          format-charging = "{capacity}% ";
+          format-plugged = "{capacity}% ";
+          format-alt = "{time} {icon}";
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
+        };
+        "sway/language" = {
+          format = "<span text_transform=\"uppercase\">{short}</span> ";
+          on-click = "swaymsg input type:keyboard xkb_switch_layout next";
+        };
+        "clock" = {
+          interval = 1;
+          format = "{:%H:%M:%S} ";
+          format-alt = "{:L%a %d/%m/%Y} 󰃭";
+          tooltip-format = "<tt><small>{calendar}</small></tt>";
+          calendar = {
+            mode = "month";
+            weeks-pos = "right";
+            on-scroll = 1;
+            format = {
+              months = "<span color='#ffead3'><b>{}</b></span>";
+              days = "<span color='#ecc6d9'><b>{}</b></span>";
+              weeks = "<span color='#99ffdd'><b>W{}</b></span>";
+              weekdays = "<span color='#ffcc66'><b>{}</b></span>";
+              today = "<span color='#ff6699'><b><u>{}</u></b></span>";
+            };
+          };
+          actions = {
+            on-scroll-up = "shift_up";
+            on-scroll-down = "shift_down";
+          };
+          locale = consts.system.locale;
+        };
       };
     };
   };
