@@ -21,15 +21,6 @@
         opacity: 0.2;
       }
 
-      window#waybar.termite {
-        background-color: #3F3F3F;
-      }
-
-      window#waybar.chromium {
-        background-color: #000000;
-        border: none;
-      }
-
       button {
         /* Use box-shadow instead of border so the text isn't offset */
         box-shadow: inset 0 -3px transparent;
@@ -46,12 +37,16 @@
 
       #workspaces button {
         padding: 0 5px;
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.05);
         color: #ffffff;
       }
 
       #workspaces button:hover {
-        background: rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.12);
+      }
+
+      #workspaces button.focused {
+        font-weight: bold;
       }
 
       #workspaces button.focused, #workspaces button.active {
@@ -126,6 +121,25 @@
         -gtk-icon-effect: highlight;
         background-color: #eb4d4b;
       }
+
+      /* Using steps() instead of linear as a timing function to limit cpu usage */
+      #battery.critical:not(.charging) {
+        background-color: #f53c3c;
+        color: #ffffff;
+        animation-name: blink;
+        animation-duration: 0.5s;
+        animation-timing-function: steps(12);
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      #temperature.warning {
+        color: #f9c74f;
+      }
+
+      #temperature.critical {
+        color: #f94144;
+      }
     '';
     settings = {
       mainBar = {
@@ -150,6 +164,7 @@
           "wireplumber"
           "battery"
           "sway/language"
+          # "keyboard-state"
           "clock"
           "tray"
         ];
@@ -194,7 +209,7 @@
           format = "{percentage_free}% ";
           path = "/";
           unit = "GB";
-          tooltip-format = "{used} / {total} (free: {free})";
+          tooltip-format = "{used} / {total} (FREE: {free})";
         };
         "memory" = {
           interval = 2;
@@ -212,6 +227,7 @@
         };
         "temperature" = {
           interval = 2;
+          thermal-zone = 7;
           format = "{temperatureC}°C ";
           critical-threshold = 80;
           warning-threshold = 70;
@@ -238,7 +254,7 @@
           format = "{volume}% {icon}";
           max-volume = 100;
           scroll-step = 5.0;
-          format-muted = "{volume}% ";
+          format-muted = "({volume}%) ";
           format-icons = [
             ""
             ""
@@ -268,6 +284,19 @@
         "sway/language" = {
           format = "<span text_transform=\"uppercase\">{short}</span> ";
           on-click = "swaymsg input type:keyboard xkb_switch_layout next";
+          tooltip = false;
+        };
+        "keyboard-state" = {
+          numlock = true;
+          capslock = true;
+          format = {
+            numlock = "N {icon}";
+            capslock = "C {icon}";
+          };
+          "format-icons" = {
+            locked = "";
+            unlocked = "";
+          };
         };
         "clock" = {
           interval = 1;

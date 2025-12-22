@@ -38,7 +38,6 @@
     xwayland.enable = true;
     extraPackages = with pkgs; [
       foot # fast, lightweight and minimalistic Wayland terminal emulator
-      i3status-rust # replacement for i3status
       wl-clipboard # command-line copy/paste utilities for Wayland
       cliphist # Wayland clipboard manager
       swayidle # idle management daemon for Wayland
@@ -52,7 +51,6 @@
       grim # grab images from a Wayland compositor
       gnome-themes-extra # dark adwaita theme
       wtype # xdotool type for wayland (fake keyboard/mouse input, window management, and more)
-      libappindicator # library to allow applications to export a menu into the Unity Menu bar
       xorg.xhost # solves "Authorization required, but no authorization protocol specified"
       xorg.xeyes # good way to verify X11 setup
     ];

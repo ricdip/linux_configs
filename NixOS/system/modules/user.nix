@@ -8,6 +8,7 @@
       "wheel"
       "video"
       "audio"
+      "input"
     ];
     # programs.zsh.enable is already managed by Home Manager
     ignoreShellProgramCheck = true;

@@ -1,6 +1,7 @@
 {
+  # migrated: i3status-rust -> waybar
   programs.i3status-rust = {
-    enable = true;
+    enable = false;
     bars = {
       top = {
         icons = "awesome6";
