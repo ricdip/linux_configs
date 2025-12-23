@@ -164,7 +164,7 @@
           "wireplumber"
           "battery"
           "sway/language"
-          # "keyboard-state"
+          "keyboard-state"
           "clock"
           "tray"
         ];
@@ -287,15 +287,13 @@
           tooltip = false;
         };
         "keyboard-state" = {
-          numlock = true;
           capslock = true;
           format = {
-            numlock = "N {icon}";
-            capslock = "C {icon}";
+            capslock = "{icon}";
           };
           "format-icons" = {
-            locked = "";
-            unlocked = "";
+            locked = "C";
+            unlocked = "";
           };
         };
         "clock" = {
