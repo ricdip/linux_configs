@@ -43,7 +43,7 @@
     nameserver = {
       # pihole DNS
       defaults = [
-        "192.168.1.245"
+        "192.168.8.245"
       ];
       # Cloudflare DNS
       fallback = [
