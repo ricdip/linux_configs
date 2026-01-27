@@ -12,7 +12,7 @@
     zfs # ZFS Filesystem Linux Userspace Tools
     # misc
     cryptsetup # LUKS
-    veracrypt # free open source filesystem on-the-fly encryption
+    # veracrypt # free open source filesystem on-the-fly encryption
     mdadm # managing RAID arrays under Linux
     testdisk # data recovery utilities (`testdisk` and `photorec` commands)
     smartmontools # tools for monitoring the health of hard drives

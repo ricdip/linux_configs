@@ -4,7 +4,6 @@
   virtualisation.libvirtd = {
     enable = true;
     qemu = {
-      ovmf.enable = true;
       vhostUserPackages = with pkgs; [ virtiofsd ];
     };
   };
