@@ -72,6 +72,12 @@
       ":q" = "exit";
       cliphist-wipe = "cliphist wipe";
       xrun = "env -u WAYLAND_DISPLAY"; # run application with xwayland
+      sway-disable-screen-poweroff = ''
+        swaymsg "inhibit_idle open"
+      '';
+      sway-enable-screen-poweroff = ''
+        swaymsg "inhibit_idle none"
+      '';
       ## git
       gs = "git status -sb";
       gsf = "git status";
