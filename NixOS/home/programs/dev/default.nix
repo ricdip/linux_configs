@@ -58,7 +58,9 @@
     go = {
       enable = true;
       package = pkgs.go; # latest Go
-      goPath = ".go";
+      env = {
+        GOPATH = ".go";
+      };
     };
   };
 
