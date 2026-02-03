@@ -23,7 +23,7 @@
     ];
     notifications = {
       x11 = {
-        enable = true;
+        enable = false;
         display = ":0";
       };
       test = true;

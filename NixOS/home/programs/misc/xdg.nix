@@ -130,6 +130,7 @@
         "x-scheme-handler/http" = "firefox.desktop";
         "x-scheme-handler/https" = "firefox.desktop";
         "x-scheme-handler/chrome" = "firefox.desktop";
+        "inode/directory" = "thunar.desktop";
       };
     };
   };

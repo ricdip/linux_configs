@@ -12,6 +12,7 @@
     ./mouse.nix
     ./openssh.nix
     ./polkit.nix
+    ./power.nix
     ./printer.nix
     ./smartd.nix
     ./sound.nix

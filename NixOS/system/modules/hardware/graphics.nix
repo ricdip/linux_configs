@@ -1,4 +1,9 @@
-{ config, consts, ... }:
+{
+  config,
+  consts,
+  pkgs,
+  ...
+}:
 {
   # enable OpenGL
   hardware.graphics = {
@@ -60,4 +65,11 @@
       nvidiaBusId = consts.hardware.graphics.nvidiaBusId;
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    vulkan-tools # Khronos official Vulkan Tools and Utilities (`vulkan-info`, `vkcube` commands)
+    mesa-demos # collection of demos and test programs for OpenGL and Mesa (`glxgears`, `glxinfo` commands)
+    # intel-gpu-tools # tools for development and testing of the Intel DRM driver (`intel_gpu_top` command)
+    # nvtopPackages.full # a (h)top like task monitor for AMD, Adreno, Intel and NVIDIA GPUs (`nvtop` command)
+  ];
 }

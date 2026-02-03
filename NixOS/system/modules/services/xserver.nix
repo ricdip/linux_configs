@@ -57,14 +57,15 @@
   };
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # Ozone Wayland support in Chromium and Electron based applications
+    XDG_OPEN_USE_PORTAL = "1";
   };
   # enable screensharing
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk # desktop integration portals for sandboxed apps
-      xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
-      xdg-desktop-portal-gnome # backend implementation for xdg-desktop-portal for the GNOME desktop environment
+      # xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
+      # xdg-desktop-portal-gnome # backend implementation for xdg-desktop-portal for the GNOME desktop environment
     ];
     xdgOpenUsePortal = true;
     wlr.enable = true;
