@@ -74,6 +74,8 @@ in
     adw-gtk3 # theme from libadwaita ported to GTK-3
     adwaita-qt # style to bend Qt applications to look like they belong into GNOME Shell
     man-pages # Linux development manual pages
+    hardinfo2 # system information and benchmarks for Linux systems
+    dmidecode # tool that reads information about system's hardware from the BIOS according to the SMBIOS/DMI standard
   ];
 
   # man documentation config
