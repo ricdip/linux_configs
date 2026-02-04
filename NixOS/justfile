@@ -69,3 +69,7 @@ snapper-list:
 # Snapper: delete a home btrfs snapshot with id NUM
 snapper-delete NUM:
     sudo snapper -c home delete {{NUM}}
+
+# Snapper: cleanup home btrfs snapshots following timeline
+snapper-cleanup:
+    sudo snapper -c home cleanup timeline
