@@ -76,6 +76,7 @@ in
     man-pages # Linux development manual pages
     hardinfo2 # system information and benchmarks for Linux systems
     dmidecode # tool that reads information about system's hardware from the BIOS according to the SMBIOS/DMI standard
+    cpu-x # free software that gathers information on CPU, motherboard and more
   ];
 
   # man documentation config
