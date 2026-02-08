@@ -43,14 +43,14 @@
   systemd.services.set-dns-fallbacks = {
     enable = true;
     description = "Sets the DNS fallbacks";
-    wantedBy = [ "NetworkManager.service" ];
-    wants = [ "NetworkManager.service" ];
-    after = [ "NetworkManager.service" ];
+    wantedBy = [ "default.target" ];
+    wants = [ "NetworkManager-wait-online.service" ];
+    after = [ "NetworkManager-wait-online.service" ];
+    script = ''
+      resolvectl dns wlp3s0 ${lib.strings.concatStringsSep " " consts.networking.nameserver.fallback}
+    '';
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = ''
-        resolvectl dns wlp3s0 ${lib.strings.concatStringsSep " " consts.networking.nameserver.fallback}
-      '';
     };
   };
 }
