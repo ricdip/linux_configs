@@ -13,7 +13,6 @@
 
   # load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [
-    "modesetting"
     "nvidia"
   ];
 
@@ -80,5 +79,6 @@
     mesa-demos # collection of demos and test programs for OpenGL and Mesa (`glxgears`, `glxinfo` commands)
     intel-gpu-tools # tools for development and testing of the Intel DRM driver (`intel_gpu_top` command)
     # nvtopPackages.full # a (h)top like task monitor for AMD, Adreno, Intel and NVIDIA GPUs (`nvtop` command)
+    nvidia-vaapi-driver # VA-API implemention using NVIDIA's NVDEC
   ];
 }
