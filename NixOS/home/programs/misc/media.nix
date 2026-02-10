@@ -17,5 +17,6 @@
     puddletag # audio tag editor similar to the Windows program, Mp3tag
     mediainfo # supplies technical and tag information about a video or audio file
     yt-dlp # CLI tool to download videos
+    bchunk # program that converts CD images in BIN/CUE format into a set of ISO and CDR tracks
   ];
 }

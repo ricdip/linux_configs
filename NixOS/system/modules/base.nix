@@ -34,7 +34,7 @@ in
       LC_TELEPHONE = defaultLocale;
       LC_TIME = defaultLocale;
       LC_CTYPE = defaultLocale;
-      LC_ALL = defaultLocale;
+      # LC_ALL = defaultLocale;
     };
   };
   # select console properties
