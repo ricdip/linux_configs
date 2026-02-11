@@ -38,6 +38,8 @@
     # Zig
     zig # compiler
     zls # language server
+    # databases
+    dbeaver-bin
   ];
 
   programs = {
