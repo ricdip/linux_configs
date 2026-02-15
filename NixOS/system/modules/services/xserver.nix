@@ -23,6 +23,12 @@
         };
       };
     };
+    desktopManager = {
+      xfce = {
+        enable = true;
+        enableWaylandSession = false;
+      };
+    };
     # configure keymap in X11 for console
     xkb = {
       layout = "it,us";
@@ -53,6 +59,7 @@
       wtype # xdotool type for wayland (fake keyboard/mouse input, window management, and more)
       xorg.xhost # solves "Authorization required, but no authorization protocol specified"
       xorg.xeyes # good way to verify X11 setup
+      xorg.xinit # startx and xinit for starting a Xorg server
     ];
   };
   environment.sessionVariables = {
