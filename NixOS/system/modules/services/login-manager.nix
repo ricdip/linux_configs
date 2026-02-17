@@ -2,7 +2,7 @@
 {
   # using tuigreet as login manager
   services.greetd = {
-    enable = true;
+    enable = false;
     settings = {
       default_session = {
         command = ''
@@ -15,6 +15,5 @@
 
   environment.etc."greetd/environments".text = ''
     sway
-    startx
   '';
 }
