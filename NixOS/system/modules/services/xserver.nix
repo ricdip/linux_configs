@@ -60,6 +60,9 @@
       wtype # xdotool type for wayland (fake keyboard/mouse input, window management, and more)
       xorg.xhost # solves "Authorization required, but no authorization protocol specified"
       xorg.xeyes # good way to verify X11 setup
+      # xfce
+      xfce.xfce4-volumed-pulse # volume keys control daemon for Xfce using pulseaudio
+      redshift # screen color temperature manager for X11 setup
     ];
   };
   environment.sessionVariables = {

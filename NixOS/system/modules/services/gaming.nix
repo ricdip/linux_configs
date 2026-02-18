@@ -13,7 +13,7 @@
     mangohud # a Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more
     lutris # open source gaming platform for GNU/Linux
     protonup-ng # CLI program and API to automate the installation and update of GloriousEggroll's Proton-GE
-    bottles # wineprefix manager
+    # bottles # wineprefix manager
     vulkan-tools # Khronos official Vulkan Tools and Utilities (`vulkan-info`, `vkcube` commands)
     mesa-demos # collection of demos and test programs for OpenGL and Mesa (`glxgears`, `glxinfo` commands)
   ];
