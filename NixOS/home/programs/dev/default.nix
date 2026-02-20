@@ -40,6 +40,8 @@
     zls # language server
     # databases
     dbeaver-bin
+    # certs
+    openssl
   ];
 
   programs = {
