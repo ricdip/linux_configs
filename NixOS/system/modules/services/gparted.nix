@@ -40,8 +40,8 @@
   in
 */
 {
-  environment.systemPackages = [
-    pkgs.gparted # graphical disk partitioning tool
+  environment.systemPackages = with pkgs; [
+    gparted # graphical disk partitioning tool
     # gpartedPolkitAction
   ];
 }

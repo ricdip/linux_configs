@@ -5,8 +5,8 @@
     HandleSuspendKey = "ignore";
     HandleHibernateKey = "ignore";
     HandleLidSwitch = "ignore";
-    HandleLidSwitchDocked = "ignore"; # con dock
-    HandleLidSwitchExternalPower = "ignore"; # con alimentatore collegato
+    HandleLidSwitchDocked = "ignore"; # with dock
+    HandleLidSwitchExternalPower = "ignore"; # with connected external power
   };
   systemd.sleep.extraConfig = ''
     AllowSuspend=no

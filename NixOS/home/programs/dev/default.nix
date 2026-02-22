@@ -4,6 +4,7 @@
     ./helix.nix
     ./ide.nix
     ./vscodium.nix
+    ./zed.nix
   ];
 
   home.packages = with pkgs; [
@@ -40,7 +41,7 @@
     zls # language server
     # databases
     dbeaver-bin
-    # certs
+    # keys and certificates
     openssl
   ];
 

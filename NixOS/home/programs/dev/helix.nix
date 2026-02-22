@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
   programs.helix = {
-    enable = true;
-    defaultEditor = true;
+    enable = false;
+    defaultEditor = false;
     settings = {
       theme = "base16_default_dark";
       editor = {

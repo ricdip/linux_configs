@@ -16,8 +16,8 @@ in
     "vfat"
     "exfat"
     "btrfs"
-    "zfs"
-    "xfs"
+    # "zfs"
+    # "xfs"
   ];
 
   # select internationalisation properties

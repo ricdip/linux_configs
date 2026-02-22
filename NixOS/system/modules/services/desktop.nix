@@ -1,5 +1,17 @@
 { pkgs, ... }:
 {
+  # Cosmic desktop manager
+  services = {
+    # displayManager = {
+    #   cosmic-greeter.enable = true;
+    # };
+    desktopManager = {
+      cosmic = {
+        enable = true;
+        xwayland.enable = true;
+      };
+    };
+  };
   # enable the graphical system
   services.xserver = {
     enable = true;
@@ -7,8 +19,8 @@
     desktopManager = {
       xterm.enable = false;
     };
+    # LightDM login manager
     displayManager = {
-      startx.enable = true;
       lightdm = {
         enable = true;
         greeters.gtk = {
@@ -24,6 +36,7 @@
         };
       };
     };
+    # Xfce desktop manager
     desktopManager = {
       xfce = {
         enable = true;
@@ -40,11 +53,12 @@
       options = "eurosign:e,grp:lwin_toggle";
     };
   };
+  # Sway window manager
   programs.sway = {
     enable = true;
     xwayland.enable = true;
     extraPackages = with pkgs; [
-      foot # fast, lightweight and minimalistic Wayland terminal emulator
+      # foot # fast, lightweight and minimalistic Wayland terminal emulator
       wl-clipboard # command-line copy/paste utilities for Wayland
       cliphist # Wayland clipboard manager
       swayidle # idle management daemon for Wayland
@@ -52,17 +66,14 @@
       brightnessctl # read and control device brightness
       sway-contrib.grimshot # helper for screenshots within sway
       wdisplays # graphical application for configuring displays in Wayland compositors
-      bemenu # dynamic menu library and client program inspired by dmenu
+      # bemenu # dynamic menu library and client program inspired by dmenu
       wev # Wayland event viewer
       slurp # select a region in a Wayland compositor
       grim # grab images from a Wayland compositor
       gnome-themes-extra # dark adwaita theme
-      wtype # xdotool type for wayland (fake keyboard/mouse input, window management, and more)
+      # wtype # xdotool type for wayland (fake keyboard/mouse input, window management, and more)
       xorg.xhost # solves "Authorization required, but no authorization protocol specified"
       xorg.xeyes # good way to verify X11 setup
-      # xfce
-      xfce.xfce4-volumed-pulse # volume keys control daemon for Xfce using pulseaudio
-      redshift # screen color temperature manager for X11 setup
     ];
   };
   environment.sessionVariables = {
@@ -74,10 +85,13 @@
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk # desktop integration portals for sandboxed apps
-      # xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
-      # xdg-desktop-portal-gnome # backend implementation for xdg-desktop-portal for the GNOME desktop environment
     ];
     xdgOpenUsePortal = true;
     wlr.enable = true;
   };
+  environment.systemPackages = with pkgs; [
+    # xfce
+    xfce.xfce4-volumed-pulse # volume keys control daemon for Xfce using pulseaudio
+    redshift # screen color temperature manager for X11 setup
+  ];
 }

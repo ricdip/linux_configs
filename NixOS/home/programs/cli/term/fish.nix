@@ -2,7 +2,8 @@
 {
   home.sessionVariables = {
     NH_FLAKE = "/home/${consts.user.name}/${consts.flake}";
-    VISUAL = "hx";
+    VISUAL = "zeditor";
+    EDITOR = "zeditor";
     BROWSER = "firefox";
     PAGER = "bat";
     LESS = "-R --ignore-case --quit-if-one-screen";

@@ -2,12 +2,12 @@
   imports = [
     ./ai.nix
     ./btrfs.nix
+    ./desktop.nix
     ./file-manager.nix
     ./fonts.nix
     ./gaming.nix
     ./gparted.nix
     ./libinput.nix
-    ./login-manager.nix
     ./lvm.nix
     ./mouse.nix
     ./openssh.nix
@@ -16,7 +16,6 @@
     ./printer.nix
     ./smartd.nix
     ./sound.nix
-    ./xserver.nix
     ./zfs.nix
   ];
 }

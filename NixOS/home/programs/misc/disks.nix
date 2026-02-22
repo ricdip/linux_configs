@@ -9,7 +9,7 @@
     ntfs3g # FUSE-based NTFS driver with full write support
     parted # create, destroy, resize, check, and copy partitions
     gptfdisk # partitioning tools for Globally Unique Identifier (GUID) Partition Table (GPT) disks
-    zfs # ZFS Filesystem Linux Userspace Tools
+    # zfs # ZFS Filesystem Linux Userspace Tools
     # misc
     cryptsetup # LUKS
     # veracrypt # free open source filesystem on-the-fly encryption
