@@ -133,6 +133,9 @@
         echo Setting "$dns" as wlp3s0 DNS
         sudo resolvectl dns wlp3s0 $dns
       '';
+      ssh-agent-enable = ''
+        eval (ssh-agent -c)
+      '';
     };
   };
 }
