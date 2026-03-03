@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.zed-editor = {
     enable = true;
@@ -35,6 +36,16 @@
       auto_update = true;
       ui_font_size = 16;
       buffer_font_size = 16;
+      lsp = {
+        "jdtls" = {
+          "settings" = {
+            "java_home" = "${pkgs.jdk}/lib/openjdk";
+            "lombok_support" = true;
+            "jdk_auto_download" = false;
+            "check_updates" = "always";
+          };
+        };
+      };
     };
     userKeymaps = [
       {
