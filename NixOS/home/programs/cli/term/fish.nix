@@ -79,6 +79,8 @@
       sway-enable-screen-poweroff = ''
         swaymsg "inhibit_idle none"
       '';
+      bluetooth-disable = "sudo rfkill block bluetooth";
+      bluetooth-enable = "sudo rfkill unblock bluetooth";
       ## git
       gs = "git status -sb";
       gsf = "git status";
