@@ -10,6 +10,7 @@
       eamodio.gitlens
       oderwat.indent-rainbow
       grapecity.gc-excelviewer
+      yzane.markdown-pdf
       # docs
       bierner.markdown-mermaid
       # frontend
