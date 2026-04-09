@@ -77,7 +77,8 @@ in
     lm_sensors # tools for reading hardware sensors (`sensors` command)
     inotify-tools # simple interface to inotify
     cron # daemon for running commands at specific times
-    polkit_gnome # a dbus session bus service that is used to bring up authentication dialogs
+    # polkit_gnome # a dbus session bus service that is used to bring up authentication dialogs (X11)
+    lxqt.lxqt-policykit # LXQt PolicyKit agent (Wayland)
     hardinfo2 # system information and benchmarks for Linux systems
     dmidecode # tool that reads information about system's hardware from the BIOS according to the SMBIOS/DMI standard
     cpu-x # free software that gathers information on CPU, motherboard and more

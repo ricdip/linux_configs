@@ -43,6 +43,7 @@ in
       for_window [app_id = "floating_update"] floating enable, resize set width 1000px height 600px
       for_window [class = "(?i)pinentry"] floating enable
       for_window [title = "Administrator privileges required"] floating enable
+      exec_always lxqt-policykit-agent
     '';
     config = {
       # set modifier and terminal
