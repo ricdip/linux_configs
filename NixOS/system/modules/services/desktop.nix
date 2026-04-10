@@ -78,17 +78,17 @@
   };
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # Ozone Wayland support in Chromium and Electron based applications
-    XDG_OPEN_USE_PORTAL = "1";
+    # XDG_OPEN_USE_PORTAL = "1";
   };
   # enable screensharing
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk # desktop integration portals for sandboxed apps
-    ];
-    xdgOpenUsePortal = true;
-    wlr.enable = true;
-  };
+  #xdg.portal = {
+  #  enable = true;
+  #  extraPortals = with pkgs; [
+  #    xdg-desktop-portal-gtk # desktop integration portals for sandboxed apps
+  #  ];
+  #  xdgOpenUsePortal = true;
+  #  wlr.enable = true;
+  #};
   environment.systemPackages = with pkgs; [
     # xfce
     xfce.xfce4-volumed-pulse # volume keys control daemon for Xfce using pulseaudio

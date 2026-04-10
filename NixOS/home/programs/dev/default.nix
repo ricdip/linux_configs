@@ -42,7 +42,7 @@
     # databases
     dbeaver-bin
     # keys and certificates
-    openssl
+    # openssl
   ];
 
   programs = {

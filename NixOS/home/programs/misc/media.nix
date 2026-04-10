@@ -4,7 +4,7 @@
     # audio/video
     mpv # general-purpose media player
     vlc # cross-platform media player and streaming server
-    spotify # Spotify official client
+    # spotify # Spotify official client
     # images
     imv # CLI image viewer for tiling window managers
     qimgv # a Qt5 image viewer with optional video support

@@ -18,17 +18,21 @@ boot:
 switch:
     nh os switch --ask
 
-# Run system update
-update:
-    nh os switch --update --ask
+# Build and activate the new configuration and make it the boot default with no user interaction
+switch-no-ask:
+    nh os switch
 
-# Run system update with no user interaction
-update-no-ask:
-    nh os switch --update
+# Run system update
+nixos-update:
+    nix flake update
+
+# Run system upgrade
+nixos-upgrade: nixos-update
+    sudo nixos-rebuild switch --flake .
 
 # Update NixOS flakes, channels and packages
-nixos-update:
-    sudo nix flake update && sudo nixos-rebuild switch --upgrade-all
+nixos-upgrade-all: nixos-update
+    sudo nixos-rebuild switch --upgrade-all
 
 # Delete all generations older than TIME
 clean TIME: gc
