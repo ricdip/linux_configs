@@ -19,10 +19,10 @@
       astro-build.astro-vscode
       angular.ng-template
       # programming languages
-      golang.go
-      ms-python.python
-      rust-lang.rust-analyzer
-      ziglang.vscode-zig
+      # golang.go
+      # ms-python.python
+      # rust-lang.rust-analyzer
+      # ziglang.vscode-zig
     ];
   };
 }

@@ -28,8 +28,8 @@
   environment.systemPackages = with pkgs; [
     # wineWowPackages.stable # open Source implementation of the Windows API on top of X, OpenGL, and Unix
     # winetricks # script to install DLLs needed to work around problems in Wine
-    quickemu # quickly create and run optimised Windows, macOS and Linux virtual machines
-    distrobox # wrapper around podman or docker to create and start containers
+    # quickemu # quickly create and run optimised Windows, macOS and Linux virtual machines
+    # distrobox # wrapper around podman or docker to create and start containers
   ];
 
   # containers

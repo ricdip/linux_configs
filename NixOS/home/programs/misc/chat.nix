@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    discord
-    signal-desktop
+    # discord
+    # signal-desktop
     # telegram-desktop
   ];
 }

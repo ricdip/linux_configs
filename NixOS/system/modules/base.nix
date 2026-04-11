@@ -85,11 +85,11 @@ in
   ];
 
   # man documentation config
-  documentation = {
-    nixos.includeAllModules = true;
-    man.generateCaches = true;
-    dev.enable = true;
-  };
+  # documentation = {
+  #   nixos.includeAllModules = true;
+  #   man.generateCaches = true;
+  #   dev.enable = true;
+  # };
 
   # a list of permissible login shells for user accounts.
   # No need to mention /bin/sh here, it is placed into this list implicitly

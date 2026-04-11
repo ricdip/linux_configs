@@ -5,12 +5,12 @@
     # displayManager = {
     #   cosmic-greeter.enable = true;
     # };
-    desktopManager = {
-      cosmic = {
-        enable = true;
-        xwayland.enable = true;
-      };
-    };
+    # desktopManager = {
+    #   cosmic = {
+    #     enable = true;
+    #     xwayland.enable = true;
+    #   };
+    # };
   };
   # enable the graphical system
   services.xserver = {
@@ -37,12 +37,12 @@
       };
     };
     # Xfce desktop manager
-    desktopManager = {
-      xfce = {
-        enable = true;
-        enableWaylandSession = false;
-      };
-    };
+    # desktopManager = {
+    #   xfce = {
+    #     enable = true;
+    #     enableWaylandSession = false;
+    #   };
+    # };
     # configure keymap in X11 for console
     xkb = {
       layout = "it,us";
@@ -90,8 +90,8 @@
   #  wlr.enable = true;
   #};
   environment.systemPackages = with pkgs; [
-    # xfce
-    xfce.xfce4-volumed-pulse # volume keys control daemon for Xfce using pulseaudio
+    # xfce desktop manager
+    # xfce.xfce4-volumed-pulse # volume keys control daemon for Xfce using pulseaudio
     redshift # screen color temperature manager for X11 setup
   ];
 }

@@ -23,6 +23,8 @@
       #   TIMELINE_CLEANUP = true;
       #   # defines whether the number cleanup algorithm should be run for the config
       #   NUMBER_CLEANUP = true;
+      #   # defines how many snapshots the number cleanup algorithm should keep. The youngest snapshots will be kept.
+      #   NUMBER_LIMIT = "10";
       #   # limits for timeline cleanup
       #   TIMELINE_LIMIT_HOURLY = "2";
       #   TIMELINE_LIMIT_DAILY = "1";
@@ -36,8 +38,9 @@
         TIMELINE_CREATE = true;
         TIMELINE_CLEANUP = true;
         NUMBER_CLEANUP = true;
+        NUMBER_LIMIT = "10";
         TIMELINE_LIMIT_HOURLY = "5";
-        TIMELINE_LIMIT_DAILY = "3";
+        TIMELINE_LIMIT_DAILY = "1";
         TIMELINE_LIMIT_WEEKLY = "1";
         TIMELINE_LIMIT_MONTHLY = "0";
         TIMELINE_LIMIT_YEARLY = "0";
