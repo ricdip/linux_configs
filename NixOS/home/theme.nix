@@ -18,13 +18,16 @@
     gtk3 = {
       extraConfig.gtk-application-prefer-dark-theme = true;
     };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
   };
   qt = {
     enable = true;
-    platformTheme.name = "adwaita";
+    platformTheme.name = "gtk";
     style = {
       name = "adwaita-dark";
-      package = pkgs.adwaita-qt6;
+      package = pkgs.adwaita-qt;
     };
   };
   # cursor

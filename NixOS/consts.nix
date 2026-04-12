@@ -52,9 +52,4 @@
       ];
     };
   };
-  disks = {
-    partitions-uuid = {
-      efi = "3B0C-4580";
-    };
-  };
 }

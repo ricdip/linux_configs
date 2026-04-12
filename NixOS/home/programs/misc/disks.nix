@@ -8,6 +8,7 @@
     dosfstools # utilities for FAT and VFAT filesystems
     ntfs3g # FUSE-based NTFS driver with full write support
     parted # create, destroy, resize, check, and copy partitions
+    gparted # graphical disk partitioning tool
     gptfdisk # partitioning tools for Globally Unique Identifier (GUID) Partition Table (GPT) disks
     # zfs # ZFS Filesystem Linux Userspace Tools
     # misc

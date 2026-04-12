@@ -17,8 +17,4 @@
   #   vulkan-tools # Khronos official Vulkan Tools and Utilities (`vulkan-info`, `vkcube` commands)
   #   mesa-demos # collection of demos and test programs for OpenGL and Mesa (`glxgears`, `glxinfo` commands)
   # ];
-
-  # environment.sessionVariables = {
-  #   STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
-  # };
 }

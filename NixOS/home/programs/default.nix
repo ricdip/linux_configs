@@ -68,15 +68,16 @@
     qpdf # manipulate the structure of PDF files
     lnav # Logfile Navigator
     pdfgrep # CLI tool to search text in PDF files
-    autojump # `cd` command that learns
-    lsd # next gen `ls` command
-    qalculate-gtk # desktop calculator
+    # autojump # `cd` command that learns
+    # lsd # next gen `ls` command
+    # qalculate-gtk # desktop calculator
     onefetch # CLI git information tool
     rpi-imager # Raspberry Pi Imaging Utility
     mermaid-cli # generation of diagrams from text (`mmdc` command)
-    sublime3 # text editor
+    # sublime3 # text editor
     ipcalc # simple IP network calculator
     traceroute # tracks the route taken by packets over an IP network
     # kiwix # offline reader for web content
+    zoxide # fast cd command that learns your habits
   ];
 }

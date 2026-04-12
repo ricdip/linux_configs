@@ -34,10 +34,10 @@
       nvidia-ps = "sudo fuser -v /dev/nvidia*";
       nvidia-run = "nvidia-offload";
       ## files
-      ls = "lsd -hAN --group-directories-first --color=auto";
-      ll = "lsd -lh --group-directories-first --color=auto";
-      la = "lsd -lha --group-directories-first --color=auto";
-      lt = "lsd --tree";
+      ls = "eza -hA --group-directories-first --icons=auto";
+      ll = "eza -lh --group-directories-first --icons=auto";
+      la = "eza -lha --group-directories-first";
+      lt = "eza --tree --level=2 --icons";
       cat = "bat --style=plain";
       less = "less -R";
       diff = "diff --color=auto";
@@ -81,6 +81,7 @@
       '';
       bluetooth-disable = "sudo rfkill block bluetooth";
       bluetooth-enable = "sudo rfkill unblock bluetooth";
+      cdi = "zi"; # fuzzy interactive jump
       ## git
       gs = "git status -sb";
       gsf = "git status";
@@ -121,7 +122,7 @@
       '';
       # locate nix packages
       locate = ''
-        nix eval --raw nixpkgs#"$argv[1]"
+        nix eval --raw "nixpkgs#$argv[1]"
       '';
       # set defaults DNS to wlp3s0 interface
       dns-set-defaults = ''
@@ -138,6 +139,12 @@
       ssh-agent-enable = ''
         eval (ssh-agent -c)
       '';
+      cd = ''
+        z $argv
+      '';
     };
+    interactiveShellInit = ''
+      zoxide init fish | source
+    '';
   };
 }

@@ -36,13 +36,13 @@
 
           menuentry "UEFI MemTest86" {
             echo "Booting UEFI MemTest86..."
-            search --no-floppy --fs-uuid --set=root ${consts.disks.partitions-uuid.efi}
+            search --file --set=root /EFI/memtest86/BOOTX64.efi
             insmod chain
             chainloader /EFI/memtest86/BOOTX64.efi
           }
         fi
       '';
     };
-    timeout = 10;
+    timeout = 5;
   };
 }

@@ -12,9 +12,5 @@
     ];
     # programs.zsh.enable is already managed by Home Manager
     ignoreShellProgramCheck = true;
-    # packages installed for user not managed by Home Manager
-    # packages = with pkgs; [
-    #   home-manager # a Nix-based user environment configurator
-    # ];
   };
 }

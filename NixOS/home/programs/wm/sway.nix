@@ -4,7 +4,7 @@ let
   # Alt key
   modifier = "Mod1";
   terminal = "alacritty";
-  i3-fonts = {
+  bar-fonts = {
     names = [
       "DejaVu Sans Mono"
       "Font Awesome 6 Free"
@@ -22,7 +22,7 @@ in
     wrapperFeatures.gtk = true;
     checkConfig = false;
     extraConfig = ''
-      exec swayidle -w \
+      exec_always swayidle -w \
         timeout ${lock-timeout} '${swaylock-command}' \
         timeout ${screen-poweroff-timeout} 'swaymsg "output * power off"' \
                 resume 'swaymsg "output * power on"' \
@@ -31,7 +31,7 @@ in
       for_window [app_id="^.*"] inhibit_idle fullscreen
       output * bg /home/${consts.user.name}/.background-image fill
       seat * hide_cursor 10000
-      exec wl-paste --watch cliphist store
+      exec_always wl-paste --watch cliphist store
       for_window [shell="xwayland"] title_format "[XWayland] %title"
       for_window [window_role = "pop-up"] floating enable
       for_window [window_role = "bubble"] floating enable
@@ -56,15 +56,15 @@ in
             statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-top.toml";
           */
           fonts = {
-            names = i3-fonts.names;
-            size = i3-fonts.size;
+            names = bar-fonts.names;
+            size = bar-fonts.size;
           };
           command = "waybar";
         }
       ];
       fonts = {
-        names = i3-fonts.names;
-        size = i3-fonts.size;
+        names = bar-fonts.names;
+        size = bar-fonts.size;
       };
       # keyboard configuration
       input."*" = {

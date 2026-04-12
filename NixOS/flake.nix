@@ -2,7 +2,7 @@
   description = "ricdip nixos configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,7 +33,7 @@
           };
           modules = [
             ./system/configuration.nix
-            nix-index-database.nixosModules.nix-index
+            nix-index-database.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;

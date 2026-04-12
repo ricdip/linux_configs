@@ -16,26 +16,11 @@ in
     "vfat"
     "exfat"
     "btrfs"
-    # "zfs"
-    # "xfs"
   ];
 
   # select internationalisation properties
   i18n = {
     defaultLocale = defaultLocale;
-    extraLocaleSettings = {
-      LC_ADDRESS = defaultLocale;
-      LC_IDENTIFICATION = defaultLocale;
-      LC_MEASUREMENT = defaultLocale;
-      LC_MONETARY = defaultLocale;
-      LC_NAME = defaultLocale;
-      LC_NUMERIC = defaultLocale;
-      LC_PAPER = defaultLocale;
-      LC_TELEPHONE = defaultLocale;
-      LC_TIME = defaultLocale;
-      LC_CTYPE = defaultLocale;
-      # LC_ALL = defaultLocale;
-    };
   };
   # select console properties
   console = {
@@ -55,7 +40,7 @@ in
   services.fwupd.enable = true;
 
   # Whether to enable GNOME Keyring daemon, a service designed to take care of the user’s security credentials, such as user names and passwords
-  services.gnome.gnome-keyring.enable = false;
+  services.gnome.gnome-keyring.enable = true;
 
   # packages installed in system profile
   environment.systemPackages = with pkgs; [
@@ -76,13 +61,15 @@ in
     man-pages # Linux development manual pages
     lm_sensors # tools for reading hardware sensors (`sensors` command)
     inotify-tools # simple interface to inotify
-    cron # daemon for running commands at specific times
     # polkit_gnome # a dbus session bus service that is used to bring up authentication dialogs (X11)
     lxqt.lxqt-policykit # LXQt PolicyKit agent (Wayland)
-    hardinfo2 # system information and benchmarks for Linux systems
+    # hardinfo2 # system information and benchmarks for Linux systems
     dmidecode # tool that reads information about system's hardware from the BIOS according to the SMBIOS/DMI standard
     cpu-x # free software that gathers information on CPU, motherboard and more
   ];
+
+  # run any command from any nixpkgs packages: `, cowsay "hello"`
+  programs.nix-index-database.comma.enable = true;
 
   # man documentation config
   # documentation = {

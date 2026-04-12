@@ -19,4 +19,11 @@
 
   # thumbnail support for images
   services.tumbler.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    ffmpegthumbnailer # lightweight video thumbnailer
+    poppler # PDF rendering library
+    freetype # font rendering engine
+    xarchiver # GTK frontend to 7z,zip,rar,tar,bzip2, gzip,arj, lha, rpm and deb (open and extract only)
+  ];
 }

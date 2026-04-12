@@ -2,9 +2,19 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      colors.primary = {
-        background = "#000000";
-        foreground = "#FFFFFF";
+      colors = {
+        primary = {
+          background = "#000000";
+          foreground = "#FFFFFF";
+        };
+        cursor = {
+          text = "#000000";
+          cursor = "#ffffff";
+        };
+        selection = {
+          text = "#000000";
+          background = "#ffffff";
+        };
       };
       font = {
         normal = {
@@ -12,7 +22,15 @@
         };
         size = 12;
       };
-      window.dynamic_title = true;
+      window = {
+        dynamic_title = true;
+        startup_mode = "Windowed";
+        decorations = "full";
+      };
+      scrolling = {
+        history = 10000;
+        multiplier = 3;
+      };
     };
   };
 }

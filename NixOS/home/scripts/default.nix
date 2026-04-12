@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # bash scripts handling
   home.packages = with pkgs; [

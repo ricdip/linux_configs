@@ -13,10 +13,8 @@
     ./modules/networking.nix
     ./modules/nix-settings.nix
     ./modules/user.nix
-    ./modules/virt.nix
+    ./modules/hardware
     ./modules/services
-    ./modules/hardware/bluetooth.nix
-    ./modules/hardware/graphics.nix
   ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,
