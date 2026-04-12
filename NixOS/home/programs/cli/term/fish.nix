@@ -71,7 +71,7 @@
       h = "history";
       clock = "watch -n 1 date";
       ":q" = "exit";
-      cliphist-wipe = "cliphist wipe";
+      wipe-cliphist = "cliphist wipe";
       xrun = "env -u WAYLAND_DISPLAY"; # run application with xwayland
       sway-disable-screen-poweroff = ''
         swaymsg "inhibit_idle open"
@@ -82,6 +82,7 @@
       bluetooth-disable = "sudo rfkill block bluetooth";
       bluetooth-enable = "sudo rfkill unblock bluetooth";
       cdi = "zi"; # fuzzy interactive jump
+      poweroff-device = "sudo udisksctl power-off -b";
       ## git
       gs = "git status -sb";
       gsf = "git status";

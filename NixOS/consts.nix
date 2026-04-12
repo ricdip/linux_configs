@@ -9,7 +9,7 @@
   # path relative to home directory
   flake = "linux_configs/NixOS";
   system = {
-    hostname = "nixos";
+    hostname = "s56cb";
     platform = "x86_64-linux";
     locale = "it_IT.UTF-8";
     timezone = "Europe/Rome";
