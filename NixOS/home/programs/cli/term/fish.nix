@@ -34,10 +34,10 @@
       nvidia-ps = "sudo fuser -v /dev/nvidia*";
       nvidia-run = "nvidia-offload";
       ## files
-      ls = "eza -hA --group-directories-first --icons=auto";
-      ll = "eza -lh --group-directories-first --icons=auto";
-      la = "eza -lha --group-directories-first";
-      lt = "eza --tree --level=2 --icons";
+      ls = "eza_auto -hA --group-directories-first";
+      ll = "eza_auto -lh --group-directories-first";
+      la = "eza_auto -lha --group-directories-first";
+      lt = "eza_auto --tree --level=2";
       cat = "bat --style=plain";
       less = "less -R";
       diff = "diff --color=auto";
@@ -134,6 +134,13 @@
       '';
       cd = ''
         z $argv
+      '';
+      eza_auto = ''
+        if test "$TERM" = "linux"
+          eza $argv
+        else
+          eza --icons=auto $argv
+        end
       '';
     };
     interactiveShellInit = ''

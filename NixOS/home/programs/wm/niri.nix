@@ -68,7 +68,7 @@
 
         // Focus windows and outputs automatically when moving the mouse into them.
         // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-        // focus-follows-mouse max-scroll-amount="0%"
+        focus-follows-mouse max-scroll-amount="0%"
 
         mod-key "Alt"
     }
@@ -280,7 +280,7 @@
 
     hotkey-overlay {
         // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-        // skip-at-startup
+        skip-at-startup
     }
 
     // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -293,7 +293,7 @@
     // You can change the path where screenshots are saved.
     // A ~ at the front will be expanded to the home directory.
     // The path is formatted with strftime(3) to give you the screenshot date and time.
-    screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+    screenshot-path "~/Pictures/Screenshots/screenshot from %Y-%m-%d %H-%M-%S.png"
 
     // You can also set this to null to disable saving screenshots to disk.
     // screenshot-path null
