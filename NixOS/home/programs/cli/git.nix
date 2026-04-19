@@ -12,6 +12,7 @@
       commit.gpgsign = true;
       user.signingkey = consts.user.git.signingkey;
     };
+    signing.format = "openpgp";
   };
   programs.diff-so-fancy = {
     enable = true;

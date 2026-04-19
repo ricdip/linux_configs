@@ -28,7 +28,7 @@
     # Nix
     nil # language server
     # nixd # language server
-    nixfmt-rfc-style # formatter
+    nixfmt # formatter
     # Rust
     # cargo # builder
     # rustc # compiler

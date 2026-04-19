@@ -1,4 +1,7 @@
 {
+  services.upower = {
+    enable = true;
+  };
   services.logind.settings.Login = {
     HandlePowerKey = "poweroff";
     HandleRebootKey = "reboot";
@@ -8,10 +11,4 @@
     HandleLidSwitchDocked = "ignore"; # with dock
     HandleLidSwitchExternalPower = "ignore"; # with connected external power
   };
-  systemd.sleep.extraConfig = ''
-    AllowSuspend=no
-    AllowHibernation=no
-    AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
-  '';
 }

@@ -1,10 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   # GTK/QT
   gtk = {
     enable = true;
+    colorScheme = "dark";
     theme = {
       name = "Adwaita-dark";
+      package = pkgs.adw-gtk3; # theme from libadwaita ported to GTK-3
     };
     cursorTheme = {
       package = pkgs.openzone-cursors;
@@ -15,19 +17,13 @@
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
     };
-    gtk3 = {
-      extraConfig.gtk-application-prefer-dark-theme = true;
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
-    };
+    gtk4.theme = config.gtk.theme;
   };
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme.name = "gtk2";
     style = {
       name = "adwaita-dark";
-      package = pkgs.adwaita-qt;
     };
   };
   # cursor

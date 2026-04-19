@@ -48,7 +48,7 @@
     procs # better ps (https://github.com/dalance/procs)
     bandwhich # a CLI utility for displaying current network utilization (https://github.com/imsnif/bandwhich)
     # speedtest-cli # command line speed test utility (https://github.com/sivel/speedtest-cli)
-    dogdns # command-line DNS client (https://github.com/ogham/dog)
+    # dogdns # command-line DNS client (https://github.com/ogham/dog)(marked as insecure: switch to doggo)
     qrencode # encoding data in a QR Code symbol
     nurl # CLI tool to generate Nix fetcher calls from repository URLs
     file # a program that shows the type of files

@@ -25,11 +25,12 @@
   # systemd DNS resolver configuration
   services.resolved = {
     enable = true;
-    domains = [ "~." ];
-    fallbackDns = consts.networking.nameserver.fallback;
-    extraConfig = ''
-      DNSStubListener=no
-    '';
+    settings = {
+      Resolve = {
+        Domains = [ "~." ];
+        FallbackDNS = consts.networking.nameserver.fallback;
+      };
+    };
   };
 
   # user groups update

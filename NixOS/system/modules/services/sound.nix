@@ -16,6 +16,5 @@
 
   environment.systemPackages = with pkgs; [
     pwvucontrol # Pipewire Volume Control (works only with xwayland)
-    helvum # GTK patchbay for pipewire (works only with xwayland)
   ];
 }

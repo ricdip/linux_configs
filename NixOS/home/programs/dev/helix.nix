@@ -84,7 +84,7 @@
           name = "nix";
           auto-format = true;
           formatter = {
-            command = "${nixfmt-rfc-style}/bin/nixfmt";
+            command = "${nixfmt}/bin/nixfmt";
           };
           language-servers = [ "nil" ];
         }

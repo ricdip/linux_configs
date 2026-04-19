@@ -71,16 +71,8 @@
       h = "history";
       clock = "watch -n 1 date";
       ":q" = "exit";
-      wipe-cliphist = "cliphist wipe";
-      xrun = "env -u WAYLAND_DISPLAY"; # run application with xwayland
-      sway-disable-screen-poweroff = ''
-        swaymsg "inhibit_idle open"
-      '';
-      sway-enable-screen-poweroff = ''
-        swaymsg "inhibit_idle none"
-      '';
-      bluetooth-disable = "sudo rfkill block bluetooth";
-      bluetooth-enable = "sudo rfkill unblock bluetooth";
+      sudo-env = "sudo -E";
+      xrun = "env DISPLAY=$DISPLAY";
       cdi = "zi"; # fuzzy interactive jump
       poweroff-device = "sudo udisksctl power-off -b";
       ## git
@@ -146,6 +138,10 @@
     };
     interactiveShellInit = ''
       zoxide init fish | source
+      set -g fish_color_command blue
+      set -g fish_color_error red
+      set -g fish_color_param white
+      set -g fish_color_valid_path green
     '';
   };
 }

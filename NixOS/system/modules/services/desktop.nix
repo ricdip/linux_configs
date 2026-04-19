@@ -1,17 +1,10 @@
-{ pkgs, ... }:
 {
-  # Cosmic desktop manager
-  services = {
-    # displayManager = {
-    #   cosmic-greeter.enable = true;
-    # };
-    # desktopManager = {
-    #   cosmic = {
-    #     enable = true;
-    #     xwayland.enable = true;
-    #   };
-    # };
-  };
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
+{
   # enable the graphical system
   services.xserver = {
     enable = true;
@@ -19,8 +12,8 @@
     desktopManager = {
       xterm.enable = false;
     };
-    # LightDM login manager
     displayManager = {
+      # LightDM login manager
       lightdm = {
         enable = true;
         greeters.gtk = {
@@ -53,28 +46,10 @@
       options = "eurosign:e,grp:lwin_toggle";
     };
   };
-  # Sway window manager
-  programs.sway = {
+  # Niri window manager
+  programs.niri = {
     enable = true;
-    xwayland.enable = true;
-    extraPackages = with pkgs; [
-      # foot # fast, lightweight and minimalistic Wayland terminal emulator
-      wl-clipboard # command-line copy/paste utilities for Wayland
-      cliphist # Wayland clipboard manager
-      swayidle # idle management daemon for Wayland
-      swaylock # screen locker for Wayland
-      brightnessctl # read and control device brightness
-      sway-contrib.grimshot # helper for screenshots within sway
-      wdisplays # graphical application for configuring displays in Wayland compositors
-      # bemenu # dynamic menu library and client program inspired by dmenu
-      wev # Wayland event viewer
-      slurp # select a region in a Wayland compositor
-      grim # grab images from a Wayland compositor
-      gnome-themes-extra # dark adwaita theme
-      # wtype # xdotool type for wayland (fake keyboard/mouse input, window management, and more)
-      xorg.xhost # solves "Authorization required, but no authorization protocol specified"
-      xorg.xeyes # good way to verify X11 setup
-    ];
+    useNautilus = true;
   };
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # Ozone Wayland support in Chromium and Electron based applications
@@ -84,6 +59,7 @@
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk # desktop integration portals for sandboxed apps
+      xdg-desktop-portal-gnome # backend implementation for xdg-desktop-portal for the GNOME desktop environment
     ];
     xdgOpenUsePortal = true;
     wlr.enable = true;
@@ -92,5 +68,10 @@
     # xfce desktop manager
     # xfce.xfce4-volumed-pulse # volume keys control daemon for Xfce using pulseaudio
     # redshift # screen color temperature manager for X11 setup
+    # niri window manager
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    xwayland-satellite # Xwayland outside your Wayland compositor
+    wdisplays # graphical application for configuring displays in Wayland compositors
+    wev # Wayland event viewer
   ];
 }

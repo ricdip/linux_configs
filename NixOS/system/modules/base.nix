@@ -54,15 +54,10 @@ in
     lshw # provide detailed information on the hardware configuration of the machine
     psmisc # utilities that use the proc filesystem
     lsof # a tool to list open files
-    # udisks # daemon, tools and libraries to access and manipulate disks (`udisksctl` command)
     memtest86-efi # a tool to detect memory errors (runs from the bootloader)
-    adw-gtk3 # theme from libadwaita ported to GTK-3
-    adwaita-qt # style to bend Qt applications to look like they belong into GNOME Shell
     man-pages # Linux development manual pages
     lm_sensors # tools for reading hardware sensors (`sensors` command)
     inotify-tools # simple interface to inotify
-    # polkit_gnome # a dbus session bus service that is used to bring up authentication dialogs (X11)
-    lxqt.lxqt-policykit # LXQt PolicyKit agent (Wayland)
     # hardinfo2 # system information and benchmarks for Linux systems
     dmidecode # tool that reads information about system's hardware from the BIOS according to the SMBIOS/DMI standard
     cpu-x # free software that gathers information on CPU, motherboard and more

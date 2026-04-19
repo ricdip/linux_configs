@@ -28,11 +28,11 @@ nixos-update:
 
 # Run system upgrade
 nixos-upgrade: nixos-update
-    sudo nixos-rebuild switch --flake .
+    sudo nixos-rebuild boot --flake .
 
 # Update NixOS flakes, channels and packages
 nixos-upgrade-all: nixos-update
-    sudo nixos-rebuild switch --upgrade-all
+    sudo nixos-rebuild boot --upgrade-all --flake .
 
 # Delete all generations older than TIME
 clean TIME: gc

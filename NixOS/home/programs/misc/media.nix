@@ -9,8 +9,8 @@
     imv # CLI image viewer for tiling window managers
     qimgv # a Qt5 image viewer with optional video support
     gimp # the GNU Image Manipulation Program
-    imagemagick # create, edit, compose, or convert bitmap images
-    exiftool # a tool to read, write and edit EXIF meta information
+    imagemagick # create, edit, compose, or convert bitmap images (`identify`)
+    exiftool # a tool to read, write and edit EXIF meta information (`exiftool`)
     # misc
     wf-recorder # utility program for screen recording of wlroots-based compositors (https://github.com/ammen99/wf-recorder)
     ffmpeg # a complete, cross-platform solution to record, convert and stream audio and video
