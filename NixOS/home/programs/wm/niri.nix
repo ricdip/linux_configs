@@ -644,6 +644,7 @@
         Mod+D { spawn-sh "noctalia-shell ipc call launcher toggle"; }
         Mod+S { spawn-sh "noctalia-shell ipc call controlCenter toggle"; }
         Ctrl+Tab { spawn-sh "noctalia-shell ipc call lockScreen lock"; }
+        Mod+Space { spawn-sh "noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; }
     }
   '';
 }
