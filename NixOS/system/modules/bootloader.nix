@@ -41,6 +41,20 @@
             chainloader /EFI/memtest86/BOOTX64.efi
           }
         fi
+
+        menuentry "SystemRescue 13.00 ISO (to RAM)" {
+          insmod part_gpt
+          insmod ext2
+          insmod loopback
+          echo "Booting SystemRescue ISO..."
+          search --no-floppy --set=iso_fs --fs-uuid ${consts.partitions.live.uuid}
+          set iso_file="/iso/${consts.partitions.live.isoName}"
+          set archiso_param="img_dev=/dev/disk/by-uuid/${consts.partitions.live.uuid} img_loop=$iso_file"
+          loopback loop ($iso_fs)$iso_file
+          set root=(loop)
+          linux /sysresccd/boot/x86_64/vmlinuz archisobasedir=sysresccd $archiso_param iomem=relaxed copytoram
+          initrd /sysresccd/boot/intel_ucode.img /sysresccd/boot/amd_ucode.img /sysresccd/boot/x86_64/sysresccd.img
+        }
       '';
     };
     timeout = 5;

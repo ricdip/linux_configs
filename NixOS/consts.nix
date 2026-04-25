@@ -24,6 +24,14 @@
       storageDriver = "btrfs";
     };
   };
+  partitions = {
+    live = {
+      # UUID of live partition
+      uuid = "656dda2c-95ae-4081-b727-1fbd69460ed6";
+      # live ISO name
+      isoName = "systemrescue-13.00-amd64.iso";
+    };
+  };
   hardware = {
     graphics = {
       intelBusId = "PCI:0:2:0";
