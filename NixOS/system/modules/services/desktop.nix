@@ -69,7 +69,7 @@
     # xfce.xfce4-volumed-pulse # volume keys control daemon for Xfce using pulseaudio
     # redshift # screen color temperature manager for X11 setup
     # niri window manager
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default (replaced by home manager module)
     xwayland-satellite # Xwayland outside your Wayland compositor
     wdisplays # graphical application for configuring displays in Wayland compositors
     wev # Wayland event viewer
