@@ -2,8 +2,8 @@
 {
   home.sessionVariables = {
     NH_FLAKE = "/home/${consts.user.name}/${consts.flake}";
-    VISUAL = "zeditor";
-    EDITOR = "zeditor";
+    VISUAL = "nvim";
+    EDITOR = "nvim";
     BROWSER = "firefox";
     PAGER = "bat";
     LESS = "-R --ignore-case --quit-if-one-screen";
@@ -42,6 +42,7 @@
       less = "less -R";
       diff = "diff --color=auto";
       e = "$EDITOR";
+      ze = "zeditor";
       ## safety
       cp = "cp -iv";
       mv = "mv -iv";

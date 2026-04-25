@@ -1,8 +1,8 @@
 {
   imports = [
-    ./term/alacritty.nix
-    ./term/fish.nix
+    ./term
     ./git.nix
     ./nnn.nix
+    ./vim.nix
   ];
 }

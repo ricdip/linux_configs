@@ -1,29 +1,29 @@
 { pkgs, ... }:
 {
   imports = [
-    ./helix.nix
     ./ide.nix
     ./vscodium.nix
     ./zed.nix
   ];
 
+  # INFO: only language servers are here, the languages are in the projects nix flakes
   home.packages = with pkgs; [
     # Assembly
     # nasm # 80x86 and x86-64 assembler
     # C/C++
     # clang # compiler
     # lldb # next-generation high-performance debugger
-    # clang-tools # formatter, language server
+    clang-tools # formatter, language server
     # gcc # GNU Compiler Collection
     # gdb # GNU Project debugger
     # gdbgui # browser-based frontend for GDB
     # gnumake # build tool
     # Python
     # python3 # interpreter
-    # python3Packages.python-lsp-server # language server
+    python3Packages.python-lsp-server # language server
     # python3Packages.black # formatter
     # Go
-    # gopls # language server
+    gopls # language server
     # delve # debugger
     # Nix
     nil # language server
@@ -32,13 +32,13 @@
     # Rust
     # cargo # builder
     # rustc # compiler
-    # rust-analyzer # language server
+    rust-analyzer # language server
     # rustfmt # formatter
     # Maven
     # maven
     # Zig
     # zig # compiler
-    # zls # language server
+    zls # language server
     # databases
     # dbeaver-bin
     # keys and certificates
