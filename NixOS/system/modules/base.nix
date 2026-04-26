@@ -30,17 +30,20 @@ in
     useXkbConfig = true;
   };
 
-  # GNOME configuration database
+  # GNOME configuration preferences
   programs.dconf.enable = true;
+
+  # XFCE configuration preferences
+  programs.xfconf.enable = true;
+
+  # Whether to enable GNOME Keyring daemon, a service designed to take care of the user’s security credentials, such as user names and passwords
+  services.gnome.gnome-keyring.enable = true;
 
   # enable udisks2, a DBus service that allows applications to query and manipulate storage devices (`udisksctl` command)
   services.udisks2.enable = true;
 
   # enable fwupd, a DBus service that allows applications to update firmware (`fwupdmgr` command)
   services.fwupd.enable = true;
-
-  # Whether to enable GNOME Keyring daemon, a service designed to take care of the user’s security credentials, such as user names and passwords
-  services.gnome.gnome-keyring.enable = true;
 
   # packages installed in system profile
   environment.systemPackages = with pkgs; [

@@ -132,12 +132,19 @@
         echo Setting "$dns" as wlp3s0 DNS
         sudo resolvectl dns wlp3s0 $dns
       '';
+      # enable ssh agent
       ssh-agent-enable = ''
         eval (ssh-agent -c)
       '';
+      # enable personal GitHub
+      git-personal-ssh-enable = ''
+        ssh-agent-enable && ssh-add $HOME/.ssh/github_personal
+      '';
+      # use zoxide as cd
       cd = ''
         z $argv
       '';
+      # use icons in eza when not in console
       eza_auto = ''
         if test "$TERM" = "linux"
           eza $argv

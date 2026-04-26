@@ -5,6 +5,7 @@
     ./cron.nix
     ./desktop.nix
     ./file-manager.nix
+    ./flatpak.nix
     ./fonts.nix
     ./gaming.nix
     ./libinput.nix
