@@ -2,7 +2,7 @@
 {
   # https://docs.noctalia.dev/getting-started/nixos/
 
-  # import the home manager module
+  # import the noctalia home manager module
   imports = [
     inputs.noctalia.homeModules.default
   ];
