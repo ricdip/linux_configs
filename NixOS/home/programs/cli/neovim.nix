@@ -19,12 +19,40 @@
           style = "dark";
         };
 
+        clipboard = {
+          # enable clipboard management for Neovim
+          enable = true;
+          # enable wl-copy
+          providers.wl-copy.enable = true;
+          # "", "unnamedplus", "unnamed", "unnamed,unnamedplus"
+          # - "unnamed": use the clipboard register "*" for all yank, delete, change and put operations which would normally go to the unnamed register.
+          # - "unnamedplus": variant of the "unnamed" flag which uses the clipboard register "+" instead of register "*" for all yank, delete, change and put operations which would normally go to the unnamed register.
+          # - "unnamed,unnamedplus": yank and delete operations (but not put) will additionally copy the text into register "*"
+          registers = "unnamedplus";
+        };
+
+        # enable lualine statusline plugin
         statusline.lualine.enable = true;
+
+        # enable telescope.nvim: multi-purpose search and picker utility
         telescope.enable = true;
-        autocomplete.nvim-cmp.enable = true;
+
+        # enable autopairs
+        autopairs.nvim-autopairs.enable = true;
+
+        autocomplete.nvim-cmp = {
+          # enable nvim-cmp
+          enable = true;
+        };
+
+        # enable comment plugin for neovim [comment-nvim]
+        # comments.comment-nvim.enable = true;
 
         lsp = {
+          # enable global LSP functionality for Neovim
           enable = true;
+          # enable trouble diagnostics viewer
+          trouble.enable = true;
         };
 
         # show relative line numbers
@@ -46,6 +74,34 @@
           cursorlineopt = "line";
           # enable word wrapping
           wrap = true;
+        };
+
+        binds = {
+          whichKey = {
+            # enable which-key keybind helper menu
+            enable = true;
+            # "classic", "modern", "helix"
+            setupOpts.preset = "helix";
+          };
+          # enable cheatsheet-nvim: searchable cheatsheet for nvim using telescope
+          cheatsheet.enable = true;
+        };
+
+        # enable cursor word and line highlighting [nvim-cursorline]
+        visuals.nvim-cursorline = {
+          enable = true;
+          setupOpts = {
+            cursorline = {
+              enable = true;
+              timeout = 1000;
+              number = false;
+            };
+            cursorword = {
+              enable = true;
+              min_length = 3;
+              hl.underline = true;
+            };
+          };
         };
 
         # custom key bindings
@@ -95,12 +151,6 @@
             mode = "n";
             action = ":q<CR>";
           }
-          # save and quit the file
-          {
-            key = "<leader>x";
-            mode = "n";
-            action = ":x<CR>";
-          }
           ## navigation between tabs
           # open a new tab
           {
@@ -132,6 +182,12 @@
             key = "<leader>B";
             mode = "n";
             action = ":bprevious<CR>";
+          }
+          # toggle trouble diagnostics
+          {
+            key = "<leader>d";
+            mode = "n";
+            action = ":Trouble diagnostics toggle<CR>";
           }
         ];
 
