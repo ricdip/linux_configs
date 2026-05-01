@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./ide.nix
     ./vscodium.nix
   ];
 
