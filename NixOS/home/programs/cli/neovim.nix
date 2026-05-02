@@ -270,7 +270,7 @@
           assembly.enable = true;
           # rust.enable = true;
           # zig.enable = true;
-          # java.enable = true;
+          java.enable = true;
           python.enable = true;
           # go.enable = true;
           sql.enable = true;
