@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   services.ollama = {
     enable = false;
@@ -15,7 +14,7 @@
   };
 
   # general-purpose speech recognition model
-  environment.systemPackages = with pkgs; [
-    # openai-whisper
-  ];
+  # environment.systemPackages = with pkgs; [
+  # openai-whisper
+  # ];
 }

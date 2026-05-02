@@ -1,9 +1,4 @@
-{
-  pkgs,
-  config,
-  inputs,
-  ...
-}:
+{ pkgs, ... }:
 {
   # enable the graphical system
   services.xserver = {

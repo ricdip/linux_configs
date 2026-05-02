@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ inputs, ... }:
 {
   # https://docs.noctalia.dev/getting-started/nixos/
 

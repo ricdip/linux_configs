@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ inputs, ... }:
 {
   # https://github.com/NotAShelf/nvf
   # https://nvf.notashelf.dev/
@@ -151,6 +151,12 @@
             mode = "n";
             action = ":bprevious<CR>";
           }
+          # clear search highlight
+          {
+            key = "<leader>c";
+            mode = "n";
+            action = ":noh<CR>";
+          }
           ## plugins
           # toggle trouble diagnostics
           {
@@ -168,8 +174,28 @@
 
         ## plugins
 
-        # enable lualine statusline plugin
-        statusline.lualine.enable = true;
+        statusline.lualine = {
+          # enable lualine statusline plugin
+          enable = true;
+          # | A | B | C X | Y | Z |
+          # using defaults for statusline
+          /*
+            activeSection = {
+              # | (A) | B | C X | Y | Z |
+              a = [];
+              # | A | (B) | C X | Y | Z |
+              b = [];
+              # | A | B | (C) X | Y | Z |
+              c = [];
+              # | A | B | C (X) | Y | Z |
+              x = [];
+              # | A | B | C X | (Y) | Z |
+              y = [];
+              # | A | B | C X | Y | (Z) |
+              z = [];
+            };
+          */
+        };
 
         # enable telescope.nvim: multi-purpose search and picker utility
         telescope.enable = true;

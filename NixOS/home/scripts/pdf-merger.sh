@@ -5,7 +5,7 @@ function help()
 {
 cat << HELP_MSG
 
-Usage: $(basename $0) -i <INPUT_FILE> [-i <INPUT_FILE>] -o <OUTPUT_FILE> | -h | -v
+Usage: $(basename "$0") -i <INPUT_FILE> [-i <INPUT_FILE>] -o <OUTPUT_FILE> | -h | -v
 
 This script allows to merge multiple input PDF files into one output PDF file using 'qpdf' program.
 
@@ -16,7 +16,7 @@ Options:
     -v                  Print program version.
 
 Example:
-    $(basename $0) -i document_1.pdf -i document_2.pdf -o merged.pdf
+    $(basename "$0") -i document_1.pdf -i document_2.pdf -o merged.pdf
 
 HELP_MSG
 }
@@ -35,7 +35,7 @@ function main()
 VERSION="1.0.0"
 
 # check 'qpdf' command
-if ! command -v qpdf 2>&1 >/dev/null
+if ! command -v qpdf >/dev/null
 then
     echo "ERROR: 'qpdf' program not found"
     exit 1;
@@ -76,7 +76,7 @@ then
     echo "ERROR: Missing output file."
     help;
     exit 1;
-elif [[ "$INPUT_FILES" == "" ]]
+elif [[ "${INPUT_FILES[0]}" == "" ]]
 then
     echo "ERROR: Missing input files."
     help;

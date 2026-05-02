@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   # enable steam
   # programs.steam = {
