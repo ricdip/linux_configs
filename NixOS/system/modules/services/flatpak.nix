@@ -6,6 +6,6 @@
 
   # apps:
   # - Ungoogled Chromium [installed]
-  # - IntelliJ IDEA Open (IntelliJ Community) [installed]
+  # - IntelliJ IDEA Open (IntelliJ Community) [not installed]
   # - Android Studio [not installed]
 }

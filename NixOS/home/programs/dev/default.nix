@@ -5,6 +5,8 @@
   ];
 
   home.packages = with pkgs; [
+    # IDE
+    jetbrains.idea-oss
     # Assembly
     # nasm # 80x86 and x86-64 assembler
     # C/C++
