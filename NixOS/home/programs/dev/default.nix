@@ -15,7 +15,7 @@
     # nixd # language server
     nixfmt # formatter
     # keys and certificates
-    # openssl
+    openssl
   ];
 
   programs = {
