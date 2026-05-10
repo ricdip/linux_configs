@@ -268,11 +268,11 @@
           xml.enable = true;
           clang.enable = true;
           assembly.enable = true;
-          # rust.enable = true;
-          # zig.enable = true;
+          rust.enable = true;
+          zig.enable = true;
           java.enable = true;
           python.enable = true;
-          # go.enable = true;
+          go.enable = true;
           sql.enable = true;
           # html.enable = true;
           # css.enable = true;

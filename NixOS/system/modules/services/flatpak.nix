@@ -6,6 +6,7 @@
 
   # apps:
   # - Ungoogled Chromium [installed]
-  # - IntelliJ IDEA Open (IntelliJ Community) [not installed]
+  # - DBeaver Community [installed]
+  # - IntelliJ IDEA Open (IntelliJ Community) [not installed via flatpak: installed via home manager]
   # - Android Studio [not installed]
 }
