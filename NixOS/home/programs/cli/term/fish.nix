@@ -28,7 +28,6 @@
       ps-mem = "ps aux --sort=-pmem | head -n 15";
       ls-mount = "mount | column -t";
       ## graphics
-      # gtop = "nvtop";
       intel-watch = "sudo intel_gpu_top";
       nvidia-watch = "nvidia-smi -l 1";
       nvidia-ps = "sudo fuser -v /dev/nvidia*";
@@ -42,7 +41,7 @@
       less = "less -R";
       diff = "diff --color=auto";
       e = "$EDITOR";
-      ze = "zeditor";
+      glow = "glow --pager";
       ## safety
       cp = "cp -iv";
       mv = "mv -iv";
@@ -65,6 +64,7 @@
       ## gpg
       gpg-ls-pub = "gpg --list-keys";
       gpg-ls-sec = "gpg --list-secret-keys --keyid-format=long";
+      gpg-import = "gpg --import";
       gpg-encrypt = "gpg -c --no-symkey-cache --cipher-algo AES256";
       gpg-decrypt = "gpg -d --no-symkey-cache";
       ## quality of life
@@ -73,7 +73,7 @@
       j = "just";
       clock = "watch -n 1 date";
       ":q" = "exit";
-      sudo-env = "sudo -E";
+      sudo-xrun = "sudo -E";
       xrun = "env DISPLAY=$DISPLAY";
       cdi = "zi"; # fuzzy interactive jump
       poweroff-device = "sudo udisksctl power-off -b";
@@ -93,6 +93,40 @@
       glg = "git log --graph --oneline --decorate";
       gls = "git log --stat";
       gld = "git log -p";
+      ## btrfs
+      # subvolumes
+      btrfs-subvolume-list = "sudo btrfs subvolume list";
+      btrfs-subvolume-create = "sudo btrfs subvolume create";
+      btrfs-subvolume-delete = "sudo btrfs subvolume delete";
+      # snapshots
+      btrfs-snapshot-w = "sudo btrfs subvolume snapshot";
+      btrfs-snapshot-ro = "sudo btrfs subvolume snapshot -r";
+      # balance (only light scrub (dusage=75) every 3 months: do it if a lot of data or snapshots are deleted)
+      btrfs-balance-start = "sudo btrfs balance start -dusage=75";
+      btrfs-balance-status = "sudo btrfs balance status";
+      # scrub (every month)
+      btrfs-scrub-start = "sudo btrfs scrub start -Bd";
+      btrfs-scrub-status = "sudo btrfs scrub status";
+      # device (physical disks info)
+      btrfs-device-usage = "sudo btrfs device usage"; # shows allocated space, chunk data/metadata/system, free space
+      btrfs-device-stats = "sudo btrfs device stats"; # shows hardware and checksum errors
+      # filesystem (logical disks info)
+      btrfs-filesystem-usage = "sudo btrfs filesystem usage"; # shows complete filesystem info
+      btrfs-filesystem-show = "sudo btrfs filesystem show"; # shows detected btrfs filesystems and associated devices
+      btrfs-filesystem-du = "sudo btrfs filesystem du -s"; # shows real space used by file/subvolume/snapshot
+      # quota (limit the space used by a subvolume)
+      btrfs-quota-show = "sudo btrfs qgroup show";
+      ## snapper
+      snapper-configs-list = "sudo snapper list-configs";
+      # snapshots
+      snapper-home-snapshots-list = "sudo snapper -c home list";
+      snapper-home-status = "sudo snapper -c home status";
+      snapper-home-diff = "sudo snapper -c home diff";
+      snapper-home-recover = "sudo snapper -c home undochange";
+      snapper-home-delete = "sudo snapper -c home delete";
+      # cleanup
+      snapper-home-cleanup-timeline = "sudo snapper -c home cleanup timeline";
+      snapper-home-cleanup-number = "sudo snapper -c home cleanup number";
     };
     functions = {
       # disable fish greeting message

@@ -274,9 +274,9 @@
           python.enable = true;
           go.enable = true;
           sql.enable = true;
-          # html.enable = true;
-          # css.enable = true;
-          # typescript.enable = true;
+          html.enable = true;
+          css.enable = true;
+          typescript.enable = true;
         };
       };
     };
