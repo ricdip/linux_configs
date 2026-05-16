@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     xdg-utils
-    handlr
+    # handlr
   ];
 
   xdg = {
@@ -13,31 +13,24 @@
       defaultApplications = {
         # application
         "application/json" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "application/yaml" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "application/toml" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "application/xml" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "application/sql" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "application/x-tex" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "application/pdf" = [
-          "zathura.desktop"
           "firefox.desktop"
         ];
         "application/x-extension-htm" = [ "firefox.desktop" ];
@@ -63,58 +56,45 @@
         "audio/webm" = [ "mpv.desktop" ];
         # image
         "image/gif" = [
-          "qimgv.desktop"
-          "sxiv.desktop"
+          "imv.desktop"
         ];
         "image/heic" = [
-          "qimgv.desktop"
-          "sxiv.desktop"
+          "imv.desktop"
         ];
         "image/tiff" = [
-          "qimgv.desktop"
-          "sxiv.desktop"
+          "imv.desktop"
         ];
         "image/svg+xml" = [
-          "qimgv.desktop"
-          "sxiv.desktop"
+          "imv.desktop"
         ];
         "image/jpeg" = [
-          "qimgv.desktop"
-          "sxiv.desktop"
+          "imv.desktop"
         ];
         "image/png" = [
-          "qimgv.desktop"
-          "sxiv.desktop"
+          "imv.desktop"
         ];
         "image/webp" = [
-          "qimgv.desktop"
-          "sxiv.desktop"
+          "imv.desktop"
         ];
         # text
         "text/plain" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "text/csv" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "text/xml" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "text/html" = [ "firefox.desktop" ];
         "text/markdown" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "text/css" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         "text/javascript" = [
-          "Helix.desktop"
-          "codium.desktop"
+          "nvim.desktop"
         ];
         # video
         "video/3gpp" = [ "mpv.desktop" ];

@@ -33,15 +33,18 @@
       nvidia-ps = "sudo fuser -v /dev/nvidia*";
       nvidia-run = "nvidia-offload";
       ## files
-      ls = "eza_auto -hA --group-directories-first";
+      ls = "eza_auto -h --group-directories-first";
       ll = "eza_auto -lh --group-directories-first";
       la = "eza_auto -lha --group-directories-first";
-      lt = "eza_auto --tree --level=2";
+      lt = "eza_auto --tree --level=1";
+      lt2 = "eza_auto --tree --level=2";
+      lt3 = "eza_auto --tree --level=3";
       cat = "bat --style=plain";
       less = "less -R";
       diff = "diff --color=auto";
       e = "$EDITOR";
       glow = "glow --pager";
+      n = "nnn";
       ## safety
       cp = "cp -iv";
       mv = "mv -iv";
@@ -64,7 +67,13 @@
       ## gpg
       gpg-ls-pub = "gpg --list-keys";
       gpg-ls-sec = "gpg --list-secret-keys --keyid-format=long";
+      gpg-fgr = "gpg --fingerprint";
+      gpg-gen = "gpg --full-generate-key";
       gpg-import = "gpg --import";
+      gpg-export-pub = "gpg --armor --export";
+      gpg-export-sec = "gpg --armor --export-secret-keys";
+      gpg-delete-pub = "gpg --delete-key";
+      gpg-delete-sec = "gpg --delete-secret-key";
       gpg-encrypt = "gpg -c --no-symkey-cache --cipher-algo AES256";
       gpg-decrypt = "gpg -d --no-symkey-cache";
       ## quality of life
@@ -83,16 +92,20 @@
       gsf = "git status";
       ga = "git add";
       gc = "git commit -m";
-      gca = "git commit --amend";
+      gca = "git commit --amend -m";
+      gcan = "git commit --amend --no-edit";
+      gcundo = "git reset --soft HEAD^";
       gps = "git push";
       gpl = "git pull";
       gd = "git diff";
+      gds = "git diff --staged";
       gw = "git switch";
       gl = "git log";
       glo = "git log --oneline --decorate";
       glg = "git log --graph --oneline --decorate";
       gls = "git log --stat";
       gld = "git log -p";
+      gbl = "git blame";
       ## btrfs
       # subvolumes
       btrfs-subvolume-list = "sudo btrfs subvolume list";
@@ -150,10 +163,10 @@
       histgrep = ''
         history | grep $argv
       '';
-      # locate nix packages
-      locate = ''
-        nix eval --raw "nixpkgs#$argv[1]"
-      '';
+      # locate nix packages (nix-locate is better)
+      # locate = ''
+      #   nix eval --raw "nixpkgs#$argv[1]"
+      # '';
       # set defaults DNS to wlp3s0 interface
       dns-set-defaults = ''
         set dns ${lib.strings.concatStringsSep " " consts.networking.nameserver.defaults}

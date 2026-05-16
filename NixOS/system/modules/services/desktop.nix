@@ -44,7 +44,7 @@
   # Niri window manager
   programs.niri = {
     enable = true;
-    useNautilus = true;
+    useNautilus = false;
   };
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # Ozone Wayland support in Chromium and Electron based applications
@@ -52,12 +52,12 @@
   # enable screensharing
   xdg.portal = {
     enable = true;
+    wlr.enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk # desktop integration portals for sandboxed apps
-      xdg-desktop-portal-gnome # backend implementation for xdg-desktop-portal for the GNOME desktop environment
+      # xdg-desktop-portal-gnome # backend implementation for xdg-desktop-portal for the GNOME desktop environment
     ];
-    xdgOpenUsePortal = true;
-    wlr.enable = true;
+    xdgOpenUsePortal = false;
   };
   environment.systemPackages = with pkgs; [
     # xfce desktop manager

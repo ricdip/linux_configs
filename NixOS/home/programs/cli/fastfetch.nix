@@ -19,7 +19,6 @@
         "users",
         "uptime",
         "loadavg",
-        "packages",
         "shell",
         "editor",
         "break",
