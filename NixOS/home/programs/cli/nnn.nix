@@ -8,13 +8,10 @@
     # d = detail mode
     # e = text in opener
     # H = show hidden
-    # U = no auto-up
     # E = use $EDITOR
-    NNN_OPTS = "cdeHUE";
+    NNN_OPTS = "cdeHE";
     # use trash instead of rm
     NNN_TRASH = 1;
-    ## previews
-    NNN_FIFO = "/tmp/nnn.fifo";
   };
 
   programs.nnn = {
