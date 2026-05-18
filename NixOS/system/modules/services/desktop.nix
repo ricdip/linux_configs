@@ -44,7 +44,7 @@
   # Niri window manager
   programs.niri = {
     enable = true;
-    useNautilus = false;
+    useNautilus = true;
   };
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # Ozone Wayland support in Chromium and Electron based applications

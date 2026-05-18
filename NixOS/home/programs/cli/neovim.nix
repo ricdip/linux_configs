@@ -113,11 +113,11 @@
             mode = "n";
             action = ":q<CR>";
           }
-          # quit the file without saving
+          # quit all files
           {
             key = "<leader>Q";
             mode = "n";
-            action = ":q!<CR>";
+            action = ":qa<CR>";
           }
           ## navigation between tabs
           # open a new tab
