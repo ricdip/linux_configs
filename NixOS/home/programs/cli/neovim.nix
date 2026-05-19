@@ -225,7 +225,17 @@
         };
 
         # enable filetree via nvim-tree.lua
-        filetree.nvimTree.enable = true;
+        filetree.nvimTree = {
+          enable = true;
+          openOnSetup = true;
+          setupOpts = {
+            git.enable = true;
+            view.width = {
+              min = 30;
+              max = 30;
+            };
+          };
+        };
 
         # enable cursor word and line highlighting [nvim-cursorline]
         visuals.nvim-cursorline = {
