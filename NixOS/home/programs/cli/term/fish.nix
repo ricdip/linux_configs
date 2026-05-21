@@ -227,11 +227,17 @@
       '';
     };
     interactiveShellInit = ''
+      # zoxide init
       zoxide init fish | source
       set -g fish_color_command blue
       set -g fish_color_error red
       set -g fish_color_param white
       set -g fish_color_valid_path green
+
+      # tmux init
+      if status is-interactive; and not set -q TMUX; and not string match -q "/dev/tty*" (tty)
+        exec tmux new-session
+      end
     '';
   };
 }
