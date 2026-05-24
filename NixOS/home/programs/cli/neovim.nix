@@ -170,6 +170,17 @@
             mode = "n";
             action = ":Hardtime toggle<CR>";
           }
+          # neotree
+          {
+            key = "<leader>tt";
+            mode = "n";
+            action = ":Neotree toggle<CR>";
+          }
+          {
+            key = "<leader>tf";
+            mode = "n";
+            action = ":Neotree focus<CR>";
+          }
         ];
 
         ## plugins
@@ -177,24 +188,6 @@
         statusline.lualine = {
           # enable lualine statusline plugin
           enable = true;
-          # | A | B | C X | Y | Z |
-          # using defaults for statusline
-          /*
-            activeSection = {
-              # | (A) | B | C X | Y | Z |
-              a = [];
-              # | A | (B) | C X | Y | Z |
-              b = [];
-              # | A | B | (C) X | Y | Z |
-              c = [];
-              # | A | B | C (X) | Y | Z |
-              x = [];
-              # | A | B | C X | (Y) | Z |
-              y = [];
-              # | A | B | C X | Y | (Z) |
-              z = [];
-            };
-          */
         };
 
         # enable telescope.nvim: multi-purpose search and picker utility
@@ -207,9 +200,6 @@
           # enable nvim-cmp
           enable = true;
         };
-
-        # enable comment plugin for neovim [comment-nvim]
-        # comments.comment-nvim.enable = true;
 
         binds = {
           whichKey = {
@@ -224,17 +214,14 @@
           hardtime-nvim.enable = true;
         };
 
-        # enable filetree via nvim-tree.lua
-        filetree.nvimTree = {
+        # enable filetree via neo-tree
+        filetree.neo-tree = {
           enable = true;
-          openOnSetup = true;
-          setupOpts = {
-            git.enable = true;
-            view.width = {
-              min = 30;
-              max = 30;
-            };
-          };
+        };
+
+        # enable git integration suite
+        git = {
+          enable = true;
         };
 
         # enable cursor word and line highlighting [nvim-cursorline]

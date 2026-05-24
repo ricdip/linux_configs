@@ -7,13 +7,15 @@
   home.file.".tmux.conf".text = ''
     ## terminal
     set -g default-terminal "tmux-256color"
-    set -sa terminal-features ",xterm-256color:RGB"
 
     ## prefix
     # change prefix from Ctrl-b to Ctrl-a
     unbind C-b
     set-option -g prefix C-a
     bind-key C-a send-prefix
+
+    ## reload
+    bind r source-file ~/.tmux.conf \; display-message "tmux reloaded"
 
     ## mouse
     set -g mouse on
@@ -56,20 +58,20 @@
     set -g renumber-windows on
     set -g base-index 1
     setw -g pane-base-index 1
-    set -sg escape-time 10
+    set -sg escape-time 0
     set -g focus-events on
     set -g status-interval 5
+    bind x kill-pane
+    bind S setw synchronize-panes
+    set -g set-clipboard on
 
     ## status bar
     set -g status-position bottom
-    set -g status-bg black
-    set -g status-fg white
+    set -g status-style bg="#000000",fg="#FFFFFF"
     set -g status-left ""
     set -g status-right " S#S:W#I:P#P "
     set -g window-status-format " #W#{window_flags} "
     set -g window-status-current-format " #[bold]#W#{window_flags} "
-    #set -g status-left-length 100
-    #set -g status-right-length 100
     set -g pane-border-style fg="#444444"
     set -g pane-active-border-style fg="#88c0d0"
 

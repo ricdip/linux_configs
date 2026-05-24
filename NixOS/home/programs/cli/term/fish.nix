@@ -105,6 +105,13 @@
       gls = "git log --stat";
       gld = "git log -p";
       gbl = "git blame";
+      ## tmux
+      ta = "tmux attach"; # connect to existent tmux session
+      tad = "tmux attach -d"; # detach other sessions and attach here
+      tls = "tmux ls"; # show all tmux sessions
+      tn = "tmux new -s"; # create a new tmux session with name
+      tk = "tmux kill-session -t"; # kill a specific tmux session
+      tks = "tmux kill-server"; # kill all tmux sessions
       ## btrfs
       # subvolumes
       btrfs-subvolume-list = "sudo btrfs subvolume list";
@@ -233,11 +240,6 @@
       set -g fish_color_error red
       set -g fish_color_param white
       set -g fish_color_valid_path green
-
-      # tmux init
-      if status is-interactive; and not set -q TMUX; and not string match -q "/dev/tty*" (tty)
-        exec tmux new-session
-      end
     '';
   };
 }
