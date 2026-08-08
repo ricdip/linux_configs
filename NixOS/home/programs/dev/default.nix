@@ -8,8 +8,6 @@
   # - to initialize a dev environment: nix flake init -t github:ricdip/nix-templates#java
   # - to show available dev environments: nix flake show github:ricdip/nix-templates
   home.packages = with pkgs; [
-    # IDE
-    jetbrains.idea-oss
     # Nix
     nil # language server
     # nixd # language server

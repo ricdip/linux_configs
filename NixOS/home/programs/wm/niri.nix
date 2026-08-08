@@ -273,7 +273,7 @@
 
     // This line starts waybar, a commonly used bar for Wayland compositors.
     //spawn-at-startup "waybar"
-    spawn-at-startup "noctalia-shell"
+    spawn-at-startup "noctalia"
 
     // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
     // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -384,9 +384,9 @@
         //XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
         //XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
         //XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-        XF86AudioRaiseVolume { spawn-sh "noctalia-shell ipc call volume increase"; }
-        XF86AudioLowerVolume { spawn-sh "noctalia-shell ipc call volume decrease"; }
-        XF86AudioMute { spawn-sh "noctalia-shell ipc call volume muteOutput"; }
+        XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+        XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+        XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
 
         // Example media keys mapping using playerctl.
         // This will work with any MPRIS-enabled media player.
@@ -400,8 +400,8 @@
         // but you need to manually put each argument in separate "" quotes.
         //XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
         //XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
-        XF86MonBrightnessUp { spawn-sh "noctalia-shell ipc call brightness increase"; }
-        XF86MonBrightnessDown { spawn-sh "noctalia-shell ipc call brightness decrease"; }
+        XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+        XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
 
         // Open/close the Overview: a zoomed-out view of workspaces and windows.
         // You can also move the mouse into the top-left hot corner,
@@ -641,10 +641,10 @@
         Mod+Shift+P { power-off-monitors; }
 
         // Custom
-        Mod+D { spawn-sh "noctalia-shell ipc call launcher toggle"; }
-        Mod+S { spawn-sh "noctalia-shell ipc call controlCenter toggle"; }
-        Ctrl+Tab { spawn-sh "noctalia-shell ipc call lockScreen lock"; }
-        Mod+Space { spawn-sh "noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; }
+        Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
+        Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
+        Ctrl+Tab { spawn-sh "noctalia msg session lock"; }
+        //Mod+Space { spawn-sh "noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; }
     }
   '';
 }

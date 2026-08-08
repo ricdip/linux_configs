@@ -28,6 +28,7 @@
   };
   # cursor
   home.pointerCursor = {
+    enable = true;
     gtk.enable = true;
     sway.enable = true;
     package = pkgs.openzone-cursors;
