@@ -14,6 +14,7 @@
     unzip # extraction utility for archives compressed in .zip format
     xz # a general-purpose data compression software,
     p7zip # a p7zip fork with additional codecs and improvements
+    libarchive # multi-format archive and compression library
     ripgrep # better grep
     ripgrep-all # ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, and more
     fd # better find
