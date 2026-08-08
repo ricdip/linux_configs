@@ -85,7 +85,6 @@
       xrun = "env DISPLAY=$DISPLAY";
       cdi = "zi"; # fuzzy interactive jump
       poweroff-device = "sudo udisksctl power-off -b";
-      noctalia-dump-config = "noctalia-shell ipc call state all > ./noctalia-settings.json";
       ## git
       gs = "git status -sb";
       gsf = "git status";
