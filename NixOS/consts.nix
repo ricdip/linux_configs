@@ -2,9 +2,6 @@
   user = {
     name = "ricdip";
     email = "riccardodpr@gmail.com";
-    git = {
-      signingkey = "86FA511B24D51753";
-    };
   };
   # path relative to home directory
   flake = "linux_configs/NixOS";
