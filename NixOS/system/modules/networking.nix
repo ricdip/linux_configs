@@ -42,7 +42,7 @@
 
   # set DNS fallbacks at startup
   systemd.services.set-dns-fallbacks = {
-    enable = true;
+    enable = false;
     description = "Sets the DNS fallbacks";
     wantedBy = [ "default.target" ];
     wants = [ "NetworkManager-wait-online.service" ];
