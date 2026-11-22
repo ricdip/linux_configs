@@ -80,5 +80,6 @@
     traceroute # tracks the route taken by packets over an IP network
     # kiwix # offline reader for web content
     zoxide # fast cd command that learns your habits
+    filezilla # graphical FTP, FTPS and SFTP client
   ];
 }
