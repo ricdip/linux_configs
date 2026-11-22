@@ -5,7 +5,7 @@
 
   # import the nvf home manager module
   imports = [
-    inputs.nvf.homeManagerModules.default
+    inputs.nvf.homeModules.default
   ];
 
   programs.nvf = {

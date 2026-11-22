@@ -47,7 +47,8 @@
 
     # enable the Nvidia settings menu,
     # accessible via `nvidia-settings`
-    nvidiaSettings = true;
+    # (disabled because uses deprecated gtk2)
+    nvidiaSettings = false;
 
     # select the appropriate driver version for specific GPU:
     # https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/

@@ -10,8 +10,6 @@
     alsa.support32Bit = true;
     # PulseAudio compatibility
     pulse.enable = true;
-    # JACK support
-    jack.enable = true;
   };
 
   environment.systemPackages = with pkgs; [

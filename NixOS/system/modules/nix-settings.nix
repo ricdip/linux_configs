@@ -33,6 +33,7 @@
     allowUnfreePredicate = _: true;
     # required by nvidia driver
     nvidia.acceptLicense = true;
+    problems.handlers."gtk+".broken = "warn";
   };
 
   programs.nix-index = {
